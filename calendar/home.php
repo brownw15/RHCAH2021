@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,7 @@
             <div style="float:left; width: 160px;">
                 <div id="nav"></div>
             </div>
-			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_POST['username']; ?>!</h2>
+			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_SESSION['myUsername']; ?>!</h2>
 			<p style="color: gray">Child Access</p>
             <div style="margin-left: 160px;">
 				<!-- Include themes -->

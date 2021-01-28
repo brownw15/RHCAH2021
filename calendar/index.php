@@ -1,6 +1,5 @@
 <?php
 	session_start(); // end in logout page
-
 ?>
 <html>
 <head>

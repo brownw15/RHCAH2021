@@ -1,6 +1,17 @@
 <?php
+    session_start();
     //include 'databaseConnection.php'    // we will add this file later, which holds establishing connection to database
     
+    /*DELETE*/
+    //for now when the form is submitted it will just redirect to home.php
+
+    /*For testing purposes*/ /*DELETE*/ $_SESSION['myUsername'] = $_POST['username'];
+    echo '<script>';
+    echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
+    echo '</script>';
+
+    /*DELETE*/
+
     // This code block checks to see if user is in database
     if(isset($_POST['submit'])){
         $username = $_POST['username'];
@@ -26,6 +37,12 @@
         $result = mysqli_query($conn, $sql);
         $value = mysqli_fetch_array($result);
         //Now you can set your values for other pages by grabbing info out of the $value[] array using the query fields like below
+        
         /*DELETE*/ $_SESSION['myUsername'] = $value["username"];
+
+        echo '<script>';
+        echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
+        echo '</script>';
+
     }
 ?>

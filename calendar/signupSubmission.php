@@ -1,6 +1,15 @@
 <?php
+    session_start();
     //include 'databaseConnection.php'    // we will add this file later, which holds establishing connection to database
     
+    /*DELETE*/
+    //for now when the form is submitted it will just redirect to home.php
+    echo '<script>';
+    echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
+    echo '</script>';
+
+    /*DELETE*/
+
     // This code block checks to see if user is in database before adding them to it
     if(isset($_POST['submit'])){
         $username = $_POST['username'];
@@ -30,7 +39,11 @@
 	$sql3 = "INSERT INTO myguests2 (firstname,lastname,username,email,userPassword) Values ('$firstname','$lastname','$username','$email','$userPassword')";
 
 	    if(mysqli_query($conn,$sql3)){
-		    //account was successfully created
+            //account was successfully created
+            $_SESSION['myUsername'] = $firstname;
+            echo '<script>';
+            echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
+            echo '</script>';
 	    }
     }
 
