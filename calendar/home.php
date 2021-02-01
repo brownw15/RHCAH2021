@@ -1,4 +1,16 @@
-<?php session_start(); ?>
+<?php session_start(); 
+    /* KEEP OR DELETE */
+    /*
+        //if the user isn't logged in and they access homepage, redirect them to login page
+        if(!iiset($_SESSION[myUsername])){
+            echo '<script>';
+            echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
+            echo '</script>';
+        }
+
+    */
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

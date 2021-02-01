@@ -1,4 +1,5 @@
 <?php
+    require_once '_db.php';
     session_start();
     //include 'databaseConnection.php'    // we will add this file later, which holds establishing connection to database
     
@@ -12,39 +13,34 @@
 
     // This code block checks to see if user is in database before adding them to it
     if(isset($_POST['submit'])){
-        $username = $_POST['username'];
-        $password = $_POST['userPassword'];
-        $profileExists = false;
+        $stmt = $db->prepare('SELECT username FROM myguests2 WHERE username = :username');
+        $stmt->bindParam(':username', $_POST['username']);
 
-        $sql = "SELECT username FROM myguests2 WHERE username='$username'";
-        $sqlcheck = mysqli_query($conn, $sql);
-        $sqlFetch = mysqli_fetch_array($sqlcheck);
-
-        if (!sqlcheck){ // if query fails, then the account was not found
+        if (!$stmt->execute()){ // if query fails, then the account was not found
             $profileExists = false;
         }
         else{
             $profileExists = true;
         }
+        $stmt->close();
     }
 
+    //create profile if it doesn't already exist
     if($profileExists == false){
-        
-	$firstname = $_POST['firstname'];
-	$lastname =  $_POST['lastname'];
-	$username =  $_POST['username'];
-	$email =  $_POST['email'];
-	$userPassword = $_POST['userPassword'];
+        $insert = "INSERT INTO myguests2 (firstname,lastname,username,email,userPassword) Values (?,?,?,?,?)"; //prepared sql statement for efficiency and security
+	    $stmt = $db->prepare($insert);
+        $stmt->bind_param("sssss", $_POST['firstname'], $_POST['lastname'], $_POST['username'], $_POST['email'], $_POST['userPassword']); //sssss for each parameter being handled as a string
 
-	$sql3 = "INSERT INTO myguests2 (firstname,lastname,username,email,userPassword) Values ('$firstname','$lastname','$username','$email','$userPassword')";
-
-	    if(mysqli_query($conn,$sql3)){
+	    if($stmt->execute()){
             //account was successfully created
+            $stmt->close();
             $_SESSION['myUsername'] = $firstname;
             echo '<script>';
             echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
             echo '</script>';
+
 	    }
     }
 
+    $stmt->close();
 ?>
