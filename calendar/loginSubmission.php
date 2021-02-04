@@ -1,15 +1,16 @@
 <?php
     require_once '_db.php';
     session_start();
-    include 'databaseConnection.php'    // we will add this file later, which holds establishing connection to database
+    include 'databaseConnection.php';    // we will add this file later, which holds establishing connection to database
+    
     
     /*DELETE*/
     //for now when the form is submitted it will just redirect to home.php
 
-    /*For testing purposes*/ /*DELETE*/ $_SESSION['myUsername'] = $_POST['username'];
-    echo '<script>';
-    echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
-    echo '</script>';
+    /*For testing purposes*/ /*DELETE*/// $_SESSION['myUsername'] = $_POST['username'];
+    //echo '<script>';
+    //echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
+    //echo '</script>';
 
     /*DELETE*/
 
