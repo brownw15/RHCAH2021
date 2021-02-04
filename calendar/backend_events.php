@@ -1,4 +1,6 @@
 <?php
+
+include 'databaseConnection.php'
 require_once '_db.php';
 
 $stmt = $db->prepare('SELECT * FROM events WHERE NOT ((end <= :start) OR (start >= :end))');

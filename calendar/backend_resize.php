@@ -1,4 +1,6 @@
 <?php
+
+include 'databaseConnection.php'
 require_once '_db.php';
 
 $insert = "UPDATE events SET start = :start, end = :end WHERE id = :id";

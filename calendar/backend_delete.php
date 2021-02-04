@@ -1,4 +1,6 @@
 <?php
+
+include 'databaseConnection.php'
 require_once '_db.php';
 
 $insert = "DELETE FROM events WHERE id = :id";

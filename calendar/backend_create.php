@@ -1,4 +1,5 @@
 <?php
+include 'databaseConnection.php'
 require_once '_db.php';
 
 $insert = "INSERT INTO events (name, start, end) VALUES (:name, :start, :end)";

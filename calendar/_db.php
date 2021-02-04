@@ -1,6 +1,6 @@
 <?php
 
-$db_exists = file_exists("daypilot.sqlite");
+$db_exists = file_exists("databaseConnection.php");
 
 $db = new PDO('sqlite:daypilot.sqlite');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
