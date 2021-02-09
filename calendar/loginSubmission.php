@@ -1,5 +1,5 @@
 <?php
-    require_once '_db.php';
+    //require_once '_db.php';
     session_start();
     include 'databaseConnection.php';    // we will add this file later, which holds establishing connection to database
     
