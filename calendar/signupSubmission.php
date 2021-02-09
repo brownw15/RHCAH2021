@@ -28,7 +28,7 @@
 
 	    if($stmt->execute()){
             //account was successfully created
-            $_SESSION['myUsername'] = $firstname;
+            $_SESSION['myUsername'] = $_POST['username'];
             echo '<script>';
             echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
             echo '</script>';
