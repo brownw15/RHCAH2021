@@ -16,7 +16,7 @@
 
     // This code block checks to see if user is in database
     if(isset($_POST['submit'])){
-        $stmt = $db->prepare('SELECT username FROM account WHERE username = :username');
+        $stmt = $link->prepare('SELECT username FROM account WHERE username = :username');
         $stmt->bindParam(':username', $_POST['username']);
 
         if (!$stmt->execute()){ // if query fails, then the account was not found
@@ -51,4 +51,5 @@
         echo '</script>';
 
     }
+    $link->close();
 ?>
