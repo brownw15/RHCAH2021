@@ -57,6 +57,9 @@
             </div>
 
             <script type="text/javascript">
+                //get access type
+                var access = "<?php echo $_SESSION['access']; ?>";
+
 				//create the monthly calendar widget on the left
                 var nav = new DayPilot.Navigator("nav");
                 nav.showMonths = 3;
@@ -78,6 +81,7 @@
 				//each function comunicates data to the php backend functions to process
 				
                 dp.onEventDeleted = function(args) {
+                    if(access === "staff"){
                     $.post("backend_delete.php",
                         {
                             id: args.e.id()
@@ -85,9 +89,11 @@
                         function() {
                             console.log("Deleted.");
                         });
+                    }
                 };
 
                 dp.onEventMoved = function(args) {
+                    if(access === "staff"){
                     $.post("backend_move.php",
                             {
                                 id: args.e.id(),
@@ -97,9 +103,11 @@
                             function() {
                                 console.log("Moved.");
                             });
+                    }
                 };
 
                 dp.onEventResized = function(args) {
+                    if(access === "staff"){
                     $.post("backend_resize.php",
                             {
                                 id: args.e.id(),
@@ -109,10 +117,12 @@
                             function() {
                                 console.log("Resized.");
                             });
+                    }
                 };
 
                 // event creating
                 dp.onTimeRangeSelected = function(args) {
+                    if(access === "staff"){
                     var name = prompt("New event name:", "Event");
                     dp.clearSelection();
                     if (!name) return;
@@ -134,6 +144,7 @@
                             function() {
                                 console.log("Created.");
                             });
+                    }
 
                 };
 
