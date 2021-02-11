@@ -38,8 +38,8 @@
             <div style="float:left; width: 160px;">
                 <div id="nav"></div>
             </div>
-			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_SESSION['myUsername']; ?>!</h2>
-			<p style="color: gray">Child Access</p>
+			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_SESSION['name']; ?>!</h2>
+			<p style="color: gray"><?php echo $_SESSION['access'] ?> Access</p>
             <div style="margin-left: 160px;">
 				<!-- Include themes -->
                 <div class="space">

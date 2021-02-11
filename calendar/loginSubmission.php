@@ -6,13 +6,14 @@
 
     // This code block checks to see if user is in database and logs them in
     if(isset($_POST['submit'])){
-        $stmt = $link->prepare('SELECT id, username, firstname, lastname, email FROM account WHERE username = ? limit 1');
+        $stmt = $link->prepare('SELECT id, username, firstname, lastname, email, description FROM account WHERE username = ? limit 1');
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
-        $stmt->bind_result($id,$username,$firstname,$lastname,$email);
+        $stmt->bind_result($id,$username,$firstname,$lastname,$email,$description);
 
         if ($stmt->fetch()){ // if query fails, then the account was not found
-            $_SESSION['myUsername'] = $firstname;
+            $_SESSION['name'] = $firstname;
+            $_SESSION['access'] = $description;
             echo '<script>';
             echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
             echo '</script>';
