@@ -6,12 +6,13 @@
 
     // This code block checks to see if user is in database and logs them in
     if(isset($_POST['submit'])){
-        $stmt = $link->prepare('SELECT id, username, firstname, lastname, email, description FROM account WHERE username = ? limit 1');
-        $stmt->bind_param('s', $_POST['username']);
+        $stmt = $link->prepare('SELECT id, username, userPassword, firstname, lastname, email, description FROM account WHERE username = ? AND userPassword = ? limit 1');
+        $stmt->bind_param('ss', $_POST['username'], $_POST['userPassword']);
         $stmt->execute();
-        $stmt->bind_result($id,$username,$firstname,$lastname,$email,$description);
-
+        $stmt->bind_result($id,$username,$userPassword,$firstname,$lastname,$email,$description);
+        
         if ($stmt->fetch()){ // if query fails, then the account was not found
+            
             $_SESSION['name'] = $firstname;
             $_SESSION['access'] = $description;
             echo '<script>';
@@ -19,8 +20,9 @@
             echo '</script>';
         }
         else{
-            //do something
-            echo "failed to login";
+            echo '<script>';
+            echo 'for(i=0; i<1; i++){alert("Invalid username or password, try again"); window.location.assign("index.php");}';
+            echo '</script>';
         }
         $stmt->close();
     }

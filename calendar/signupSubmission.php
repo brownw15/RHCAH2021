@@ -16,6 +16,9 @@
         }
         else{
             $profileExists = true;
+            echo '<script>';
+            echo 'for(i=0; i<1; i++){alert("Profile already exists, try logging in"); window.location.assign("index.php");}';
+            echo '</script>';
         }
     }
  
