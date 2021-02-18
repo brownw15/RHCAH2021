@@ -40,6 +40,7 @@
             </div>
 			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_SESSION['name']; ?>!</h2>
 			<p style="color: gray"><?php echo $_SESSION['access'] ?> Access</p>
+            <form><input type="submit" class="logoutButton" name="logout" value="logout"/></form>
             <div style="margin-left: 160px;">
 				<!-- Include themes -->
                 <div class="space">
@@ -167,6 +168,16 @@
                 $("#theme").change(function(e) {
                     dp.theme = this.value;
                     dp.update();
+                });
+
+                $('.logoutButton').click(function(){
+                    var btnValue = $(this).val();
+                    var processURL = 'logout.php';
+                    var data = {'action': btnValue};
+                    $.post(processURL, data, function(response){
+                        alert("logout successful");
+                        for(i=0; i<1; i++){window.location.assign("index.php")};
+                    });
                 });
             });
             </script>
