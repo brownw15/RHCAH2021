@@ -75,7 +75,7 @@
 
 
 	<div class="submitButton">
-		<input type="submit" value="sign up!" id="submit" name="submit"> <!-- it isnt good practice two have two types of button and submit  i took it out  all it does is take the first type -->
+		<input type="submit" value="sign up!" id="submit" name="submitS"> <!-- it isnt good practice two have two types of button and submit  i took it out  all it does is take the first type -->
 
 	</div>
 

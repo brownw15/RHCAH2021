@@ -3,41 +3,50 @@
     session_start();
     include 'databaseConnection.php';   // we will add this file later, which holds establishing connection to database
 
+    $statsFile = fopen("statsFile.csv","a");
+
     // This code block checks to see if user is in database before adding them to it
     //the object in $var->prepare needs to be the same object as the object created in databaseConnection.php via $var = new mysqli();
-    if(isset($_POST['submit'])){
-        $stmt = $link->prepare("SELECT account.username FROM account WHERE username=?");
+    if(isset($_POST['submitS'])){
+        $stmt = $link->prepare('SELECT username FROM account WHERE username = ?');
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $result = $stmt->get_result();
         // if query returns 0 rows, account not found.
-        if ($result->num_rows == 0){
-            $profileExists = false;
-        }
-        else{
+        if ($result->num_rows > 0){
             $profileExists = true;
             echo '<script>';
             echo 'for(i=0; i<1; i++){alert("Profile already exists, try logging in"); window.location.assign("index.php");}';
             echo '</script>';
+        }
+        else{
+            $profileExists = false;
         }
     }
  
     //create profile if it doesn't already exist
     if($profileExists == false){
         //id needs to be modified for each test unless working with a fresh database.
-        $insert = "INSERT INTO account (firstname,lastname,username,email,userPassword) VALUES (?,?,?,?,?)"; //prepared sql statement for efficiency and security
+        $insert = 'INSERT INTO account (firstname,lastname,username,email,userPassword) VALUES (?,?,?,?,?)'; //prepared sql statement for efficiency and security
 	    $stmt = $link->prepare($insert);
         $stmt->bind_param("sssss", $_POST['firstname'], $_POST['lastname'], $_POST['username'], $_POST['email'], $_POST['userPassword']); //sssss for each parameter being handled as a string
 
-	    if($stmt->execute()){
+        if($stmt->execute()){
             //account was successfully created
-            $_SESSION['myUsername'] = $_POST['username'];
+            $_SESSION['name'] = $_POST['firstname'];
+            $_SESSION['access'] = "child";
+            $statsData = array("Account Created, " . $_POST['username'] . ", " . date("Y-m-d") . ", " . date("h:i:sa"));
+            foreach($statsData as $line){
+                fputcsv($statsFile, explode(',',$line));
+            }
             echo '<script>';
             echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
             echo '</script>';
-	    }
+        }
+    
     }
 
     //needs to be same as the connection variable. otherwise connection won't close successfully.
     $link->close();
+    fclose($statsFile);
 ?>

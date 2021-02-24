@@ -3,6 +3,7 @@
     session_start();
     include 'databaseConnection.php';    // holds establishing connection to database
 
+    $statsFile = fopen("statsFile.csv","a");
 
     // This code block checks to see if user is in database and logs them in
     if(isset($_POST['submit'])){
@@ -15,6 +16,10 @@
             
             $_SESSION['name'] = $firstname;
             $_SESSION['access'] = $description;
+            $statsData = array("Login, " . $firstname . ", " . date("Y-m-d") . ", " . date("h:i:sa"));
+            foreach($statsData as $line){
+                fputcsv($statsFile, explode(',',$line));
+            }
             echo '<script>';
             echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
             echo '</script>';
@@ -29,4 +34,5 @@
 
     /* NEED PROTOCOL FOR WHAT HAPPENS WHEN USER NOT LOGGED IN */
     $link->close();
+    fclose($statsFile);
 ?>

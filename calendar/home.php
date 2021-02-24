@@ -145,6 +145,13 @@
                             function() {
                                 console.log("Created.");
                             });
+                    
+                    var processURL = 'trackStats.php';
+                    var data = {'start': args.start.toString()};
+                    $.post(processURL, data, function(response){
+                        console.log("Stats Updated.");
+                    });
+
                     }
 
                 };
