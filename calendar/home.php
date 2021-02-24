@@ -147,7 +147,11 @@
                             });
                     
                     var processURL = 'trackStats.php';
-                    var data = {'start': args.start.toString()};
+                    var data = {'start': args.start.toString(),
+                                'end': args.end.toString(),
+                                'eventId': DayPilot.guid(),
+                                'eventName': name
+                                };
                     $.post(processURL, data, function(response){
                         console.log("Stats Updated.");
                     });
