@@ -76,7 +76,7 @@ body{
 	border: 1px solid gray;
 }
 
-/*
+
 .loginButton{
 	width: 260px;
 	height: 35px;
@@ -97,7 +97,7 @@ body{
 	margin-top: 10px;
 
 }
-*/
+
 .loginButton:hover{
 	opacity: 0.8;
 }
@@ -201,22 +201,6 @@ h2{
 	left: 470px;
 	width: 200px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .darkBar{

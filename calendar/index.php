@@ -5,19 +5,20 @@
 <head>
 	<link rel="stylesheet" href="loginStyle.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bulma.min.css">
 	<title> Log in</title>
 </head>
 
 <body>
 
 
-<div class="mainContainer">
+<div class="Container">
 
 	<div class="loginHead">
 		<h2 id="headerText">Login</h2>
 	</div>
 
-<div id="loginForm">
+<div class= field id="loginForm">
 <div class="inputSection">
 
 	<form action="loginSubmission.php" method="post">
@@ -49,12 +50,12 @@
 		
 
 	<div class="firstname loginUserN">
-		<input type="text" id="inputUsername" name="firstname" placeholder="firstname" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z">
+		<input class="input" type="text" id="inputUsername" name="firstname" placeholder="firstname" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z">
 	</div>
 
 
 	<div class="lastname loginUserN">
-		<input type="text" id="inputPassword" name="lastname" placeholder="lastname" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z">
+		<input class="input" type="text" id="inputPassword" name="lastname" placeholder="lastname" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z">
 	</div>
 
 	<div class="signUpUserN loginUserN">
@@ -66,7 +67,7 @@
 		<input type="password" id="inputPassword" name="userPassword" placeholder="password" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[^#@()/><\][\\\x22,;|]+" title="Must contain 7 or more characters that are of at least one number, and one uppercase and lowercase letter. use characters: a-z, 0-9, !.':/~-$|*%" required> 
 	</div>
 
-	<div class="email loginUserN">
+	<div class="control email loginUserN">
 		<input type="text" id="inputPassword" name="email" placeholder="email" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[^$#%*:'~()/><\][\\\x22,;|]+" title="use characters: a-z, 0-9, .@" required>
 	</div>
 
@@ -75,12 +76,12 @@
 
 
 	<div class="submitButton">
-		<input type="submit" value="sign up!" id="submit" name="submitS"> <!-- it isnt good practice two have two types of button and submit  i took it out  all it does is take the first type -->
+		<input class="button" type="submit" value="sign up!" id="submit" name="submitS"> <!-- it isnt good practice two have two types of button and submit  i took it out  all it does is take the first type -->
 
 	</div>
 
-	</form>
-	<p>Already have an account? <button onclick="toggleForm()">Login</button></p>
+	</form class="field">
+	<p>Already have an account? <button class="button is-primary is-light"onclick="toggleForm()">Login</button></p>
 </div>
 </div>
 
