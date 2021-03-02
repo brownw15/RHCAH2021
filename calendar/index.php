@@ -43,7 +43,7 @@
 
 
 <div id="signupForm" style="display: none">
-<div class="inputSection">
+<div class="inputSection" style="height: 300px">
 
 	<form action="signupSubmission.php" method="post">
 		
