@@ -32,9 +32,8 @@
 		<input type="password" id="inputPassword" name="userPassword" placeholder="password" size="26" maxlength="30" minlength="1" autocomplete="off" pattern="[^#@()/><\][\\\x22,;|]+" title="enter at least 7 characters: a-z, 0-9, !.':/~-$|*%" required>
 	</div>
 
-	<div class="loginButton">
+	<div class="submitButton">
 		<input type="submit" value="login" id="submit" name="submit"> 
-
 	</div>
 
 	</form>
