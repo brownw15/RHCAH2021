@@ -90,6 +90,15 @@
                         function() {
                             console.log("Deleted.");
                         });
+                        
+                    var processURL = 'trackStats.php';
+                    var data = {'type': 'delete',
+                                'eventId': args.e.id()
+                                };
+                    $.post(processURL, data, function(response){
+                        console.log("Stats Updated.");
+                    });
+
                     }
                 };
 
@@ -104,6 +113,17 @@
                             function() {
                                 console.log("Moved.");
                             });
+
+                    var processURL = 'trackStats.php';
+                    var data = {'type': 'edit',
+                                'start': args.newStart.toString(),
+                                'end': args.newEnd.toString(),
+                                'eventId': args.e.id()
+                                };
+                    $.post(processURL, data, function(response){
+                        console.log("Stats Updated.");
+                    });
+
                     }
                 };
 
@@ -118,6 +138,17 @@
                             function() {
                                 console.log("Resized.");
                             });
+
+                    var processURL = 'trackStats.php';
+                    var data = {'type': 'edit',
+                                'start': args.newStart.toString(),
+                                'end': args.newEnd.toString(),
+                                'eventId': args.e.id()
+                                };
+                    $.post(processURL, data, function(response){
+                        console.log("Stats Updated.");
+                    });
+
                     }
                 };
 
@@ -147,7 +178,8 @@
                             });
                     
                     var processURL = 'trackStats.php';
-                    var data = {'start': args.start.toString(),
+                    var data = {'type': 'create',
+                                'start': args.start.toString(),
                                 'end': args.end.toString(),
                                 'eventId': DayPilot.guid(),
                                 'eventName': name
