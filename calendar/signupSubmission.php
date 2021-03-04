@@ -7,7 +7,7 @@
 
     // This code block checks to see if user is in database before adding them to it
     //the object in $var->prepare needs to be the same object as the object created in databaseConnection.php via $var = new mysqli();
-    if(isset($_POST['submitS'])){
+    if(isset($_POST['signupSubmit'])){
         $stmt = $link->prepare('SELECT username FROM account WHERE username = ?');
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();

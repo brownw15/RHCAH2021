@@ -38,7 +38,7 @@
             </div>
 			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_SESSION['name']; ?>!</h2>
 			<p style="color: gray"><?php echo $_SESSION['access'] ?> Access</p>
-                <input class="input" type="submit" class="logoutButton" name="logout" value="logout"/>
+             <button type="submit" class="logoutButton" name="logout">Logout</button>
             <div style="margin-left: 160px;">
 				<!-- Include themes -->
                 <div class="space">
