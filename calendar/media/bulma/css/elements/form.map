@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "form.css",
+	"sources": [
+		"../../sass/elements/form.sass"
+	],
+	"sourcesContent": [
+		"@warn \"The form.sass file is DEPRECATED. It has moved into its own /form folder. Please import sass/form/_all instead.\";\n"
+	],
+	"names": [],
+	"mappings": ""
+}

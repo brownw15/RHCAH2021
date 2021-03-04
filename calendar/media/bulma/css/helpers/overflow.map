@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "overflow.css",
+	"sources": [
+		"../../sass/helpers/overflow.sass"
+	],
+	"sourcesContent": [
+		".is-clipped {\n  overflow: hidden !important; }\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,WAAW,CAAC;EACV,QAAQ,EAAE,iBAAiB;CAAG"
+}
