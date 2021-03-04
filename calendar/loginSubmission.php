@@ -6,7 +6,7 @@
     $statsFile = fopen("statsFile.csv","a");
 
     // This code block checks to see if user is in database and logs them in
-    if(isset($_POST['submit'])){
+    if(isset($_POST['loginSubmit'])){
         $stmt = $link->prepare('SELECT id, username, userPassword, firstname, lastname, email, description FROM account WHERE username = ? AND userPassword = ? limit 1');
         $stmt->bind_param('ss', $_POST['username'], $_POST['userPassword']);
         $stmt->execute();

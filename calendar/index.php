@@ -25,7 +25,7 @@
 			</div>
 			<div class="field is-grouped is-grouped-right">
 				<div class="control">
-					<button class="button is-link" type="submit"> Submit</button>
+					<button class="button is-link" type="submit" name="loginSubmit"> Submit</button>
 				</div>
 				<div class="control">
 					<button class="button is-link is-light" type="button" onclick="toggleForm()"> Sign Up</button>
@@ -68,7 +68,7 @@
 					<button class="button is-link" type="button"  onclick="toggleForm()">Back to login</button>
 				</div>
 				<div class="control">
-					<button class="button is-link is-light" type="submit"> Submit</button>
+					<button class="button is-link is-light" type="submit" name="signupSubmit"> Submit</button>
 				</div>
 			</div>
 		</form>
