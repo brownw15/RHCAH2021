@@ -16,8 +16,7 @@
 <html>
 <head>
     <title>HTML5/JavaScript Event Calendar</title>
-    	<link type="text/css" rel="stylesheet" href="media/bulma.min.css" />
-
+        <link rel="stylesheet" href="./media/css/styles.css">
         <link type="text/css" rel="stylesheet" href="themes/calendar_g.css" />
         <link type="text/css" rel="stylesheet" href="themes/calendar_green.css" />
         <link type="text/css" rel="stylesheet" href="themes/calendar_traditional.css" />
@@ -39,7 +38,7 @@
             </div>
 			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_SESSION['name']; ?>!</h2>
 			<p style="color: gray"><?php echo $_SESSION['access'] ?> Access</p>
-            <form><input type="submit" class="logoutButton" name="logout" value="logout"/></form>
+                <input class="input" type="submit" class="logoutButton" name="logout" value="logout"/>
             <div style="margin-left: 160px;">
 				<!-- Include themes -->
                 <div class="space">

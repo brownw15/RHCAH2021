@@ -10,7 +10,7 @@
 
 <body>
 	<div class="container is-centered block" style="width:600px">
-		<form id="loginForm" class="box" action="loginSubmission.php" method="post" style=>
+		<form id="loginForm" class="box" action="loginSubmission.php" method="post">
 			<h1 class="title is-1 has-text-weight-semibold is-family-monospace">Login</h1>
 			<div class="field">
 				<div class="control">
@@ -28,12 +28,12 @@
 					<button class="button is-link" type="submit"> Submit</button>
 				</div>
 				<div class="control">
-					<button class="button is-link is-light" type="submit" onclick="toggleForm()"> Sign Up</button>
+					<button class="button is-link is-light" type="button" onclick="toggleForm()"> Sign Up</button>
 				</div>
 			</div>
 		</form>
 
-		<form id="signupForm" class="box" action="/signupSubmission.php" method="post" style="display:none">
+		<form id="signupForm" class="box" action="signupSubmission.php" method="post" style="display:none">
 			<h1 class="title is-1 has-text-weight-semibold is-family-monospace">Sign Up</h1>
 
 			<div class="field is-grouped">
@@ -68,11 +68,10 @@
 					<button class="button is-link" type="button"  onclick="toggleForm()">Back to login</button>
 				</div>
 				<div class="control">
-					<button class="button is-link is-light" type="submit" formaction="/signupSubmission.php" onclick="toggleForm()"> Submit</button>
+					<button class="button is-link is-light" type="submit"> Submit</button>
 				</div>
 			</div>
 		</form>
-
 	</div>
 <script>
 function toggleForm(){
