@@ -53,7 +53,7 @@
 			
 			<div class="field">
 				<div class="control">
-					<input class="input" id="inputUsername" name="userName" type="text" placeholder="Username" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
+					<input class="input" id="inputUsername" name="username" type="text" placeholder="Username" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
 				</div>
 			</div>
 
@@ -68,7 +68,7 @@
 					<button class="button is-link" type="button"  onclick="toggleForm()">Back to login</button>
 				</div>
 				<div class="control">
-					<button class="button is-link is-light" type="submit" name="signupSubmit"> Submit</button>
+					<button name="signupSubmit" type="submit" class="button is-link is-light"> Submit</button>
 				</div>
 			</div>
 		</form>
