@@ -1,5 +1,6 @@
 <?php 
     session_start(); 
+    include 'databaseConnection.php';
     /* KEEP OR DELETE */
     /*
         //if the user isn't logged in and they access homepage, redirect them to login page
@@ -29,6 +30,9 @@
 	<!-- daypilot libraries -->
         <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
+    <!-- Font Awesome Icons -->
+    <script src="https://use.fontawesome.com/f3a0fc03e6.js"></script>
+
 </head>
 <body>
         <div class="main">
@@ -36,9 +40,35 @@
             <div style="float:left; width: 160px;">
                 <div id="nav"></div>
             </div>
+             <!--Dayspedia.com widget--><iframe width='300' height='100' style='padding:0!important;margin:0!important;border:none!important;background:none!important;background:transparent!important;float: right; top:-30px' marginheight='0' marginwidth='0' frameborder='0' scrolling='no' comment='/*defined*/' src='https://dayspedia.com/widgets/digit/?v=1&iframe=eyJ3LTEyIjp0cnVlLCJ3LTExIjp0cnVlLCJ3LTEzIjp0cnVlLCJ3LTE0IjpmYWxzZSwidy0xNSI6ZmFsc2UsInctMTEwIjpmYWxzZSwidy13aWR0aC0wIjp0cnVlLCJ3LXdpZHRoLTEiOmZhbHNlLCJ3LXdpZHRoLTIiOmZhbHNlLCJ3LTE2IjoiMjRweCIsInctMTkiOiI0OCIsInctMTciOiIxNiIsInctMjEiOnRydWUsImJnaW1hZ2UiOi0yLCJiZ2ltYWdlU2V0IjpmYWxzZSwidy0yMWMwIjoiI2ZmZmZmZiIsInctMCI6dHJ1ZSwidy0zIjp0cnVlLCJ3LTNjMCI6IiMzNDM0MzQiLCJ3LTNiMCI6IjEiLCJ3LTYiOiIjMzQzNDM0Iiwidy0yMCI6dHJ1ZSwidy00IjoiIzAwN2RiZiIsInctMTgiOmZhbHNlLCJ3LXdpZHRoLTJjLTAiOiIzMDAifQ==&lang=en&cityid=1490'></iframe><!--Dayspedia.com widget ENDS-->
+            <br >
 			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_SESSION['name']; ?>!</h2>
 			<p style="color: gray"><?php echo $_SESSION['access'] ?> Access</p>
              <button type="submit" class="logoutButton" name="logout">Logout</button>
+            <div style="margin-left: 160px;">
+            <div class="dropdown">
+                    <?php
+                        //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
+                        $resultSet = $link->query("SELECT firstname, lastname FROM account");
+                    ?>
+                    <form method="post">
+                    Select Child: <select id="dropdown-content" name ="childMenu">
+                    <?php
+                        if($_SESSION['access'] == 'staff')
+                        {
+                            while($rows = $resultSet->fetch_assoc())
+                            {
+                                $fnames = $rows['firstname']; 
+                                $lnames = $rows['lastname'];
+                                echo "<option value='$fnames'>$fnames ".  $lnames ."</option>";
+                            }
+                        } 
+                    ?>
+                    </select>
+                    <input type="submit" value="Submit the form"/>
+                    </form>
+                </div>
+            </div>
             <div style="margin-left: 160px;">
 				<!-- Include themes -->
                 <div class="space">
@@ -51,8 +81,15 @@
                         <option value="calendar_transparent">Transparent</option>
                     </select>
                 </div>
+
 				<!-- Placeholder for daypilot lite calendar widget -->
                 <div id="dp"></div>
+            </div>
+
+            <div class="Upcoming" style="margin-top: 15px; margin-left: 160px; width: 85%; border: .7px solid #e3e3e3; height: 80px; padding: 10px">
+                <h1>Upcoming...</h1>
+                "Company Potlock" &nbsp; &nbsp; <i class="fa fa-calendar" aria-hidden="true"></i> Next Friday  &nbsp; &nbsp; <i class="fa fa-map-marker" aria-hidden="true"></i> Location: On site
+                &nbsp; &nbsp; <i class="fa fa-clock-o" aria-hidden="true"></i> 5:00 - 6:30p
             </div>
 
             <script type="text/javascript">
