@@ -20,7 +20,7 @@
 
 			<div class="field">
 				<div class="control">
-					<input class="input" type="inputPassword" name="userPassword" placeholder="Password" size="26" maxlength="30" minlength="1" autocomplete="off" pattern="[^#@()/><\][\\\x22,;|]+" title="enter at least 7 characters: a-z, 0-9, !.':/~-$|*%" required >
+					<input class="input" type="password" name="userPassword" placeholder="Password" size="26" maxlength="30" minlength="1" autocomplete="off" pattern="[^#@()/><\][\\\x22,;|]+" title="enter at least 7 characters: a-z, 0-9, !.':/~-$|*%" required >
 				</div>
 			</div>
 			<div class="field is-grouped is-grouped-right">
