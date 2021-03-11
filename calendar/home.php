@@ -35,7 +35,7 @@
 
 </head>
 <body>
-        <div class="main">
+        <div class="container has-text-white">
 
             <div style="float:left; width: 160px;">
                 <div id="nav"></div>
@@ -44,7 +44,7 @@
             <br >
 			<h2 style="margin-bottom: 0px">Welcome Back <?php echo $_SESSION['name']; ?>!</h2>
 			<p style="color: gray"><?php echo $_SESSION['access'] ?> Access</p>
-             <button type="submit" class="logoutButton" name="logout">Logout</button>
+             <button type="submit" class="button is-warning logoutButton" name="logout">Logout</button>
             <div style="margin-left: 160px;">
             <div class="dropdown">
                     <?php
@@ -65,21 +65,25 @@
                         } 
                     ?>
                     </select>
-                    <input type="submit" value="Submit the form"/>
+                    <input class="button" type="submit" value="Submit the form"/>
                     </form>
                 </div>
             </div>
             <div style="margin-left: 160px;">
 				<!-- Include themes -->
-                <div class="space">
-                    Theme: <select id="theme">
-                        <option value="calendar_default">Default</option>
-                        <option value="calendar_white">White</option>
-                        <option value="calendar_g">Google-Like</option>
-                        <option value="calendar_green">Green</option>
-                        <option value="calendar_traditional">Traditional</option>
-                        <option value="calendar_transparent">Transparent</option>
+                <div class="space dropdown">
+                    <span> Theme: <select id="theme"> </span>
+                    <div class="dropdown-menu" id="dropdown-menu1" role="menu">
+                        <div class="dropdown-content">
+                            <option value="calendar_default">Default</option>
+                            <option value="calendar_white">White</option>
+                            <option value="calendar_g">Google-Like</option>
+                            <option value="calendar_green">Green</option>
+                            <option value="calendar_traditional">Traditional</option>
+                            <option value="calendar_transparent">Transparent</option>
                     </select>
+                        </div>
+                    </div>
                 </div>
 
 				<!-- Placeholder for daypilot lite calendar widget -->

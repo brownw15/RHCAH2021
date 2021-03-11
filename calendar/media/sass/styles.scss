@@ -3,24 +3,31 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 // Set your brand colors
-$purple: #8A4D76;
-$pink: #FA7C91;
-$brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
+$red: #CC003D;
+$gray: #54425D;
+$blue: #0023DC;
+$green: #94D50C;
+$purple: #4D3BFF;
+$orange:#FF5917;
+$grey-dark:#424141;
+$grey-darker: #262525;
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
 // Update Bulma's global variables
-$family-primary: "Cantarell" sans-serif;
+$family-primary: $family-sans-serif;
 $family-secondary: "Roboto", "Times New Roman", sans-serif;
-$grey-dark: $brown;
-$grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
-$widescreen-enabled: false;
+$primary: $red;
+$link: $blue;
+$info: $gray;
+$success: $green;
+$warning: $orange;
+$background: $grey-dark;
+$text-strong: $gray;
+$widescreen-enabled: true;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
+$body-background-color: $grey-dark;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
