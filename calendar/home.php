@@ -31,14 +31,14 @@
         <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
     <!-- Font Awesome Icons -->
-    <script src="https://use.fontawesome.com/f3a0fc03e6.js"></script>
+     <script src="https://use.fontawesome.com/f3a0fc03e6.js"></script>
 
 </head>
 <body>
         <div class="container has-text-white">
 
-            <div style="float:left; width: 160px;">
-                <div id="nav"></div>
+            <div class="container" style="float:right; width: 160px;">
+                <div id="nav"> </div>
             </div>
              <!--Dayspedia.com widget--><iframe width='300' height='100' style='padding:0!important;margin:0!important;border:none!important;background:none!important;background:transparent!important;float: right; top:-30px' marginheight='0' marginwidth='0' frameborder='0' scrolling='no' comment='/*defined*/' src='https://dayspedia.com/widgets/digit/?v=1&iframe=eyJ3LTEyIjp0cnVlLCJ3LTExIjp0cnVlLCJ3LTEzIjp0cnVlLCJ3LTE0IjpmYWxzZSwidy0xNSI6ZmFsc2UsInctMTEwIjpmYWxzZSwidy13aWR0aC0wIjp0cnVlLCJ3LXdpZHRoLTEiOmZhbHNlLCJ3LXdpZHRoLTIiOmZhbHNlLCJ3LTE2IjoiMjRweCIsInctMTkiOiI0OCIsInctMTciOiIxNiIsInctMjEiOnRydWUsImJnaW1hZ2UiOi0yLCJiZ2ltYWdlU2V0IjpmYWxzZSwidy0yMWMwIjoiI2ZmZmZmZiIsInctMCI6dHJ1ZSwidy0zIjp0cnVlLCJ3LTNjMCI6IiMzNDM0MzQiLCJ3LTNiMCI6IjEiLCJ3LTYiOiIjMzQzNDM0Iiwidy0yMCI6dHJ1ZSwidy00IjoiIzAwN2RiZiIsInctMTgiOmZhbHNlLCJ3LXdpZHRoLTJjLTAiOiIzMDAifQ==&lang=en&cityid=1490'></iframe><!--Dayspedia.com widget ENDS-->
             <br >
@@ -69,10 +69,10 @@
                     </form>
                 </div>
             </div>
-            <div style="margin-left: 160px;">
+            <div>
 				<!-- Include themes -->
                 <div class="space dropdown">
-                    <span> Theme: <select id="theme"> </span>
+                    <h3> Theme: <select id="theme"> </h3>
                     <div class="dropdown-menu" id="dropdown-menu1" role="menu">
                         <div class="dropdown-content">
                             <option value="calendar_default">Default</option>
@@ -87,10 +87,10 @@
                 </div>
 
 				<!-- Placeholder for daypilot lite calendar widget -->
-                <div id="dp"></div>
+                <div class="container calender" id="dp"></div>
             </div>
-
-            <div class="Upcoming" style="margin-top: 15px; margin-left: 160px; width: 85%; border: .7px solid #e3e3e3; height: 80px; padding: 10px">
+            
+            <div class="Upcoming has-text-white" style="margin-top: 15px; margin-left: 160px; width: 85%; border: .7px solid #e3e3e3; height: 80px; padding: 10px">
                 <h1>Upcoming...</h1>
                 "Company Potlock" &nbsp; &nbsp; <i class="fa fa-calendar" aria-hidden="true"></i> Next Friday  &nbsp; &nbsp; <i class="fa fa-map-marker" aria-hidden="true"></i> Location: On site
                 &nbsp; &nbsp; <i class="fa fa-clock-o" aria-hidden="true"></i> 5:00 - 6:30p
@@ -99,7 +99,6 @@
             <script type="text/javascript">
                 //get access type
                 var access = "<?php echo $_SESSION['access']; ?>";
-
 				//create the monthly calendar widget on the left
                 var nav = new DayPilot.Navigator("nav");
                 nav.showMonths = 3;
@@ -114,9 +113,11 @@
 				//initialize the main calendar view
                 var dp = new DayPilot.Calendar("dp");
                 dp.viewType = "Week";
-
                 dp.eventDeleteHandling = "Update";
-				
+
+               // Nick Check this out
+                $("div").removeAttr("style");
+
 				//below are the main functions you can perform on the calendar
 				//each function comunicates data to the php backend functions to process
 				
@@ -265,6 +266,7 @@
             </script>
 
         </div>
+        
         <div class="clear">
         </div>
 
