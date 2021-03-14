@@ -207,7 +207,7 @@
                     });
                     dp.events.add(e);
 
-                    $.post("backend_create.php",
+                    $.post("backendCreate.php",
                             {
                                 start: args.start.toString(),
                                 end: args.end.toString(),
