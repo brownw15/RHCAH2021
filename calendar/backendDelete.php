@@ -1,12 +1,15 @@
 <?php
     session_start();
-    include 'databaseConnection.php';
+    include 'databaseConnection.php'; // connect to database
     
-    $delete = 'DELETE FROM events WHERE id = ?';
+    // create DELETE statement to delete an event by its id
+    $delete = 'DELETE FROM events WHERE id = ?'; 
     $stmt = $link->prepare($delete);
-    $stmt->bind_param("i",$_POST['id']);
+    $stmt->bind_param("i",$_POST['id']); // puts correct id in the statement
 
-    if($stmt->execute()){
+    // determine whether the deletion was successful
+    if($stmt->execute()){ // if statement succeded
+        // create confirmation response
         class Result {}
 
         $response = new Result();
@@ -16,7 +19,8 @@
         header('Content-Type: application/json');
         echo json_encode($response);
     }
-    else{
+    else{ // if statement failed
+        // create pop-up error stating attempt failed
         echo '<script>';
         echo 'for(i=0; i<1; i++){alert("Error Creating Event"); window.location.assign("Home.php");}';
         echo '</script>';
