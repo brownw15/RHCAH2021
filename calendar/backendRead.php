@@ -3,13 +3,20 @@
     include 'databaseConnection.php';
     
     $read = 'SELECT * FROM events WHERE ((start > 2021-03-01))';
-    //$stmt = $link->prepare($read);
-    //$stmt->bind_param("ss",$_GET['start'],$_GET['end']);
-
-    $read->execute();
-    echo "<script>console.log('fail')</script>";
-    
+    $read->execute();    
     $result = $read->fetchAll();
+
+    /*       OR
+
+    $read = 'SELECT * FROM events WHERE ((start > ?))';
+    $stmt = $link->prepare($read);
+    $dateTime = dateTime(2021-03-01);
+    $stmt->bind_param("s",$dateTime);
+
+    $stmt->execute();    
+    $result = $stmt->fetchAll();
+
+    */
 
     class Event {}
     $events = array();
