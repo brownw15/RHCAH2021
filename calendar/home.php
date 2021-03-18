@@ -241,7 +241,7 @@
                 loadEvents();
 
                 function loadEvents() {
-                    dp.events.load("backend_events.php");
+                    dp.events.load("backendRead.php");
                 }
 
             </script>
@@ -270,6 +270,7 @@
         <div class="clear">
         </div>
 
+        
 </body>
 </html>
 
