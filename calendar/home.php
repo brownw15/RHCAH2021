@@ -123,7 +123,7 @@
 				
                 dp.onEventDeleted = function(args) {
                     if(access === "staff"){
-                    $.post("backend_delete.php",
+                    $.post("backendDelete.php",
                         {
                             id: args.e.id()
                         },

@@ -2,9 +2,9 @@
     session_start();
     include 'databaseConnection.php';
     
-    $move = 'UPDATE events SET start = ?, end = ? WHERE id = ?';
-    $stmt = $link->prepare($move);
-    $stmt->bind_param("ssi",$_POST['newStart'], $_POST['newEnd'], $_POST['id']);
+    $delete = 'DELETE FROM events WHERE id = ?';
+    $stmt = $link->prepare($delete);
+    $stmt->bind_param("i",$_POST['id']);
 
     if($stmt->execute()){
         class Result {}
