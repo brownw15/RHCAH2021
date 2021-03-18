@@ -2,11 +2,13 @@
     session_start();
     include 'databaseConnection.php';
     
-    $read = 'SELECT * FROM events WHERE NOT ((end <= ' . $_GET['start'] . ') OR (start >= ' . $_GET['end'] . '))';
+    $read = 'SELECT * FROM events WHERE ((start > 2021-03-01))';
     //$stmt = $link->prepare($read);
     //$stmt->bind_param("ss",$_GET['start'],$_GET['end']);
 
     $read->execute();
+    echo "<script>console.log('fail')</script>";
+    
     $result = $read->fetchAll();
 
     class Event {}
