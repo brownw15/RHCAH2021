@@ -2,9 +2,9 @@
     session_start();
     include 'databaseConnection.php';
     
-    $insert = 'INSERT INTO events (name,start,end) VALUES (?,?,?)';
-    $stmt = $link->prepare($insert);
-    $stmt->bind_param("sss",$_POST['name'], $_POST['start'], $_POST['end']);
+    $move = 'UPDATE events SET start = ?, end = ? WHERE id = ?';
+    $stmt = $link->prepare($move);
+    $stmt->bind_param("ssi",$_POST['newStart'], $_POST['newEnd'], $_POST['id']);
 
     if($stmt->execute()){
         class Result {}

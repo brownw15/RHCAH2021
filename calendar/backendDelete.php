@@ -2,9 +2,9 @@
     session_start();
     include 'databaseConnection.php';
     
-    $insert = 'INSERT INTO events (name,start,end) VALUES (?,?,?)';
-    $stmt = $link->prepare($insert);
-    $stmt->bind_param("sss",$_POST['name'], $_POST['start'], $_POST['end']);
+    $delete = 'DELETE FROM events WHERE id = ?';
+    $stmt = $link->prepare($delete);
+    $stmt->bind_param("i",$_POST['id']);
 
     if($stmt->execute()){
         class Result {}
