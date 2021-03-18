@@ -116,7 +116,7 @@
                 dp.eventDeleteHandling = "Update";
 
                // Nick Check this out
-                $("div").removeAttr("style");
+                //$("div").removeAttr("style");
 
 				//below are the main functions you can perform on the calendar
 				//each function comunicates data to the php backend functions to process
@@ -144,7 +144,7 @@
 
                 dp.onEventMoved = function(args) {
                     if(access === "staff"){
-                    $.post("backend_move.php",
+                    $.post("backendMove.php",
                             {
                                 id: args.e.id(),
                                 newStart: args.newStart.toString(),
@@ -169,7 +169,7 @@
 
                 dp.onEventResized = function(args) {
                     if(access === "staff"){
-                    $.post("backend_resize.php",
+                    $.post("backendResize.php",
                             {
                                 id: args.e.id(),
                                 newStart: args.newStart.toString(),
