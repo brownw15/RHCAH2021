@@ -1,10 +1,12 @@
 <?php
 
+// get if the connection file has already been created
 $db_exists = file_exists("databaseConnection.php");
 
 $db = new PDO('sqlite:daypilot.sqlite');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
+// if the database has not yet been created then it will be here
 if (!$db_exists) {
     //create the database
     $db->exec("CREATE TABLE IF NOT EXISTS events (
