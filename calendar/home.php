@@ -163,7 +163,7 @@
                 
                 dp.onEventDeleted = function(args) {
                     if(access === "staff"){
-                    $.post("backend_delete.php",
+                    $.post("backendDelete.php",
                         {
                             id: args.e.id()
                         },
@@ -184,7 +184,7 @@
 
                 dp.onEventMoved = function(args) {
                     if(access === "staff"){
-                    $.post("backend_move.php",
+                    $.post("backendMove.php",
                             {
                                 id: args.e.id(),
                                 newStart: args.newStart.toString(),
@@ -209,7 +209,7 @@
 
                 dp.onEventResized = function(args) {
                     if(access === "staff"){
-                    $.post("backend_resize.php",
+                    $.post("backendResize.php",
                             {
                                 id: args.e.id(),
                                 newStart: args.newStart.toString(),
@@ -230,6 +230,59 @@
                         console.log("Stats Updated.");
                     });
 
+                    }
+                };
+
+                // event creating
+                dp.onTimeRangeSelected = function(args) {
+                    if(access === "staff"){
+                    var name = prompt("New event name:", "Event");
+                    dp.clearSelection();
+                    if (!name) return;
+                    var e = new DayPilot.Event({
+                        start: args.start,
+                        end: args.end,
+                        id: DayPilot.guid(),
+                        resource: args.resource,
+                        text: name
+                    });
+                    dp.events.add(e);
+
+                    $.post("backendCreate.php",
+                            {
+                                start: args.start.toString(),
+                                end: args.end.toString(),
+                                name: name
+                            },
+                            function() {
+                                console.log("Created.");
+                            });
+                    
+                    var processURL = 'trackStats.php';
+                    var data = {'type': 'create',
+                                'start': args.start.toString(),
+                                'end': args.end.toString(),
+                                'eventId': DayPilot.guid(),
+                                'eventName': name
+                                };
+                    $.post(processURL, data, function(response){
+                        console.log("Stats Updated.");
+                    });
+
+                    }
+
+                };
+
+                dp.onEventClick = function(args) {
+                    alert("clicked: " + args.e.id());
+                };
+
+                dp.init();
+
+                loadEvents();
+
+                function loadEvents() {
+                    dp.events.load("backendRead.php");
                 }
             };
               // event creating
