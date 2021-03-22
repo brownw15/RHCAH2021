@@ -1,11 +1,17 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import "reset";
+@import "redpurple";
+@import "cal";
+@import "calgreen";
+@import "calg";
+@import "caltraditional";
 
 // Set your brand colors
 $red: #CC003D;
-$gray: #54425D;
-$blue: #0023DC;
+$gray: #050505;
+$blue: #0025dc9f;
 $green: #94D50C;
 $purple: #4D3BFF;
 $orange:#FF5917;
@@ -15,16 +21,16 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
 
 // Update Bulma's global variables
 $family-primary: $family-sans-serif;
-$family-secondary: "Roboto", "Times New Roman", sans-serif;
+$family-secondary: "Roboto", "Nunito", "Times New Roman", sans-serif;
 $primary: $red;
-$link: $blue;
-$info: $gray;
-$success: $green;
-$warning: $orange;
-$background: $grey-dark;
-$text-strong: $gray;
-$widescreen-enabled: true;
-$fullhd-enabled: false;
+  $link: $blue;
+  $info: $gray;
+  $success: $green;
+  $warning: $orange;
+  $background: $grey-dark;
+  $text-strong: $gray;
+  $widescreen-enabled: true;
+  $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
 $body-background-color: $grey-dark;
@@ -32,5 +38,14 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+.remove-all-styles {
+    all: revert;
+  }
+
+.calendar-widget {
+  float: right;
+}
+
 @import "../bulma/sass/utilities/_all.sass";
 @import "../bulma/bulma.sass";
+

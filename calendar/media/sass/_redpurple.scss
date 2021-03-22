@@ -1,0 +1,48 @@
+/* 
+DayPilot Navigator Theme 
+https://themes.daypilot.org/navigator/theme/p3or4r
+Theme Designer Version: 2020.11.14.39354
+*/
+.navigator_default_main { border-left: 1px solid #858d94;border-right: 1px solid #858d94;border-bottom: 1px solid #858d94; font-family: Nunito, Roboto, sans-serif; font-size: 12px; }
+.navigator_default_main *, .navigator_default_main *:before, .navigator_default_main *:after { box-sizing: border-box; }
+.navigator_default_line { border-bottom: 1px solid #858d94; }
+/* month header */ 
+.navigator_default_title, .navigator_default_titleleft, .navigator_default_titleright { 
+	border-top: 1px solid #858d94;
+	color: #ffffff;
+	background: #54425d;
+}
+.navigator_default_title { text-align: center; }
+.navigator_default_titleleft, .navigator_default_titleright { text-align: center; }
+/* day headers */
+.navigator_default_dayheader { 
+	color: #ffffff;
+	background: #870000;
+	padding: 0px;
+	text-align: center;
+}
+/* day cells */
+.navigator_default_cell { 
+	color: #000000;
+	background: #ffffff;
+	text-align: center;
+}
+.navigator_default_cell_text {
+	padding: 0px;
+}
+.navigator_default_weeknumber { 
+	color: #000000;
+	background: #ffffff;
+	text-align: center;
+	padding: 0px;
+}
+.navigator_default_weekend { 
+	color: #000000;
+	background: #f0f0f0;
+	text-align: center;
+	padding: 0px;
+}
+.navigator_default_dayother { color: gray; }
+.navigator_default_todaybox { border: 1px solid red; }
+.navigator_default_busy { font-weight: bold; }
+.navigator_default_select .navigator_default_cell_box { background-color: #870000; opacity: 0.5; }

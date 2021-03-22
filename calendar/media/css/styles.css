@@ -1,4 +1,2203 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+/* line 1, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this,
+.reset-this a,
+.reset-this abbr,
+.reset-this address,
+.reset-this area,
+.reset-this article,
+.reset-this aside,
+.reset-this div,
+.reset-this kbd,
+.reset-this keygen,
+.reset-this label,
+.reset-this legend,
+.reset-this li,
+.reset-this link,
+.reset-this map,
+.reset-this mark,
+.reset-this menu,
+.reset-this meta,
+.reset-this meter,
+.reset-this nav,
+.reset-this noscript,
+.reset-this object,
+.reset-this ol,
+.reset-this optgroup,
+.reset-this option,
+.reset-this output,
+.reset-this p,
+.reset-this param,
+.reset-this pre,
+.reset-this progress,
+.reset-this q,
+.reset-this rp,
+.reset-this rt,
+.reset-this ruby,
+.reset-this s,
+.reset-this samp,
+.reset-this script,
+.reset-this section,
+.reset-this select,
+.reset-this small,
+.reset-this source,
+.reset-this span,
+.reset-this strong,
+.reset-this style,
+.reset-this sub,
+.reset-this summary,
+.reset-this sup,
+.reset-this table,
+.reset-this tbody,
+.reset-this td,
+.reset-this textarea,
+.reset-this tfoot,
+.reset-this th,
+.reset-this thead,
+.reset-this time,
+.reset-this title,
+.reset-this tr,
+.reset-this track,
+.reset-this u,
+.reset-this ul,
+.reset-this var,
+.reset-this video,
+.reset-this wbr {
+  animation: none;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-duration: 0;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+  animation-name: none;
+  animation-play-state: running;
+  animation-timing-function: ease;
+  backface-visibility: visible;
+  background: 0;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: none;
+  background-origin: padding-box;
+  background-position: 0 0;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  border: 0;
+  border-style: none;
+  border-width: medium;
+  border-color: inherit;
+  border-bottom: 0;
+  border-bottom-color: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-collapse: separate;
+  border-image: none;
+  border-left: 0;
+  border-left-color: inherit;
+  border-left-style: none;
+  border-left-width: medium;
+  border-radius: 0;
+  border-right: 0;
+  border-right-color: inherit;
+  border-right-style: none;
+  border-right-width: medium;
+  border-spacing: 0;
+  border-top: 0;
+  border-top-color: inherit;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-style: none;
+  border-top-width: medium;
+  bottom: auto;
+  box-shadow: none;
+  box-sizing: content-box;
+  caption-side: top;
+  clear: none;
+  clip: auto;
+  color: inherit;
+  columns: auto;
+  column-count: auto;
+  column-fill: balance;
+  column-gap: normal;
+  column-rule: medium none currentColor;
+  column-rule-color: currentColor;
+  column-rule-style: none;
+  column-rule-width: none;
+  column-span: 1;
+  column-width: auto;
+  content: normal;
+  counter-increment: none;
+  counter-reset: none;
+  cursor: auto;
+  direction: ltr;
+  display: inline;
+  empty-cells: show;
+  float: none;
+  font: normal;
+  font-family: inherit;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: auto;
+  hyphens: none;
+  left: auto;
+  letter-spacing: normal;
+  line-height: normal;
+  list-style: none;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: disc;
+  margin: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  orphans: 0;
+  outline: 0;
+  outline-color: invert;
+  outline-style: none;
+  outline-width: medium;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: auto;
+  perspective: none;
+  perspective-origin: 50% 50%;
+  position: static;
+  /* May need to alter quotes for different locales (e.g fr) */
+  quotes: '\201C' '\201D' '\2018' '\2019';
+  right: auto;
+  tab-size: 8;
+  table-layout: auto;
+  text-align: inherit;
+  text-align-last: auto;
+  text-decoration: none;
+  text-decoration-color: inherit;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  top: auto;
+  transform: none;
+  transform-style: flat;
+  transition: none;
+  transition-delay: 0s;
+  transition-duration: 0s;
+  transition-property: none;
+  transition-timing-function: ease;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: visible;
+  white-space: normal;
+  widows: 0;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto; }
+
+/* line 213, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this html {
+  display: block; }
+
+/* line 216, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this head,
+.reset-this link,
+.reset-this meta,
+.reset-this script,
+.reset-this style,
+.reset-this title {
+  display: none; }
+
+/* line 224, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this body {
+  display: block;
+  margin: 8px; }
+
+/* line 228, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 1em 0; }
+
+/* line 236, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this address,
+.reset-this article,
+.reset-this aside,
+.reset-this div,
+.reset-this footer,
+.reset-this header,
+.reset-this hgroup,
+.reset-this layer,
+.reset-this main,
+.reset-this nav,
+.reset-this section {
+  display: block; }
+
+/* line 249, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this marquee {
+  display: inline-block;
+  overflow: -webkit-marquee; }
+
+/* line 253, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this blockquote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin: 1em 40px; }
+
+/* line 261, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this figcaption {
+  display: block; }
+
+/* line 264, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this figure {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin: 1em 40px; }
+
+/* line 272, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this q {
+  display: inline; }
+
+/* line 275, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this q::before {
+  content: open-quote; }
+
+/* line 278, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this q::after {
+  content: close-quote; }
+
+/* line 281, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this center {
+  display: block;
+  text-align: -webkit-center; }
+
+/* line 285, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0.5em auto;
+  border-style: inset;
+  border-width: 1px; }
+
+/* line 295, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this video {
+  object-fit: contain; }
+
+/* line 298, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 0.67em 0;
+  font-weight: bold; }
+
+/* line 308, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) h1 {
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin: 0.83em 0; }
+
+/* line 317, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) h1 {
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin: 1em 0; }
+
+/* line 329, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) h1 {
+  font-size: 1.00em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin: 1.33em 0; }
+
+/* line 344, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) h1 {
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin: 1.67em 0; }
+
+/* line 362, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) :matches(article,
+.reset-this aside,
+.reset-this nav,
+.reset-this section) h1 {
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin: 2.33em 0; }
+
+/* line 383, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 0.83em 0;
+  font-weight: bold; }
+
+/* line 393, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 1em 0;
+  font-weight: bold; }
+
+/* line 403, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this h4 {
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 1.33em 0;
+  font-weight: bold; }
+
+/* line 412, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this h5 {
+  display: block;
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 1.67em 0;
+  font-weight: bold; }
+
+/* line 422, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this h6 {
+  display: block;
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 2.33em 0;
+  font-weight: bold; }
+
+/* line 432, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray; }
+
+/* line 438, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+/* line 443, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+/* line 448, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this tfoot {
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+/* line 453, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this table > tr {
+  vertical-align: middle; }
+
+/* line 456, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this col {
+  display: table-column; }
+
+/* line 459, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this colgroup {
+  display: table-column-group; }
+
+/* line 462, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit; }
+
+/* line 467, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this td,
+.reset-this th {
+  display: table-cell;
+  vertical-align: inherit; }
+
+/* line 472, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this th {
+  font-weight: bold; }
+
+/* line 475, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this caption {
+  display: table-caption;
+  text-align: -webkit-center; }
+
+/* line 479, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ul,
+.reset-this menu,
+.reset-this dir {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 1em 0;
+  padding-left: 40px;
+  padding: 40px; }
+
+/* line 492, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ol {
+  display: block;
+  list-style-type: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 1em 0;
+  padding-left: 40px;
+  padding-left: 40px; }
+
+/* line 503, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this li {
+  display: list-item;
+  text-align: -webkit-match-parent; }
+
+/* line 507, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ul ul,
+.reset-this ol ul {
+  list-style-type: circle; }
+
+/* line 511, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ol ol ul,
+.reset-this ol ul ul,
+.reset-this ul ol ul,
+.reset-this ul ul ul {
+  list-style-type: square; }
+
+/* line 517, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this dd {
+  display: block;
+  margin-left: 40px;
+  margin-left: 40px; }
+
+/* line 522, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this dl {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0; }
+
+/* line 529, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this dt {
+  display: block; }
+
+/* line 532, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ol ul,
+.reset-this ul ol,
+.reset-this ul ul,
+.reset-this ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0; }
+
+/* line 541, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this form {
+  display: block;
+  margin-top: 0em; }
+
+/* line 545, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this label {
+  cursor: default; }
+
+/* line 548, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this legend {
+  display: block;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border: none; }
+
+/* line 556, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  -webkit-padding-before: 0.35em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  -webkit-padding-after: 0.625em;
+  border: 2px groove ThreeDFace;
+  min-width: -webkit-min-content; }
+
+/* line 567, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this button {
+  -webkit-appearance: button; }
+
+/* line 570, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input,
+.reset-this textarea,
+.reset-this keygen,
+.reset-this select,
+.reset-this button,
+.reset-this isindex,
+.reset-this meter,
+.reset-this progress {
+  -webkit-writing-mode: horizontal-tb !important; }
+
+/* line 580, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input,
+.reset-this textarea,
+.reset-this keygen,
+.reset-this select,
+.reset-this button,
+.reset-this isindex {
+  margin: 0em;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start; }
+
+/* line 597, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="hidden"] {
+  display: none; }
+
+/* line 600, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input,
+.reset-this input:matches([type="password"],
+.reset-this [type="search"]),
+.reset-this isindex {
+  -webkit-appearance: textfield;
+  background-color: white;
+  border: 2px inset;
+  padding: 1px;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  cursor: auto; }
+
+/* line 612, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="search"] {
+  -webkit-appearance: searchfield;
+  box-sizing: border-box; }
+
+/* line 616, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input::-webkit-textfield-decoration-container {
+  display: flex;
+  align-items: center;
+  content: none !important; }
+
+/* line 621, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="search"]::-webkit-textfield-decoration-container {
+  direction: ltr; }
+
+/* line 624, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input::-webkit-clear-button {
+  -webkit-appearance: searchfield-cancel-button;
+  display: inline-block;
+  flex: none;
+  margin-left: 2px; }
+
+/* line 630, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+  display: block;
+  flex: none;
+  align-self: flex-start;
+  margin: auto 0; }
+
+/* line 637, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: searchfield-decoration;
+  display: block;
+  flex: none;
+  align-self: flex-start;
+  margin: auto 0; }
+
+/* line 644, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: searchfield-results-decoration;
+  display: block;
+  flex: none;
+  align-self: flex-start;
+  margin: auto 0; }
+
+/* line 651, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="search"]::-webkit-search-results-button {
+  -webkit-appearance: searchfield-results-button;
+  display: block;
+  flex: none; }
+
+/* line 656, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button;
+  display: block;
+  position: relative;
+  cursor: default;
+  height: 1.5em;
+  vertical-align: top;
+  flex: none;
+  -webkit-user-select: none; }
+
+/* line 666, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input::-webkit-auto-fill-button {
+  -webkit-mask-image: -webkit-image-set(url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAAAXNSR0IB2cksfwAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAADyWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDx4bXA6TW9kaWZ5RGF0ZT4yMDE1LTA0LTAzVDE2OjA2OjI1PC94bXA6TW9kaWZ5RGF0ZT4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8eG1wOkNyZWF0ZURhdGU+MjAxNS0wNC0wM1QxNjowMzoxNjwveG1wOkNyZWF0ZURhdGU+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyPC90aWZmOllSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpSZXNvbHV0aW9uVW5pdD4yPC90aWZmOlJlc29sdXRpb25Vbml0PgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjwvdGlmZjpYUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT4xPC9leGlmOkNvbG9yU3BhY2U+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj4xNTwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4xMjwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoz37ZdAAAA5ElEQVQoFY2RsQ5BQRBFd9EgEYXv8QlaEqVGpfUPao3oKXyEQiJI1ERESaGmwnPu2k2QJ2uS82Z2du7s7jyTJInBWnCABeygoXwM6kwN1GELFo7wgOo/4gmFEovzWzyMiTMUlyFYJQT4wlucGko8T90xZv0j/5EusVpCuLr8FPK6NraHPmT8Oks8gI2bKEEOZhAauEJf3PX5Eb4ImpEG2gni0NWJvwdFYRvuoIHeoOUa++56+wpSxb6myf4J6qG5VWCt1ckPvHsksf531HSiDJ1VV9n15eJfJ+YkvWcMF+jFZa+KJ554xIc+jempAAAAAElFTkSuQmCC") 1x, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAYCAYAAADtaU2/AAAAAXNSR0IB2cksfwAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAADyWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDx4bXA6TW9kaWZ5RGF0ZT4yMDE1LTA0LTAzVDE2OjA2OjIxPC94bXA6TW9kaWZ5RGF0ZT4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8eG1wOkNyZWF0ZURhdGU+MjAxNS0wNC0wM1QxNjowMzoyNTwveG1wOkNyZWF0ZURhdGU+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyPC90aWZmOllSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpSZXNvbHV0aW9uVW5pdD4yPC90aWZmOlJlc29sdXRpb25Vbml0PgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjwvdGlmZjpYUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT4xPC9leGlmOkNvbG9yU3BhY2U+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj4zMDwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4yNDwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpGMDB3AAAB8UlEQVRIDbVWO07DQBS0QSJUNJQcAloOQMEZ6InSUMEBkFJEQihQkQKJklQUlFBQQoH4SHAKJDokAgIz4+wLs5u15RjypOF9dvaN197dkCS/NodwC7gG3hxuXI1jUcuyLKkDa7aE4B7IHM7hCcs5Rs6Y1RHlHBpXo6JXeXX45xLOxB8QN2QsD+sKz2B2E1iRhqnEsxIvI96U/M8hv6mtyjxXehGpk+tZ3RVzdQOgcPN4KkPuvNbse2mtSsxXPYl9TkIu41L4rowQjD0Fee2UwqcTzA65/TRNB0CzSg/ygHegT34D4FGxjVXkHx0XbmQfiIzfKtto4LWEy3m58XLQs2zNzPPByAltGwXj0EfFUecbUd4O8pFxZ98CSrC4bNfvypxvxBu6cubAl3DaRSfBxNRjXtxckw5GjU+RXJweUNGOPRTqnrWRWQP1HkkTaRSK98CLioYr5vV4BqigxarlxSbsmu0XzO8qLxRmw/WCiRyLmjYEgTfhEWAPTM88VV4ozDP9HEyyBijHLdKQ4l2AR+YAGBMNhcFJVgETU8+xqIXCVXNtxm9cdJyU58VVhUKe/khwB+55XaeYqDC/zdoUtbzWFDPj7fQCLFjB+Vf4xaA2SvkK65iumLvwJNLkOFL79xJXfQhwlQTjsnu61r+2fEs/b4ZbzrEPMzEAAAAASUVORK5CYII=") 2x);
+  -webkit-mask-size: 15px 12px;
+  width: 15px;
+  height: 12px;
+  margin-left: 3px;
+  margin-right: 2px;
+  background-color: black;
+  flex: none;
+  -webkit-user-select: none; }
+
+/* line 677, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input::-webkit-auto-fill-button:hover {
+  background-color: #007aff; }
+
+/* line 680, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input::-webkit-auto-fill-button:active {
+  background-color: #003cdb; }
+
+/* line 683, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input::-webkit-caps-lock-indicator {
+  -webkit-appearance: caps-lock-indicator;
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"><path fill="black" fill-opacity="0.4" d="M12.5 0.5A 4 4 0 0 1 16.5 4.5L 16.5 12.5A 4 4 0 0 1 12.5 16.5L 4.5 16.5A 4 4 0 0 1 0.5 12.5L 0.5 4.5A 4 4 0 0 1 4.5 0.5L 12.5 0.5M 8.5 2L 4 7L 6.25 7L 6.25 10.25L 10.75 10.25L 10.75 7L 13 7L 8.5 2M 10.75 12L 6.25 12L 6.25 14.25L 10.75 14.25L 10.75 12"/></svg>');
+  align-self: stretch;
+  flex: none;
+  -webkit-user-select: none; }
+
+/* line 690, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this keygen,
+.reset-this select {
+  border-radius: 5px; }
+
+/* line 694, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this keygen::-webkit-keygen-select {
+  margin: 0px; }
+
+/* line 697, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this textarea {
+  -webkit-appearance: textarea;
+  -webkit-nbsp-mode: space;
+  -webkit-line-break: after-white-space;
+  flex-direction: column;
+  resize: auto;
+  cursor: auto;
+  padding: 2px;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/* line 708, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ::-webkit-input-placeholder {
+  -webkit-text-security: none;
+  color: darkGray;
+  pointer-events: none !important; }
+
+/* line 713, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input::-webkit-input-placeholder,
+.reset-this isindex::-webkit-input-placeholder {
+  white-space: pre;
+  word-wrap: normal;
+  overflow: hidden; }
+
+/* line 719, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="password"] {
+  -webkit-text-security: disc !important; }
+
+/* line 722, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input:matches([type="hidden"],
+.reset-this [type="image"],
+.reset-this [type="file"]) {
+  -webkit-appearance: initial;
+  padding: initial;
+  background-color: initial;
+  border: initial; }
+
+/* line 730, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="file"] {
+  align-items: baseline;
+  color: inherit;
+  text-align: start !important; }
+
+/* line 735, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input:-webkit-autofill {
+  background-color: #FAFFBD !important;
+  background-image: none !important;
+  color: #000000 !important; }
+
+/* line 740, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input:matches([type="radio"],
+.reset-this [type="checkbox"]) {
+  margin: 3px 2px;
+  padding: initial;
+  background-color: initial;
+  border: initial; }
+
+/* line 747, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input:matches([type="button"],
+.reset-this [type="submit"],
+.reset-this [type="reset"]) {
+  -webkit-appearance: push-button;
+  white-space: pre; }
+
+/* line 753, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="file"]::-webkit-file-upload-button {
+  -webkit-appearance: push-button;
+  white-space: nowrap;
+  margin: 0;
+  font-size: inherit; }
+
+/* line 759, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input:matches([type="button"],
+.reset-this [type="submit"],
+.reset-this [type="reset"]),
+.reset-this input[type="file"]::-webkit-file-upload-button,
+.reset-this button {
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: ButtonText;
+  padding: 0 1.0em;
+  border: 1px solid #4c4c4c;
+  background-color: rgba(255, 255, 255, 0.01);
+  font: 11px Helvetica;
+  box-sizing: border-box; }
+
+/* line 774, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input:matches([type="button"],
+.reset-this [type="submit"],
+.reset-this [type="reset"]):active,
+.reset-this input[type="file"]::-webkit-file-upload-button:active,
+.reset-this button:active {
+  color: ActiveButtonText; }
+
+/* line 781, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="range"] {
+  -webkit-appearance: slider-horizontal;
+  padding: initial;
+  border: initial;
+  margin: 2px;
+  color: #909090; }
+
+/* line 788, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="range"]::-webkit-slider-container,
+.reset-this input[type="range"]::-webkit-media-slider-container {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  align-contents: center; }
+
+/* line 795, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="range"]::-webkit-slider-runnable-track {
+  flex: 1;
+  align-self: center;
+  box-sizing: border-box;
+  display: block; }
+
+/* line 801, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="range"]::-webkit-slider-thumb,
+.reset-this input[type="range"]::-webkit-media-slider-thumb {
+  -webkit-appearance: sliderthumb-horizontal;
+  box-sizing: border-box;
+  display: block; }
+
+/* line 807, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input:matches([type="button"],
+.reset-this [type="submit"],
+.reset-this [type="reset"]):disabled,
+.reset-this input[type="file"]:disabled::-webkit-file-upload-button,
+.reset-this button:disabled,
+.reset-this select:disabled,
+.reset-this keygen:disabled,
+.reset-this optgroup:disabled,
+.reset-this option:disabled,
+.reset-this select[disabled] > option {
+  color: GrayText; }
+
+/* line 819, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this area,
+.reset-this param {
+  display: none; }
+
+/* line 823, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  border-radius: 5px;
+  width: 16px;
+  height: 16px;
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0.01); }
+
+/* line 831, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this select {
+  box-sizing: border-box;
+  -webkit-appearance: menulist;
+  border: 1px solid;
+  color: black;
+  background-color: white;
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  cursor: default; }
+
+/* line 842, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this optgroup {
+  font-weight: bolder; }
+
+/* line 845, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this option {
+  font-weight: normal; }
+
+/* line 848, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this output {
+  display: inline; }
+
+/* line 851, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ::-webkit-validation-bubble {
+  display: inline-block;
+  z-index: 2147483647;
+  position: absolute;
+  opacity: 0.95;
+  line-height: 0;
+  margin: 0;
+  -webkit-text-security: none;
+  transition: opacity 05.5s ease; }
+
+/* line 861, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ::-webkit-validation-bubble-message {
+  display: flex;
+  position: relative;
+  top: -4px;
+  font: message-box;
+  color: black;
+  min-width: 50px;
+  max-width: 200px;
+  border: solid 2px #400;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8ecec), to(#e8cccc));
+  padding: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 4px 4px 4px rgba(100, 100, 100, 0.6), inset -2px -2px 1px #d0c4c4, inset 2px 2px 1px white;
+  line-height: normal;
+  white-space: normal;
+  z-index: 2147483644; }
+
+/* line 878, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ::-webkit-validation-bubble-text-block {
+  flex: 1; }
+
+/* line 881, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ::-webkit-validation-bubble-heading {
+  font-weight: bold; }
+
+/* line 884, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ::-webkit-validation-bubble-arrow {
+  display: inline-block;
+  position: relative;
+  left: 32px;
+  width: 16px;
+  height: 16px;
+  background-color: #f8ecec;
+  border-width: 2px 0 0 2px;
+  border-style: solid;
+  border-color: #400;
+  box-shadow: inset 2px 2px 1px white;
+  -webkit-transform-origin: 0 0;
+  transform: rotate(45deg);
+  z-index: 2147483645; }
+
+/* line 899, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ::-webkit-validation-bubble-arrow-clipper {
+  display: block;
+  overflow: hidden;
+  height: 16px; }
+
+/* line 904, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this progress {
+  -webkit-appearance: progress-bar;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 1em;
+  width: 10em;
+  vertical-align: -0.2em; }
+
+/* line 912, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this progress::-webkit-progress-inner-element {
+  -webkit-appearance: inherit;
+  box-sizing: inherit;
+  height: 100%;
+  width: 100%; }
+
+/* line 918, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this progress::-webkit-progress-bar {
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; }
+
+/* line 924, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this progress::-webkit-progress-value {
+  background-color: green;
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box; }
+
+/* line 930, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this u,
+.reset-this ins {
+  text-decoration: underline; }
+
+/* line 934, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this strong,
+.reset-this b {
+  font-weight: bold; }
+
+/* line 938, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this i,
+.reset-this cite,
+.reset-this em,
+.reset-this var,
+.reset-this address,
+.reset-this dfn {
+  font-style: italic; }
+
+/* line 946, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this tt,
+.reset-this code,
+.reset-this kbd,
+.reset-this samp {
+  font-family: monospace; }
+
+/* line 952, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this pre,
+.reset-this xmp,
+.reset-this plaintext,
+.reset-this listing {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0; }
+
+/* line 961, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this mark {
+  background-color: yellow;
+  color: black; }
+
+/* line 965, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this big {
+  font-size: larger; }
+
+/* line 968, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this small {
+  font-size: smaller; }
+
+/* line 971, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this s,
+.reset-this strike,
+.reset-this del {
+  text-decoration: line-through; }
+
+/* line 976, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this sub {
+  vertical-align: sub;
+  font-size: smaller; }
+
+/* line 980, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this sup {
+  vertical-align: super;
+  font-size: smaller; }
+
+/* line 984, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this nobr {
+  white-space: nowrap; }
+
+/* line 987, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this :focus {
+  outline: auto; }
+
+/* line 990, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this html:focus,
+.reset-this body:focus,
+.reset-this input[readonly]:focus,
+.reset-this applet:focus,
+.reset-this embed:focus,
+.reset-this iframe:focus,
+.reset-this object:focus {
+  outline: none; }
+
+/* line 999, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this input:matches([type="button"],
+.reset-this [type="checkbox"],
+.reset-this [type="file"],
+.reset-this [type="hidden"],
+.reset-this [type="image"],
+.reset-this [type="radio"],
+.reset-this [type="reset"],
+.reset-this [type="search"],
+.reset-this [type="submit"]):focus,
+.reset-this input[type="file"]:focus::-webkit-file-upload-button {
+  outline-offset: 0; }
+
+/* line 1011, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this a:any-link {
+  color: -webkit-link;
+  text-decoration: underline;
+  cursor: auto; }
+
+/* line 1016, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this a:any-link:active {
+  color: -webkit-activelink; }
+
+/* line 1019, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ruby,
+.reset-this rt {
+  text-indent: 0; }
+
+/* line 1023, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this rt {
+  line-height: normal;
+  -webkit-text-emphasis: none; }
+
+/* line 1027, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ruby > rt {
+  display: block;
+  font-size: -webkit-ruby-text;
+  text-align: start; }
+
+/* line 1032, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ruby > rp {
+  display: none; }
+
+/* line 1035, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this noframes {
+  display: none; }
+
+/* line 1038, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this frameset,
+.reset-this frame {
+  display: block; }
+
+/* line 1042, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this frameset {
+  border-color: inherit; }
+
+/* line 1045, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this iframe {
+  border: 2px inset; }
+
+/* line 1048, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this details {
+  display: block; }
+
+/* line 1051, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this summary {
+  display: block; }
+
+/* line 1054, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this summary::-webkit-details-marker {
+  display: inline-block;
+  width: 0.66em;
+  height: 0.66em;
+  margin-right: 0.4em; }
+
+/* line 1060, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this bdi,
+.reset-this output {
+  unicode-bidi: -webkit-isolate; }
+
+/* line 1064, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this bdo {
+  unicode-bidi: bidi-override; }
+
+/* line 1067, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_reset.scss */
+.reset-this ol li {
+  list-style-type: decimal; }
+
+/* 
+DayPilot Navigator Theme 
+https://themes.daypilot.org/navigator/theme/p3or4r
+Theme Designer Version: 2020.11.14.39354
+*/
+/* line 6, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_main {
+  border-left: 1px solid #858d94;
+  border-right: 1px solid #858d94;
+  border-bottom: 1px solid #858d94;
+  font-family: Nunito, Roboto, sans-serif;
+  font-size: 12px; }
+
+/* line 7, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_main *, .navigator_default_main *:before, .navigator_default_main *:after {
+  box-sizing: border-box; }
+
+/* line 8, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_line {
+  border-bottom: 1px solid #858d94; }
+
+/* month header */
+/* line 10, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_title, .navigator_default_titleleft, .navigator_default_titleright {
+  border-top: 1px solid #858d94;
+  color: #ffffff;
+  background: #54425d; }
+
+/* line 15, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_title {
+  text-align: center; }
+
+/* line 16, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_titleleft, .navigator_default_titleright {
+  text-align: center; }
+
+/* day headers */
+/* line 18, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_dayheader {
+  color: #ffffff;
+  background: #870000;
+  padding: 0px;
+  text-align: center; }
+
+/* day cells */
+/* line 25, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_cell {
+  color: #000000;
+  background: #ffffff;
+  text-align: center; }
+
+/* line 30, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_cell_text {
+  padding: 0px; }
+
+/* line 33, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_weeknumber {
+  color: #000000;
+  background: #ffffff;
+  text-align: center;
+  padding: 0px; }
+
+/* line 39, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_weekend {
+  color: #000000;
+  background: #f0f0f0;
+  text-align: center;
+  padding: 0px; }
+
+/* line 45, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_dayother {
+  color: gray; }
+
+/* line 46, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_todaybox {
+  border: 1px solid red; }
+
+/* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_busy {
+  font-weight: bold; }
+
+/* line 48, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_redpurple.scss */
+.navigator_default_select .navigator_default_cell_box {
+  background-color: #870000;
+  opacity: 0.5; }
+
+/* calendar white */
+/* line 3, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_main {
+  border: 1px solid #999; }
+
+/* line 12, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_scroll_up {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAB3RJTUUH2wESDiYcrhwCiQAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAARnQU1BAACxjwv8YQUAAACcSURBVHjaY2AgF9wWsTW6yGMlhi7OhC7AyMDQzMnBXIpFHAFuCtuaMTP+P8nA8P/b1x//FfW/HHuF1UQmxv+NUP1c3OxMVVhNvCVi683E8H8LXOY/w9+fTH81tF8fv4NiIpBRj+YoZtZ/LDUoJmKYhsVUpv0MDiyMDP96sIYV0FS2/8z9ICaLlOhvS4b/jC//MzC8xBG0vJeF7GQBlK0xdiUzCtsAAAAASUVORK5CYII=); }
+
+/* line 16, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_scroll_down {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAACqSURBVChTY7wpam3L9J+xmQEP+PGPKZZxP4MDi4zI78uMDIwa2NT+Z2DYovrmiC+TI8OBP/8ZmEqwGvif4e8vxr+FIDkmEKH25vBWBgbG0+iK/zEwLtF+ffwOXCGI8Y+BoRFFIdC030x/WmBiYBNhpgLdswNJ8RSYaSgmgk39z1gPUfj/29ef/9rwhQTDHRHbrbdEbLvRFcGthkkAra/9/uMvhkK8piNLAgCRpTnNn4AEmAAAAABJRU5ErkJggg==); }
+
+/* line 20, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_rowheader_inner,
+.calendar_white_cornerright_inner,
+.calendar_white_corner_inner,
+.calendar_white_colheader_inner,
+.calendar_white_alldayheader_inner {
+  color: #666;
+  background: #eee;
+  background: -moz-linear-gradient(top, #eee 0%, #ddd);
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#eeeeee", endColorStr="#dddddd"); }
+
+/* line 40, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_cornerright_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-bottom: 1px solid #999; }
+
+/* line 50, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_rowheader_inner {
+  font-size: 16pt;
+  text-align: right;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999; }
+
+/* line 64, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_corner_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999; }
+
+/* line 75, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_rowheader_minutes {
+  font-size: 10px;
+  vertical-align: super;
+  padding-left: 2px;
+  padding-right: 2px; }
+
+/* line 83, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_colheader_inner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999; }
+
+/* line 96, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_cell_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff; }
+
+/* line 108, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_alldayheader_inner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999; }
+
+/* line 121, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_message {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  padding: 10px;
+  color: #ffffff;
+  background: #ffa216;
+  background: -moz-linear-gradient(top, #ffa216 0%, #ff8400);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffa216), to(#ff8400));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#ffa216", endColorStr="#ff8400"); }
+
+/* line 140, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_alldayevent_inner,
+.calendar_white_event_inner {
+  color: #666;
+  background: #fff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #eee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eee));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#ffffff", endColorStr="#eeeeee");
+  border: 1px solid #999;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8); }
+
+/* line 169, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_selected .calendar_white_event_inner {
+  background: #ddd; }
+
+/* line 174, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_alldayevent_inner {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 1px;
+  padding: 2px;
+  margin-right: 1px;
+  font-size: 12px; }
+
+/* line 187, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_event_withheader .calendar_white_event_inner {
+  padding-top: 15px; }
+
+/* line 192, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_event {
+  cursor: default; }
+
+/* line 197, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_event_inner {
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  bottom: 2px;
+  left: 2px;
+  right: 0px;
+  padding: 2px;
+  font-size: 12px; }
+
+/* line 211, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_shadow_inner {
+  background-color: #666666;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  height: 100%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+/* line 223, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_event_delete {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjExR/NCNwAAAI5JREFUKFNtkLERgCAMRbmzdK8s4gAUlhYOYEHJEJYOYOEwDmGBPxC4kOPfvePy84MGR0RJ2N1A8H3N6DATwSQ57m2ql8NBG+AEM7D+UW+wjdfUPgerYNgB5gOLRHqhcasg84C2QxPMtrUhSqQIhg7ypy9VM2EUZPI/4rQ7rGxqo9sadTegw+UdjeDLAKUfhbaQUVPIfJYAAAAASUVORK5CYII=) center center no-repeat;
+  opacity: 0.6;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=60)';
+  cursor: pointer; }
+
+/* line 230, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_event_delete:hover {
+  opacity: 1;
+  -ms-filter: none; }
+
+/* line 235, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_scroll_up {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAB3RJTUUH2wESDiYcrhwCiQAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAARnQU1BAACxjwv8YQUAAACcSURBVHjaY2AgF9wWsTW6yGMlhi7OhC7AyMDQzMnBXIpFHAFuCtuaMTP+P8nA8P/b1x//FfW/HHuF1UQmxv+NUP1c3OxMVVhNvCVi683E8H8LXOY/w9+fTH81tF8fv4NiIpBRj+YoZtZ/LDUoJmKYhsVUpv0MDiyMDP96sIYV0FS2/8z9ICaLlOhvS4b/jC//MzC8xBG0vJeF7GQBlK0xdiUzCtsAAAAASUVORK5CYII=); }
+
+/* line 239, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_scroll_down {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAACqSURBVChTY7wpam3L9J+xmQEP+PGPKZZxP4MDi4zI78uMDIwa2NT+Z2DYovrmiC+TI8OBP/8ZmEqwGvif4e8vxr+FIDkmEKH25vBWBgbG0+iK/zEwLtF+ffwOXCGI8Y+BoRFFIdC030x/WmBiYBNhpgLdswNJ8RSYaSgmgk39z1gPUfj/29ef/9rwhQTDHRHbrbdEbLvRFcGthkkAra/9/uMvhkK8piNLAgCRpTnNn4AEmAAAAABJRU5ErkJggg==); }
+
+/* line 243, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_now {
+  background-color: red; }
+
+/* line 244, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_cal.scss */
+.calendar_white_now:before {
+  content: '';
+  top: -5px;
+  border-width: 5px;
+  border-color: transparent transparent transparent red;
+  border-style: solid;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  -moz-transform: scale(0.9999); }
+
+/* calendar full */
+/* line 3, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_main {
+  border: 1px solid #999; }
+
+/* line 12, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_cornerright_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-bottom: 1px solid #999;
+  color: #ffffff;
+  background: #666;
+  background: -moz-linear-gradient(top, #777 0%, #666);
+  background: -webkit-gradient(linear, left top, left bottom, from(#777), to(#666));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#777777", endColorStr="#666666");
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.3); }
+
+/* line 38, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_rowheader_inner {
+  font-size: 16pt;
+  text-align: right;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  color: #ffffff;
+  background: #666;
+  background: -moz-linear-gradient(top, #777 0%, #666);
+  background: -webkit-gradient(linear, left top, left bottom, from(#777), to(#666));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#777777", endColorStr="#666666");
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.3); }
+
+/* line 68, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_corner_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  color: #ffffff;
+  background: #666;
+  background: -moz-linear-gradient(top, #777 0%, #666);
+  background: -webkit-gradient(linear, left top, left bottom, from(#777), to(#666));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#777777", endColorStr="#666666");
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.3); }
+
+/* line 95, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_rowheader_minutes {
+  font-size: 10px;
+  vertical-align: super;
+  padding-left: 2px;
+  padding-right: 2px; }
+
+/* line 103, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_colheader_inner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  color: #ffffff;
+  background: #666;
+  background: -moz-linear-gradient(top, #777 0%, #666);
+  background: -webkit-gradient(linear, left top, left bottom, from(#777), to(#666));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#777777", endColorStr="#666666");
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.3); }
+
+/* line 130, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_cell_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff; }
+
+/* line 142, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_alldayheader_inner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  color: #ffffff;
+  background: #666;
+  background: -moz-linear-gradient(top, #777 0%, #666);
+  background: -webkit-gradient(linear, left top, left bottom, from(#777), to(#666));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#777777", endColorStr="#666666");
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.3); }
+
+/* line 170, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_message {
+  padding: 10px;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  color: #ffffff;
+  background: #000;
+  background: -moz-linear-gradient(top, #999 0%, #666);
+  background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#666));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#999999", endColorStr="#666666");
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.3); }
+
+/* line 193, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_alldayevent {
+  border-radius: 15px;
+  /* ie gradient + rounded corners problem */
+  overflow: hidden; }
+
+/* line 199, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_alldayevent_inner {
+  position: absolute;
+  overflow: hidden;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  padding: 2px;
+  margin-right: 1px;
+  font-size: 12px;
+  color: #ffffff;
+  background: #a8dc18;
+  background: -moz-linear-gradient(top, #a2c200 0%, #8aaa00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#a2c200), to(#8aaa00));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#a2c200", endColorStr="#8aaa00");
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #7cb316;
+  -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2), 0px 1px 0px white; }
+
+/* line 241, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_event {
+  border-radius: 5px;
+  /* ie gradient + rounded corners problem */ }
+
+/* line 247, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_event_inner {
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  bottom: 2px;
+  left: 2px;
+  right: 0px;
+  margin-right: 1px;
+  font-size: 12px;
+  padding: 2px;
+  padding-left: 8px;
+  /* make space for duration bar */
+  color: #ffffff;
+  background: #a2c200;
+  background: -moz-linear-gradient(top, #a2c200 0%, #8aaa00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#a2c200), to(#8aaa00));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#a2c200", endColorStr="#8aaa00");
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #7cb316;
+  -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 2px rgba(255, 255, 255, 0.8);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2), 0px 1px 0px white; }
+
+/* line 289, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_event_bar {
+  top: 3px;
+  bottom: 4px;
+  left: 6px;
+  width: 2px;
+  background-color: #C0D46A;
+  background-color: #C7D48D; }
+
+/* line 299, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_event_bar_inner {
+  position: absolute;
+  width: 2px;
+  background-color: #6E8700; }
+
+/* line 306, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_event_hover .calendar_green_event_inner,
+.calendar_green_alldayevent_hover .calendar_green_alldayevent_inner {
+  background: #a8dc18;
+  background: -moz-linear-gradient(top, #a8dc18 0%, #8fc300);
+  background: -webkit-gradient(linear, left top, left bottom, from(#a8dc18), to(#8fc300));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#a8dc18", endColorStr="#8fc300"); }
+
+/* line 321, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_shadow_inner {
+  background-color: #666666;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  height: 100%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+/* line 333, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_event_delete {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjExR/NCNwAAAI5JREFUKFNtkLERgCAMRbmzdK8s4gAUlhYOYEHJEJYOYOEwDmGBPxC4kOPfvePy84MGR0RJ2N1A8H3N6DATwSQ57m2ql8NBG+AEM7D+UW+wjdfUPgerYNgB5gOLRHqhcasg84C2QxPMtrUhSqQIhg7ypy9VM2EUZPI/4rQ7rGxqo9sadTegw+UdjeDLAKUfhbaQUVPIfJYAAAAASUVORK5CYII=) center center no-repeat;
+  opacity: 0.6;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=60)';
+  cursor: pointer; }
+
+/* line 340, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_event_delete:hover {
+  opacity: 1;
+  -ms-filter: none; }
+
+/* line 345, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_scroll_up {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAB3RJTUUH2wESDiYcrhwCiQAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAARnQU1BAACxjwv8YQUAAACcSURBVHjaY2AgF9wWsTW6yGMlhi7OhC7AyMDQzMnBXIpFHAFuCtuaMTP+P8nA8P/b1x//FfW/HHuF1UQmxv+NUP1c3OxMVVhNvCVi683E8H8LXOY/w9+fTH81tF8fv4NiIpBRj+YoZtZ/LDUoJmKYhsVUpv0MDiyMDP96sIYV0FS2/8z9ICaLlOhvS4b/jC//MzC8xBG0vJeF7GQBlK0xdiUzCtsAAAAASUVORK5CYII=); }
+
+/* line 349, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_scroll_down {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAACqSURBVChTY7wpam3L9J+xmQEP+PGPKZZxP4MDi4zI78uMDIwa2NT+Z2DYovrmiC+TI8OBP/8ZmEqwGvif4e8vxr+FIDkmEKH25vBWBgbG0+iK/zEwLtF+ffwOXCGI8Y+BoRFFIdC030x/WmBiYBNhpgLdswNJ8RSYaSgmgk39z1gPUfj/29ef/9rwhQTDHRHbrbdEbLvRFcGthkkAra/9/uMvhkK8piNLAgCRpTnNn4AEmAAAAABJRU5ErkJggg==); }
+
+/* line 353, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_now {
+  background-color: red; }
+
+/* line 354, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calgreen.scss */
+.calendar_green_now:before {
+  content: '';
+  top: -5px;
+  border-width: 5px;
+  border-color: transparent transparent transparent red;
+  border-style: solid;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  -moz-transform: scale(0.9999); }
+
+/* 
+
+DayPilot Calendar Theme 
+http://themes.daypilot.org/calendar/theme/pectq6
+
+*/
+/* line 9, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_main {
+  border: 1px solid #dddddd; }
+
+/* line 14, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_main, .calendar_g_main td {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px; }
+
+/* line 24, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_event_inner {
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: 0px;
+  color: #1d1d1d;
+  background-color: #9a9cff;
+  padding: 3px;
+  border: 1px solid #373ad7; }
+
+/* line 56, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_alldayevent_inner {
+  position: absolute;
+  overflow: hidden;
+  left: 1px;
+  right: 0px;
+  top: 1px;
+  bottom: 0px;
+  margin: 2px;
+  color: #1d1d1d;
+  background-color: #9a9cff;
+  padding: 2px;
+  border: 1px solid #373ad7;
+  text-align: left; }
+
+/* line 83, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_alldayheader_inner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid  #dddddd;
+  color: #555555;
+  background: #ffffff; }
+
+/* line 100, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_colheader_inner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  color: #555555;
+  background: #ffffff; }
+
+/* line 116, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_rowheader_inner {
+  font-size: 12px;
+  text-align: right;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid  #dddddd;
+  color: #555555;
+  background: #ffffff; }
+
+/* line 134, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_rowheader_minutes {
+  font-size: 12px;
+  xvertical-align: super;
+  padding-left: 2px;
+  padding-right: 2px; }
+
+/* line 142, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_corner_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid  #dddddd;
+  color: #555555;
+  background: #ffffff; }
+
+/* line 157, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_cornerright_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid  #dddddd;
+  color: #555555;
+  background: #ffffff; }
+
+/* line 173, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_rowheader_inner {
+  padding: 2px; }
+
+/* line 177, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_cell_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  background: #ffffff; }
+
+/* line 189, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_cell_business .calendar_g_cell_inner {
+  background: #ffffff; }
+
+/* line 193, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_message {
+  padding: 10px;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  color: #1d1d1d;
+  background: #f9edbe; }
+
+/* line 204, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_shadow_inner {
+  background-color: #666666;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  height: 100%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+/* line 215, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_event_delete {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjExR/NCNwAAAI5JREFUKFNtkLERgCAMRbmzdK8s4gAUlhYOYEHJEJYOYOEwDmGBPxC4kOPfvePy84MGR0RJ2N1A8H3N6DATwSQ57m2ql8NBG+AEM7D+UW+wjdfUPgerYNgB5gOLRHqhcasg84C2QxPMtrUhSqQIhg7ypy9VM2EUZPI/4rQ7rGxqo9sadTegw+UdjeDLAKUfhbaQUVPIfJYAAAAASUVORK5CYII=) center center no-repeat;
+  opacity: 0.6;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=60)';
+  cursor: pointer; }
+
+/* line 222, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_event_delete:hover {
+  opacity: 1;
+  -ms-filter: none; }
+
+/* line 227, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_scroll_up {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAB3RJTUUH2wESDiYcrhwCiQAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAARnQU1BAACxjwv8YQUAAACcSURBVHjaY2AgF9wWsTW6yGMlhi7OhC7AyMDQzMnBXIpFHAFuCtuaMTP+P8nA8P/b1x//FfW/HHuF1UQmxv+NUP1c3OxMVVhNvCVi683E8H8LXOY/w9+fTH81tF8fv4NiIpBRj+YoZtZ/LDUoJmKYhsVUpv0MDiyMDP96sIYV0FS2/8z9ICaLlOhvS4b/jC//MzC8xBG0vJeF7GQBlK0xdiUzCtsAAAAASUVORK5CYII=); }
+
+/* line 231, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_scroll_down {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAACqSURBVChTY7wpam3L9J+xmQEP+PGPKZZxP4MDi4zI78uMDIwa2NT+Z2DYovrmiC+TI8OBP/8ZmEqwGvif4e8vxr+FIDkmEKH25vBWBgbG0+iK/zEwLtF+ffwOXCGI8Y+BoRFFIdC030x/WmBiYBNhpgLdswNJ8RSYaSgmgk39z1gPUfj/29ef/9rwhQTDHRHbrbdEbLvRFcGthkkAra/9/uMvhkK8piNLAgCRpTnNn4AEmAAAAABJRU5ErkJggg==); }
+
+/* line 235, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_now {
+  background-color: red; }
+
+/* line 236, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_calg.scss */
+.calendar_g_now:before {
+  content: '';
+  top: -5px;
+  border-width: 5px;
+  border-color: transparent transparent transparent red;
+  border-style: solid;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  -moz-transform: scale(0.9999); }
+
+/* 
+
+DayPilot Calendar Theme 
+http://themes.daypilot.org/calendar/theme/japngi
+
+*/
+/* line 9, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_main {
+  border: 1px solid #999999; }
+
+/* line 14, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_main, .calendar_traditional_main td {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 12px; }
+
+/* line 24, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_event_inner {
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: 0px;
+  color: #333333;
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f2f2f2));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2);
+  background: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2);
+  background: -ms-linear-gradient(top, #ffffff 0%, #f2f2f2);
+  background: -o-linear-gradient(top, #ffffff 0%, #f2f2f2);
+  background: linear-gradient(top, #ffffff 0%, #f2f2f2);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#ffffff", endColorStr="#f2f2f2");
+  padding: 3px;
+  padding-left: 9px;
+  border: 1px solid #999999; }
+
+/* line 66, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_alldayevent_inner {
+  position: absolute;
+  overflow: hidden;
+  left: 1px;
+  right: 0px;
+  top: 1px;
+  bottom: 0px;
+  margin: 0px;
+  color: #333333;
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f2f2f2));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2);
+  background: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2);
+  background: -ms-linear-gradient(top, #ffffff 0%, #f2f2f2);
+  background: -o-linear-gradient(top, #ffffff 0%, #f2f2f2);
+  background: linear-gradient(top, #ffffff 0%, #f2f2f2);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#ffffff", endColorStr="#f2f2f2");
+  padding: 3px;
+  border: 1px solid #999999;
+  text-align: left; }
+
+/* line 101, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_alldayheader_inner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid  #999999;
+  color: #333333;
+  background: #ece9d8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#efecde), to(#e9e6d2));
+  background: -webkit-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -moz-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -ms-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -o-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: linear-gradient(top, #efecde 0%, #e9e6d2);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#efecde", endColorStr="#e9e6d2"); }
+
+/* line 126, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_colheader_inner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  color: #333333;
+  background: #ece9d8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#efecde), to(#e9e6d2));
+  background: -webkit-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -moz-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -ms-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -o-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: linear-gradient(top, #efecde 0%, #e9e6d2);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#efecde", endColorStr="#e9e6d2"); }
+
+/* line 150, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_rowheader_inner {
+  font-size: 16pt;
+  text-align: right;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid  #999999;
+  color: #333333;
+  background: #ece9d8;
+  background: -webkit-gradient(linear, left top, right top, from(#efecde), to(#e9e6d2));
+  background: -webkit-linear-gradient(left, #efecde 0%, #e9e6d2);
+  background: -moz-linear-gradient(left, #efecde 0%, #e9e6d2);
+  background: -ms-linear-gradient(left, #efecde 0%, #e9e6d2);
+  background: -o-linear-gradient(left, #efecde 0%, #e9e6d2);
+  background: linear-gradient(left, #efecde 0%, #e9e6d2);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#efecde", endColorStr="#e9e6d2", GradientType=1); }
+
+/* line 176, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_rowheader_minutes {
+  font-size: 10px;
+  vertical-align: super;
+  padding-left: 2px;
+  padding-right: 2px; }
+
+/* line 184, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_corner_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid  #999999;
+  color: #333333;
+  background: #ece9d8;
+  background: -webkit-gradient(linear, left top, right top, from(#efecde), to(#e9e6d2));
+  background: -webkit-linear-gradient(left, #efecde 0%, #e9e6d2);
+  background: -moz-linear-gradient(left, #efecde 0%, #e9e6d2);
+  background: -ms-linear-gradient(left, #efecde 0%, #e9e6d2);
+  background: -o-linear-gradient(left, #efecde 0%, #e9e6d2);
+  background: linear-gradient(left, #efecde 0%, #e9e6d2);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#efecde", endColorStr="#e9e6d2", GradientType=1); }
+
+/* line 207, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_cornerright_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid  #999999;
+  color: #333333;
+  background: #ece9d8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#efecde), to(#e9e6d2));
+  background: -webkit-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -moz-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -ms-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: -o-linear-gradient(top, #efecde 0%, #e9e6d2);
+  background: linear-gradient(top, #efecde 0%, #e9e6d2);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#efecde", endColorStr="#e9e6d2"); }
+
+/* line 231, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_rowheader_inner {
+  padding: 2px; }
+
+/* line 235, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_cell_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 1px solid #ead098;
+  border-bottom: 1px solid #ead098;
+  background: #fff4bc; }
+
+/* line 247, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_cell_business .calendar_traditional_cell_inner {
+  background: #ffffd5; }
+
+/* line 251, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_message {
+  padding: 10px;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  color: #ffffff;
+  background: #777777;
+  background: -webkit-gradient(linear, left top, left bottom, from(#838383), to(#6b6b6b));
+  background: -webkit-linear-gradient(top, #838383 0%, #6b6b6b);
+  background: -moz-linear-gradient(top, #838383 0%, #6b6b6b);
+  background: -ms-linear-gradient(top, #838383 0%, #6b6b6b);
+  background: -o-linear-gradient(top, #838383 0%, #6b6b6b);
+  background: linear-gradient(top, #838383 0%, #6b6b6b);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#838383", endColorStr="#6b6b6b"); }
+
+/* line 270, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_shadow_inner {
+  background-color: #666666;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  height: 100%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+/* line 282, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_event_bar {
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  width: 5px;
+  background-color: #ffffff;
+  border-left: 1px solid #999; }
+
+/* line 293, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_event_bar_inner {
+  position: absolute;
+  width: 5px;
+  background-color: #2d5de0; }
+
+/* line 300, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_event_delete {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjExR/NCNwAAAI5JREFUKFNtkLERgCAMRbmzdK8s4gAUlhYOYEHJEJYOYOEwDmGBPxC4kOPfvePy84MGR0RJ2N1A8H3N6DATwSQ57m2ql8NBG+AEM7D+UW+wjdfUPgerYNgB5gOLRHqhcasg84C2QxPMtrUhSqQIhg7ypy9VM2EUZPI/4rQ7rGxqo9sadTegw+UdjeDLAKUfhbaQUVPIfJYAAAAASUVORK5CYII=) center center no-repeat;
+  opacity: 0.6;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=60)';
+  cursor: pointer; }
+
+/* line 307, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_event_delete:hover {
+  opacity: 1;
+  -ms-filter: none; }
+
+/* line 312, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_scroll_up {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAB3RJTUUH2wESDiYcrhwCiQAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAARnQU1BAACxjwv8YQUAAACcSURBVHjaY2AgF9wWsTW6yGMlhi7OhC7AyMDQzMnBXIpFHAFuCtuaMTP+P8nA8P/b1x//FfW/HHuF1UQmxv+NUP1c3OxMVVhNvCVi683E8H8LXOY/w9+fTH81tF8fv4NiIpBRj+YoZtZ/LDUoJmKYhsVUpv0MDiyMDP96sIYV0FS2/8z9ICaLlOhvS4b/jC//MzC8xBG0vJeF7GQBlK0xdiUzCtsAAAAASUVORK5CYII=); }
+
+/* line 316, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_scroll_down {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAACqSURBVChTY7wpam3L9J+xmQEP+PGPKZZxP4MDi4zI78uMDIwa2NT+Z2DYovrmiC+TI8OBP/8ZmEqwGvif4e8vxr+FIDkmEKH25vBWBgbG0+iK/zEwLtF+ffwOXCGI8Y+BoRFFIdC030x/WmBiYBNhpgLdswNJ8RSYaSgmgk39z1gPUfj/29ef/9rwhQTDHRHbrbdEbLvRFcGthkkAra/9/uMvhkK8piNLAgCRpTnNn4AEmAAAAABJRU5ErkJggg==); }
+
+/* line 320, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_now {
+  background-color: red; }
+
+/* line 321, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/_caltraditional.scss */
+.calendar_traditional_now:before {
+  content: '';
+  top: -5px;
+  border-width: 5px;
+  border-color: transparent transparent transparent red;
+  border-style: solid;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  -moz-transform: scale(0.9999); }
+
+/* line 41, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+.remove-all-styles {
+  all: revert; }
+
+/* line 45, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+.calendar-widget {
+  float: right; }
+
 /* Bulma Utilities */
 @keyframes spinAround {
   from {
@@ -547,7 +2746,7 @@ body {
 
 /* line 74, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/base/generic.sass */
 a {
-  color: #0023DC;
+  color: #0025dc9f;
   cursor: pointer;
   text-decoration: none; }
   /* line 78, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/base/generic.sass */
@@ -594,7 +2793,7 @@ span {
 
 /* line 112, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/base/generic.sass */
 strong {
-  color: #54425D;
+  color: #050505;
   font-weight: 700; }
 
 /* line 118, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/base/generic.sass */
@@ -629,7 +2828,7 @@ table th {
 
 /* line 142, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/base/generic.sass */
 table th {
-  color: #54425D; }
+  color: #050505; }
 
 /* Bulma Elements */
 /* line 10, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/box.sass */
@@ -643,18 +2842,18 @@ table th {
 
 /* line 20, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/box.sass */
 a.box:hover, a.box:focus {
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px #0023DC; }
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px #0025dc9f; }
 
 /* line 23, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/box.sass */
 a.box:active {
-  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #0023DC; }
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #0025dc9f; }
 
 /* line 49, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
 .button {
   background-color: white;
   border-color: #dbdbdb;
   border-width: 2px;
-  color: #54425D;
+  color: #050505;
   cursor: pointer;
   justify-content: center;
   padding-bottom: calc(0.5em - 2px);
@@ -688,11 +2887,11 @@ a.box:active {
     color: #262525; }
   /* line 89, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
   .button:focus, .button.is-focused {
-    border-color: #0023DC;
+    border-color: #0025dc9f;
     color: #262525; }
     /* line 93, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button:focus:not(:active), .button.is-focused:not(:active) {
-      box-shadow: 0 0 0 0.125em rgba(0, 35, 220, 0.25); }
+      box-shadow: 0 0 0 0.125em rgba(0, 37, 220, 0.25); }
   /* line 95, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
   .button:active, .button.is-active {
     border-color: #424141;
@@ -706,11 +2905,11 @@ a.box:active {
     /* line 105, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
       background-color: #424141;
-      color: #54425D; }
+      color: #050505; }
     /* line 111, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-text:active, .button.is-text.is-active {
       background-color: #353434;
-      color: #54425D; }
+      color: #050505; }
     /* line 115, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-text[disabled],
     fieldset[disabled] .button.is-text {
@@ -1168,12 +3367,12 @@ a.box:active {
         color: #fa004b; }
   /* line 123, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
   .button.is-link {
-    background-color: #0023DC;
+    background-color: #0025dc9f;
     border-color: transparent;
     color: #fff; }
     /* line 127, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-link:hover, .button.is-link.is-hovered {
-      background-color: #0021cf;
+      background-color: rgba(0, 35, 207, 0.623529);
       border-color: transparent;
       color: #fff; }
     /* line 132, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
@@ -1182,22 +3381,22 @@ a.box:active {
       color: #fff; }
       /* line 136, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link:focus:not(:active), .button.is-link.is-focused:not(:active) {
-        box-shadow: 0 0 0 0.125em rgba(0, 35, 220, 0.25); }
+        box-shadow: 0 0 0 0.125em rgba(0, 37, 220, 0.25); }
     /* line 138, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-link:active, .button.is-link.is-active {
-      background-color: #001fc3;
+      background-color: rgba(0, 33, 195, 0.623529);
       border-color: transparent;
       color: #fff; }
     /* line 143, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-link[disabled],
     fieldset[disabled] .button.is-link {
-      background-color: #0023DC;
+      background-color: #0025dc9f;
       border-color: transparent;
       box-shadow: none; }
     /* line 148, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-link.is-inverted {
       background-color: #fff;
-      color: #0023DC; }
+      color: #0025dc9f; }
       /* line 151, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-inverted:hover, .button.is-link.is-inverted.is-hovered {
         background-color: #f2f2f2; }
@@ -1207,23 +3406,23 @@ a.box:active {
         background-color: #fff;
         border-color: transparent;
         box-shadow: none;
-        color: #0023DC; }
+        color: #0025dc9f; }
     /* line 161, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-link.is-loading::after {
       border-color: transparent transparent #fff #fff !important; }
     /* line 163, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-link.is-outlined {
       background-color: transparent;
-      border-color: #0023DC;
-      color: #0023DC; }
+      border-color: #0025dc9f;
+      color: #0025dc9f; }
       /* line 167, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-outlined:hover, .button.is-link.is-outlined.is-hovered, .button.is-link.is-outlined:focus, .button.is-link.is-outlined.is-focused {
-        background-color: #0023DC;
-        border-color: #0023DC;
+        background-color: #0025dc9f;
+        border-color: #0025dc9f;
         color: #fff; }
       /* line 175, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-outlined.is-loading::after {
-        border-color: transparent transparent #0023DC #0023DC !important; }
+        border-color: transparent transparent #0025dc9f #0025dc9f !important; }
       /* line 181, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-outlined.is-loading:hover::after, .button.is-link.is-outlined.is-loading.is-hovered::after, .button.is-link.is-outlined.is-loading:focus::after, .button.is-link.is-outlined.is-loading.is-focused::after {
         border-color: transparent transparent #fff #fff !important; }
@@ -1231,9 +3430,9 @@ a.box:active {
       .button.is-link.is-outlined[disabled],
       fieldset[disabled] .button.is-link.is-outlined {
         background-color: transparent;
-        border-color: #0023DC;
+        border-color: #0025dc9f;
         box-shadow: none;
-        color: #0023DC; }
+        color: #0025dc9f; }
     /* line 189, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-link.is-inverted.is-outlined {
       background-color: transparent;
@@ -1242,10 +3441,10 @@ a.box:active {
       /* line 193, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-inverted.is-outlined:hover, .button.is-link.is-inverted.is-outlined.is-hovered, .button.is-link.is-inverted.is-outlined:focus, .button.is-link.is-inverted.is-outlined.is-focused {
         background-color: #fff;
-        color: #0023DC; }
+        color: #0025dc9f; }
       /* line 204, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-inverted.is-outlined.is-loading:hover::after, .button.is-link.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-link.is-inverted.is-outlined.is-loading:focus::after, .button.is-link.is-inverted.is-outlined.is-loading.is-focused::after {
-        border-color: transparent transparent #0023DC #0023DC !important; }
+        border-color: transparent transparent #0025dc9f #0025dc9f !important; }
       /* line 206, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-inverted.is-outlined[disabled],
       fieldset[disabled] .button.is-link.is-inverted.is-outlined {
@@ -1255,26 +3454,26 @@ a.box:active {
         color: #fff; }
     /* line 216, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-link.is-light {
-      background-color: #ebeeff;
-      color: #0f35ff; }
+      background-color: rgba(235, 238, 255, 0.623529);
+      color: rgba(15, 56, 255, 0.623529); }
       /* line 219, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-light:hover, .button.is-link.is-light.is-hovered {
-        background-color: #dee3ff;
+        background-color: rgba(222, 227, 255, 0.623529);
         border-color: transparent;
-        color: #0f35ff; }
+        color: rgba(15, 56, 255, 0.623529); }
       /* line 224, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-link.is-light:active, .button.is-link.is-light.is-active {
-        background-color: #d1d8ff;
+        background-color: rgba(209, 217, 255, 0.623529);
         border-color: transparent;
-        color: #0f35ff; }
+        color: rgba(15, 56, 255, 0.623529); }
   /* line 123, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
   .button.is-info {
-    background-color: #54425D;
+    background-color: #050505;
     border-color: transparent;
     color: #fff; }
     /* line 127, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-info:hover, .button.is-info.is-hovered {
-      background-color: #4d3d56;
+      background-color: black;
       border-color: transparent;
       color: #fff; }
     /* line 132, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
@@ -1283,22 +3482,22 @@ a.box:active {
       color: #fff; }
       /* line 136, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info:focus:not(:active), .button.is-info.is-focused:not(:active) {
-        box-shadow: 0 0 0 0.125em rgba(84, 66, 93, 0.25); }
+        box-shadow: 0 0 0 0.125em rgba(5, 5, 5, 0.25); }
     /* line 138, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-info:active, .button.is-info.is-active {
-      background-color: #47374e;
+      background-color: black;
       border-color: transparent;
       color: #fff; }
     /* line 143, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-info[disabled],
     fieldset[disabled] .button.is-info {
-      background-color: #54425D;
+      background-color: #050505;
       border-color: transparent;
       box-shadow: none; }
     /* line 148, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-info.is-inverted {
       background-color: #fff;
-      color: #54425D; }
+      color: #050505; }
       /* line 151, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-inverted:hover, .button.is-info.is-inverted.is-hovered {
         background-color: #f2f2f2; }
@@ -1308,23 +3507,23 @@ a.box:active {
         background-color: #fff;
         border-color: transparent;
         box-shadow: none;
-        color: #54425D; }
+        color: #050505; }
     /* line 161, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-info.is-loading::after {
       border-color: transparent transparent #fff #fff !important; }
     /* line 163, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-info.is-outlined {
       background-color: transparent;
-      border-color: #54425D;
-      color: #54425D; }
+      border-color: #050505;
+      color: #050505; }
       /* line 167, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-outlined:hover, .button.is-info.is-outlined.is-hovered, .button.is-info.is-outlined:focus, .button.is-info.is-outlined.is-focused {
-        background-color: #54425D;
-        border-color: #54425D;
+        background-color: #050505;
+        border-color: #050505;
         color: #fff; }
       /* line 175, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-outlined.is-loading::after {
-        border-color: transparent transparent #54425D #54425D !important; }
+        border-color: transparent transparent #050505 #050505 !important; }
       /* line 181, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-outlined.is-loading:hover::after, .button.is-info.is-outlined.is-loading.is-hovered::after, .button.is-info.is-outlined.is-loading:focus::after, .button.is-info.is-outlined.is-loading.is-focused::after {
         border-color: transparent transparent #fff #fff !important; }
@@ -1332,9 +3531,9 @@ a.box:active {
       .button.is-info.is-outlined[disabled],
       fieldset[disabled] .button.is-info.is-outlined {
         background-color: transparent;
-        border-color: #54425D;
+        border-color: #050505;
         box-shadow: none;
-        color: #54425D; }
+        color: #050505; }
     /* line 189, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-info.is-inverted.is-outlined {
       background-color: transparent;
@@ -1343,10 +3542,10 @@ a.box:active {
       /* line 193, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-inverted.is-outlined:hover, .button.is-info.is-inverted.is-outlined.is-hovered, .button.is-info.is-inverted.is-outlined:focus, .button.is-info.is-inverted.is-outlined.is-focused {
         background-color: #fff;
-        color: #54425D; }
+        color: #050505; }
       /* line 204, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-inverted.is-outlined.is-loading:hover::after, .button.is-info.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-info.is-inverted.is-outlined.is-loading:focus::after, .button.is-info.is-inverted.is-outlined.is-loading.is-focused::after {
-        border-color: transparent transparent #54425D #54425D !important; }
+        border-color: transparent transparent #050505 #050505 !important; }
       /* line 206, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-inverted.is-outlined[disabled],
       fieldset[disabled] .button.is-info.is-inverted.is-outlined {
@@ -1356,18 +3555,18 @@ a.box:active {
         color: #fff; }
     /* line 216, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
     .button.is-info.is-light {
-      background-color: #f5f3f7;
-      color: #8c7099; }
+      background-color: whitesmoke;
+      color: #919191; }
       /* line 219, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-light:hover, .button.is-info.is-light.is-hovered {
-        background-color: #efecf1;
+        background-color: #eeeeee;
         border-color: transparent;
-        color: #8c7099; }
+        color: #919191; }
       /* line 224, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
       .button.is-info.is-light:active, .button.is-info.is-light.is-active {
-        background-color: #e9e4ec;
+        background-color: #e8e8e8;
         border-color: transparent;
-        color: #8c7099; }
+        color: #919191; }
   /* line 123, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/button.sass */
   .button.is-success {
     background-color: #94D50C;
@@ -1832,7 +4031,7 @@ a.box:active {
 .content h4,
 .content h5,
 .content h6 {
-  color: #54425D;
+  color: #050505;
   font-weight: 600;
   line-height: 1.125; }
 
@@ -1962,7 +4161,7 @@ a.box:active {
     vertical-align: top; }
   /* line 126, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/content.sass */
   .content table th {
-    color: #54425D; }
+    color: #050505; }
     /* line 128, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/content.sass */
     .content table th:not([align]) {
       text-align: inherit; }
@@ -1970,12 +4169,12 @@ a.box:active {
   .content table thead td,
   .content table thead th {
     border-width: 0 0 2px;
-    color: #54425D; }
+    color: #050505; }
   /* line 136, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/content.sass */
   .content table tfoot td,
   .content table tfoot th {
     border-width: 2px 0 0;
-    color: #54425D; }
+    color: #050505; }
   /* line 143, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/content.sass */
   .content table tbody tr:last-child td,
   .content table tbody tr:last-child th {
@@ -2182,20 +4381,20 @@ a.box:active {
       color: #fa004b; }
   /* line 41, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/notification.sass */
   .notification.is-link {
-    background-color: #0023DC;
+    background-color: #0025dc9f;
     color: #fff; }
     /* line 48, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/notification.sass */
     .notification.is-link.is-light {
-      background-color: #ebeeff;
-      color: #0f35ff; }
+      background-color: rgba(235, 238, 255, 0.623529);
+      color: rgba(15, 56, 255, 0.623529); }
   /* line 41, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/notification.sass */
   .notification.is-info {
-    background-color: #54425D;
+    background-color: #050505;
     color: #fff; }
     /* line 48, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/notification.sass */
     .notification.is-info.is-light {
-      background-color: #f5f3f7;
-      color: #8c7099; }
+      background-color: whitesmoke;
+      color: #919191; }
   /* line 41, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/notification.sass */
   .notification.is-success {
     background-color: #94D50C;
@@ -2307,28 +4506,28 @@ a.box:active {
     background-image: linear-gradient(to right, #CC003D 30%, #ededed 30%); }
   /* line 33, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-link::-webkit-progress-value {
-    background-color: #0023DC; }
+    background-color: #0025dc9f; }
   /* line 35, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-link::-moz-progress-bar {
-    background-color: #0023DC; }
+    background-color: #0025dc9f; }
   /* line 37, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-link::-ms-fill {
-    background-color: #0023DC; }
+    background-color: #0025dc9f; }
   /* line 39, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-link:indeterminate {
-    background-image: linear-gradient(to right, #0023DC 30%, #ededed 30%); }
+    background-image: linear-gradient(to right, #0025dc9f 30%, #ededed 30%); }
   /* line 33, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-info::-webkit-progress-value {
-    background-color: #54425D; }
+    background-color: #050505; }
   /* line 35, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-info::-moz-progress-bar {
-    background-color: #54425D; }
+    background-color: #050505; }
   /* line 37, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-info::-ms-fill {
-    background-color: #54425D; }
+    background-color: #050505; }
   /* line 39, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-info:indeterminate {
-    background-image: linear-gradient(to right, #54425D 30%, #ededed 30%); }
+    background-image: linear-gradient(to right, #050505 30%, #ededed 30%); }
   /* line 33, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/progress.sass */
   .progress.is-success::-webkit-progress-value {
     background-color: #94D50C; }
@@ -2404,7 +4603,7 @@ a.box:active {
 /* line 28, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
 .table {
   background-color: white;
-  color: #54425D; }
+  color: #050505; }
   /* line 32, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
   .table td,
   .table th {
@@ -2445,14 +4644,14 @@ a.box:active {
     /* line 42, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
     .table td.is-link,
     .table th.is-link {
-      background-color: #0023DC;
-      border-color: #0023DC;
+      background-color: #0025dc9f;
+      border-color: #0025dc9f;
       color: #fff; }
     /* line 42, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
     .table td.is-info,
     .table th.is-info {
-      background-color: #54425D;
-      border-color: #54425D;
+      background-color: #050505;
+      border-color: #050505;
       color: #fff; }
     /* line 42, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
     .table td.is-success,
@@ -2494,7 +4693,7 @@ a.box:active {
       vertical-align: middle; }
   /* line 58, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
   .table th {
-    color: #54425D; }
+    color: #050505; }
     /* line 60, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
     .table th:not([align]) {
       text-align: inherit; }
@@ -2518,7 +4717,7 @@ a.box:active {
     .table thead td,
     .table thead th {
       border-width: 0 0 2px;
-      color: #54425D; }
+      color: #050505; }
   /* line 79, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
   .table tfoot {
     background-color: transparent; }
@@ -2526,7 +4725,7 @@ a.box:active {
     .table tfoot td,
     .table tfoot th {
       border-width: 2px 0 0;
-      color: #54425D; }
+      color: #050505; }
   /* line 85, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/table.sass */
   .table tbody {
     background-color: transparent; }
@@ -2666,20 +4865,20 @@ a.box:active {
       color: #fa004b; }
   /* line 79, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/tag.sass */
   .tag:not(body).is-link {
-    background-color: #0023DC;
+    background-color: #0025dc9f;
     color: #fff; }
     /* line 86, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/tag.sass */
     .tag:not(body).is-link.is-light {
-      background-color: #ebeeff;
-      color: #0f35ff; }
+      background-color: rgba(235, 238, 255, 0.623529);
+      color: rgba(15, 56, 255, 0.623529); }
   /* line 79, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/tag.sass */
   .tag:not(body).is-info {
-    background-color: #54425D;
+    background-color: #050505;
     color: #fff; }
     /* line 86, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/tag.sass */
     .tag:not(body).is-info.is-light {
-      background-color: #f5f3f7;
-      color: #8c7099; }
+      background-color: whitesmoke;
+      color: #919191; }
   /* line 79, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/tag.sass */
   .tag:not(body).is-success {
     background-color: #94D50C;
@@ -2788,7 +4987,7 @@ a.tag:hover {
 
 /* line 34, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/title.sass */
 .title {
-  color: #54425D;
+  color: #050505;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125; }
@@ -2832,7 +5031,7 @@ a.tag:hover {
   line-height: 1.25; }
   /* line 61, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/title.sass */
   .subtitle strong {
-    color: #54425D;
+    color: #050505;
     font-weight: 600; }
   /* line 64, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/title.sass */
   .subtitle:not(.is-spaced) + .title {
@@ -2899,26 +5098,26 @@ a.tag:hover {
   background-color: white;
   border-color: transparent;
   border-radius: 4px;
-  color: #54425D; }
+  color: #050505; }
   /* line 68, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/utilities/mixins.sass */
   .input::-moz-placeholder, .textarea::-moz-placeholder, .select select::-moz-placeholder {
-    color: rgba(84, 66, 93, 0.3); }
+    color: rgba(5, 5, 5, 0.3); }
   /* line 68, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/utilities/mixins.sass */
   .input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .select select::-webkit-input-placeholder {
-    color: rgba(84, 66, 93, 0.3); }
+    color: rgba(5, 5, 5, 0.3); }
   /* line 68, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/utilities/mixins.sass */
   .input:-moz-placeholder, .textarea:-moz-placeholder, .select select:-moz-placeholder {
-    color: rgba(84, 66, 93, 0.3); }
+    color: rgba(5, 5, 5, 0.3); }
   /* line 68, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/utilities/mixins.sass */
   .input:-ms-input-placeholder, .textarea:-ms-input-placeholder, .select select:-ms-input-placeholder {
-    color: rgba(84, 66, 93, 0.3); }
+    color: rgba(5, 5, 5, 0.3); }
   /* line 38, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/shared.sass */
   .input:hover, .textarea:hover, .select select:hover, .is-hovered.input, .is-hovered.textarea, .select select.is-hovered {
     border-color: #b5b5b5; }
   /* line 41, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/shared.sass */
   .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
-    border-color: #0023DC;
-    box-shadow: 0 0 0 0.125em rgba(0, 35, 220, 0.25); }
+    border-color: #0025dc9f;
+    box-shadow: 0 0 0 0.125em rgba(0, 37, 220, 0.25); }
   /* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/shared.sass */
   .input[disabled], .textarea[disabled], .select select[disabled],
   fieldset[disabled] .input,
@@ -2998,16 +5197,16 @@ a.tag:hover {
       box-shadow: 0 0 0 0.125em rgba(204, 0, 61, 0.25); }
   /* line 17, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/input-textarea.sass */
   .is-link.input, .is-link.textarea {
-    border-color: #0023DC; }
+    border-color: #0025dc9f; }
     /* line 19, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/input-textarea.sass */
     .is-link.input:focus, .is-link.textarea:focus, .is-link.is-focused.input, .is-link.is-focused.textarea, .is-link.input:active, .is-link.textarea:active, .is-link.is-active.input, .is-link.is-active.textarea {
-      box-shadow: 0 0 0 0.125em rgba(0, 35, 220, 0.25); }
+      box-shadow: 0 0 0 0.125em rgba(0, 37, 220, 0.25); }
   /* line 17, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/input-textarea.sass */
   .is-info.input, .is-info.textarea {
-    border-color: #54425D; }
+    border-color: #050505; }
     /* line 19, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/input-textarea.sass */
     .is-info.input:focus, .is-info.textarea:focus, .is-info.is-focused.input, .is-info.is-focused.textarea, .is-info.input:active, .is-info.textarea:active, .is-info.is-active.input, .is-info.is-active.textarea {
-      box-shadow: 0 0 0 0.125em rgba(84, 66, 93, 0.25); }
+      box-shadow: 0 0 0 0.125em rgba(5, 5, 5, 0.25); }
   /* line 17, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/input-textarea.sass */
   .is-success.input, .is-success.textarea {
     border-color: #94D50C; }
@@ -3088,7 +5287,7 @@ a.tag:hover {
     cursor: pointer; }
   /* line 8, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/checkbox-radio.sass */
   .checkbox:hover, .radio:hover {
-    color: #54425D; }
+    color: #050505; }
   /* line 10, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/checkbox-radio.sass */
   .checkbox[disabled], .radio[disabled],
   fieldset[disabled] .checkbox,
@@ -3113,7 +5312,7 @@ a.tag:hover {
     height: 2.5em; }
   /* line 11, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
   .select:not(.is-multiple):not(.is-loading)::after {
-    border-color: #0023DC;
+    border-color: #0025dc9f;
     right: 1.125em;
     z-index: 4; }
   /* line 17, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
@@ -3146,7 +5345,7 @@ a.tag:hover {
         padding: 0.5em 1em; }
   /* line 41, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
   .select:not(.is-multiple):not(.is-loading):hover::after {
-    border-color: #54425D; }
+    border-color: #050505; }
   /* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
   .select.is-white:not(:hover)::after {
     border-color: white; }
@@ -3209,28 +5408,28 @@ a.tag:hover {
       box-shadow: 0 0 0 0.125em rgba(204, 0, 61, 0.25); }
   /* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
   .select.is-link:not(:hover)::after {
-    border-color: #0023DC; }
+    border-color: #0025dc9f; }
   /* line 49, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
   .select.is-link select {
-    border-color: #0023DC; }
+    border-color: #0025dc9f; }
     /* line 51, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
     .select.is-link select:hover, .select.is-link select.is-hovered {
-      border-color: #001fc3; }
+      border-color: rgba(0, 33, 195, 0.623529); }
     /* line 54, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
     .select.is-link select:focus, .select.is-link select.is-focused, .select.is-link select:active, .select.is-link select.is-active {
-      box-shadow: 0 0 0 0.125em rgba(0, 35, 220, 0.25); }
+      box-shadow: 0 0 0 0.125em rgba(0, 37, 220, 0.25); }
   /* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
   .select.is-info:not(:hover)::after {
-    border-color: #54425D; }
+    border-color: #050505; }
   /* line 49, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
   .select.is-info select {
-    border-color: #54425D; }
+    border-color: #050505; }
     /* line 51, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
     .select.is-info select:hover, .select.is-info select.is-hovered {
-      border-color: #47374e; }
+      border-color: black; }
     /* line 54, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
     .select.is-info select:focus, .select.is-info select.is-focused, .select.is-info select:active, .select.is-info select.is-active {
-      box-shadow: 0 0 0 0.125em rgba(84, 66, 93, 0.25); }
+      box-shadow: 0 0 0 0.125em rgba(5, 5, 5, 0.25); }
   /* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/select.sass */
   .select.is-success:not(:hover)::after {
     border-color: #94D50C; }
@@ -3411,42 +5610,42 @@ a.tag:hover {
     color: #fff; }
   /* line 27, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file.is-link .file-cta {
-    background-color: #0023DC;
+    background-color: #0025dc9f;
     border-color: transparent;
     color: #fff; }
   /* line 33, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file.is-link:hover .file-cta, .file.is-link.is-hovered .file-cta {
-    background-color: #0021cf;
+    background-color: rgba(0, 35, 207, 0.623529);
     border-color: transparent;
     color: #fff; }
   /* line 39, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file.is-link:focus .file-cta, .file.is-link.is-focused .file-cta {
     border-color: transparent;
-    box-shadow: 0 0 0.5em rgba(0, 35, 220, 0.25);
+    box-shadow: 0 0 0.5em rgba(0, 37, 220, 0.25);
     color: #fff; }
   /* line 45, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file.is-link:active .file-cta, .file.is-link.is-active .file-cta {
-    background-color: #001fc3;
+    background-color: rgba(0, 33, 195, 0.623529);
     border-color: transparent;
     color: #fff; }
   /* line 27, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file.is-info .file-cta {
-    background-color: #54425D;
+    background-color: #050505;
     border-color: transparent;
     color: #fff; }
   /* line 33, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file.is-info:hover .file-cta, .file.is-info.is-hovered .file-cta {
-    background-color: #4d3d56;
+    background-color: black;
     border-color: transparent;
     color: #fff; }
   /* line 39, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file.is-info:focus .file-cta, .file.is-info.is-focused .file-cta {
     border-color: transparent;
-    box-shadow: 0 0 0.5em rgba(84, 66, 93, 0.25);
+    box-shadow: 0 0 0.5em rgba(5, 5, 5, 0.25);
     color: #fff; }
   /* line 45, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file.is-info:active .file-cta, .file.is-info.is-active .file-cta {
-    background-color: #47374e;
+    background-color: black;
     border-color: transparent;
     color: #fff; }
   /* line 27, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
@@ -3605,14 +5804,14 @@ a.tag:hover {
   /* line 129, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file-label:hover .file-cta {
     background-color: #eeeeee;
-    color: #54425D; }
+    color: #050505; }
   /* line 132, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file-label:hover .file-name {
     border-color: #d5d5d5; }
   /* line 135, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file-label:active .file-cta {
     background-color: #e8e8e8;
-    color: #54425D; }
+    color: #050505; }
   /* line 138, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/file.sass */
   .file-label:active .file-name {
     border-color: #cfcfcf; }
@@ -3667,7 +5866,7 @@ a.tag:hover {
 
 /* line 8, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/tools.sass */
 .label {
-  color: #54425D;
+  color: #050505;
   display: block;
   font-size: 1rem;
   font-weight: 700; }
@@ -3706,10 +5905,10 @@ a.tag:hover {
     color: #CC003D; }
   /* line 29, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/tools.sass */
   .help.is-link {
-    color: #0023DC; }
+    color: #0025dc9f; }
   /* line 29, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/tools.sass */
   .help.is-info {
-    color: #54425D; }
+    color: #050505; }
   /* line 29, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/form/tools.sass */
   .help.is-success {
     color: #94D50C; }
@@ -3962,7 +6161,7 @@ a.tag:hover {
   /* line 15, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/breadcrumb.sass */
   .breadcrumb a {
     align-items: center;
-    color: #0023DC;
+    color: #0025dc9f;
     display: flex;
     justify-content: center;
     padding: 0 0.75em; }
@@ -3978,7 +6177,7 @@ a.tag:hover {
       padding-left: 0; }
     /* line 29, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/breadcrumb.sass */
     .breadcrumb li.is-active a {
-      color: #54425D;
+      color: #050505;
       cursor: default;
       pointer-events: none; }
     /* line 33, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/breadcrumb.sass */
@@ -4048,7 +6247,7 @@ a.tag:hover {
 /* line 37, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/card.sass */
 .card-header-title {
   align-items: center;
-  color: #54425D;
+  color: #050505;
   display: flex;
   flex-grow: 1;
   font-weight: 700;
@@ -4160,7 +6359,7 @@ button.dropdown-item {
   /* line 72, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/dropdown.sass */
   a.dropdown-item.is-active,
   button.dropdown-item.is-active {
-    background-color: #0023DC;
+    background-color: #0025dc9f;
     color: #fff; }
 
 /* line 76, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/dropdown.sass */
@@ -4347,10 +6546,10 @@ button.dropdown-item {
     /* line 36, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/menu.sass */
     .menu-list a:hover {
       background-color: #424141;
-      color: #54425D; }
+      color: #050505; }
     /* line 40, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/menu.sass */
     .menu-list a.is-active {
-      background-color: #0023DC;
+      background-color: #0025dc9f;
       color: #fff; }
   /* line 44, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/menu.sass */
   .menu-list li ul {
@@ -4445,26 +6644,26 @@ button.dropdown-item {
       color: #fa004b; }
   /* line 59, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/message.sass */
   .message.is-link {
-    background-color: #ebeeff; }
+    background-color: rgba(235, 238, 255, 0.623529); }
     /* line 61, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/message.sass */
     .message.is-link .message-header {
-      background-color: #0023DC;
+      background-color: #0025dc9f;
       color: #fff; }
     /* line 64, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/message.sass */
     .message.is-link .message-body {
-      border-color: #0023DC;
-      color: #0f35ff; }
+      border-color: #0025dc9f;
+      color: rgba(15, 56, 255, 0.623529); }
   /* line 59, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/message.sass */
   .message.is-info {
-    background-color: #f5f3f7; }
+    background-color: whitesmoke; }
     /* line 61, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/message.sass */
     .message.is-info .message-header {
-      background-color: #54425D;
+      background-color: #050505;
       color: #fff; }
     /* line 64, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/message.sass */
     .message.is-info .message-body {
-      border-color: #54425D;
-      color: #8c7099; }
+      border-color: #050505;
+      color: #919191; }
   /* line 59, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/message.sass */
   .message.is-success {
     background-color: #f8feec; }
@@ -4607,7 +6806,7 @@ button.dropdown-item {
 
 /* line 94, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/modal.sass */
 .modal-card-title {
-  color: #54425D;
+  color: #050505;
   flex-grow: 1;
   flex-shrink: 0;
   font-size: 1.5rem;
@@ -4914,7 +7113,7 @@ button.dropdown-item {
         color: #fff; } }
   /* line 65, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
   .navbar.is-link {
-    background-color: #0023DC;
+    background-color: #0025dc9f;
     color: #fff; }
     /* line 69, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
     .navbar.is-link .navbar-brand > .navbar-item,
@@ -4925,7 +7124,7 @@ button.dropdown-item {
     .navbar.is-link .navbar-brand .navbar-link:focus,
     .navbar.is-link .navbar-brand .navbar-link:hover,
     .navbar.is-link .navbar-brand .navbar-link.is-active {
-      background-color: #001fc3;
+      background-color: rgba(0, 33, 195, 0.623529);
       color: #fff; }
     /* line 80, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
     .navbar.is-link .navbar-brand .navbar-link::after {
@@ -4951,7 +7150,7 @@ button.dropdown-item {
       .navbar.is-link .navbar-end .navbar-link:focus,
       .navbar.is-link .navbar-end .navbar-link:hover,
       .navbar.is-link .navbar-end .navbar-link.is-active {
-        background-color: #001fc3;
+        background-color: rgba(0, 33, 195, 0.623529);
         color: #fff; }
       /* line 98, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
       .navbar.is-link .navbar-start .navbar-link::after,
@@ -4961,15 +7160,15 @@ button.dropdown-item {
       .navbar.is-link .navbar-item.has-dropdown:focus .navbar-link,
       .navbar.is-link .navbar-item.has-dropdown:hover .navbar-link,
       .navbar.is-link .navbar-item.has-dropdown.is-active .navbar-link {
-        background-color: #001fc3;
+        background-color: rgba(0, 33, 195, 0.623529);
         color: #fff; }
       /* line 107, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
       .navbar.is-link .navbar-dropdown a.navbar-item.is-active {
-        background-color: #0023DC;
+        background-color: #0025dc9f;
         color: #fff; } }
   /* line 65, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
   .navbar.is-info {
-    background-color: #54425D;
+    background-color: #050505;
     color: #fff; }
     /* line 69, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
     .navbar.is-info .navbar-brand > .navbar-item,
@@ -4980,7 +7179,7 @@ button.dropdown-item {
     .navbar.is-info .navbar-brand .navbar-link:focus,
     .navbar.is-info .navbar-brand .navbar-link:hover,
     .navbar.is-info .navbar-brand .navbar-link.is-active {
-      background-color: #47374e;
+      background-color: black;
       color: #fff; }
     /* line 80, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
     .navbar.is-info .navbar-brand .navbar-link::after {
@@ -5006,7 +7205,7 @@ button.dropdown-item {
       .navbar.is-info .navbar-end .navbar-link:focus,
       .navbar.is-info .navbar-end .navbar-link:hover,
       .navbar.is-info .navbar-end .navbar-link.is-active {
-        background-color: #47374e;
+        background-color: black;
         color: #fff; }
       /* line 98, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
       .navbar.is-info .navbar-start .navbar-link::after,
@@ -5016,11 +7215,11 @@ button.dropdown-item {
       .navbar.is-info .navbar-item.has-dropdown:focus .navbar-link,
       .navbar.is-info .navbar-item.has-dropdown:hover .navbar-link,
       .navbar.is-info .navbar-item.has-dropdown.is-active .navbar-link {
-        background-color: #47374e;
+        background-color: black;
         color: #fff; }
       /* line 107, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
       .navbar.is-info .navbar-dropdown a.navbar-item.is-active {
-        background-color: #54425D;
+        background-color: #050505;
         color: #fff; } }
   /* line 65, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
   .navbar.is-success {
@@ -5313,7 +7512,7 @@ a.navbar-item,
   .navbar-link:hover,
   .navbar-link.is-active {
     background-color: #fafafa;
-    color: #0023DC; }
+    color: #0025dc9f; }
 
 /* line 183, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
 .navbar-item {
@@ -5337,14 +7536,14 @@ a.navbar-item,
     /* line 197, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
     .navbar-item.is-tab:focus, .navbar-item.is-tab:hover {
       background-color: transparent;
-      border-bottom-color: #0023DC; }
+      border-bottom-color: #0025dc9f; }
     /* line 201, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
     .navbar-item.is-tab.is-active {
       background-color: transparent;
-      border-bottom-color: #0023DC;
+      border-bottom-color: #0025dc9f;
       border-bottom-style: solid;
       border-bottom-width: 3px;
-      color: #0023DC;
+      color: #0025dc9f;
       padding-bottom: calc(0.5rem - 3px); }
 
 /* line 209, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
@@ -5357,7 +7556,7 @@ a.navbar-item,
   padding-right: 2.5em; }
   /* line 215, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
   .navbar-link:not(.is-arrowless)::after {
-    border-color: #0023DC;
+    border-color: #0025dc9f;
     margin-top: -0.375em;
     right: 1.125em; }
 
@@ -5466,7 +7665,7 @@ a.navbar-item,
     /* line 314, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
     .navbar.is-transparent .navbar-dropdown a.navbar-item.is-active {
       background-color: #424141;
-      color: #0023DC; }
+      color: #0025dc9f; }
   /* line 317, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
   .navbar-burger {
     display: none; }
@@ -5537,7 +7736,7 @@ a.navbar-item,
       /* line 378, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
       .navbar-dropdown a.navbar-item.is-active {
         background-color: #424141;
-        color: #0023DC; }
+        color: #0025dc9f; }
     /* line 381, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/navbar.sass */
     .navbar.is-spaced .navbar-dropdown, .navbar-dropdown.is-boxed {
       border-radius: 6px;
@@ -5660,7 +7859,7 @@ a.navbar-item,
 .pagination-next,
 .pagination-link {
   border-color: #dbdbdb;
-  color: #54425D;
+  color: #050505;
   min-width: 2.5em; }
   /* line 78, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/pagination.sass */
   .pagination-previous:hover,
@@ -5672,7 +7871,7 @@ a.navbar-item,
   .pagination-previous:focus,
   .pagination-next:focus,
   .pagination-link:focus {
-    border-color: #0023DC; }
+    border-color: #0025dc9f; }
   /* line 83, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/pagination.sass */
   .pagination-previous:active,
   .pagination-next:active,
@@ -5697,8 +7896,8 @@ a.navbar-item,
 
 /* line 99, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/pagination.sass */
 .pagination-link.is-current {
-  background-color: #0023DC;
-  border-color: #0023DC;
+  background-color: #0025dc9f;
+  border-color: #0025dc9f;
   color: #fff; }
 
 /* line 104, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/pagination.sass */
@@ -5821,24 +8020,24 @@ a.navbar-item,
     color: #CC003D; }
   /* line 42, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel.is-link .panel-heading {
-    background-color: #0023DC;
+    background-color: #0025dc9f;
     color: #fff; }
   /* line 45, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel.is-link .panel-tabs a.is-active {
-    border-bottom-color: #0023DC; }
+    border-bottom-color: #0025dc9f; }
   /* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel.is-link .panel-block.is-active .panel-icon {
-    color: #0023DC; }
+    color: #0025dc9f; }
   /* line 42, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel.is-info .panel-heading {
-    background-color: #54425D;
+    background-color: #050505;
     color: #fff; }
   /* line 45, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel.is-info .panel-tabs a.is-active {
-    border-bottom-color: #54425D; }
+    border-bottom-color: #050505; }
   /* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel.is-info .panel-block.is-active .panel-icon {
-    color: #54425D; }
+    color: #050505; }
   /* line 42, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel.is-success .panel-heading {
     background-color: #94D50C;
@@ -5879,7 +8078,7 @@ a.navbar-item,
 .panel-heading {
   background-color: #ededed;
   border-radius: 6px 6px 0 0;
-  color: #54425D;
+  color: #050505;
   font-size: 1.25em;
   font-weight: 700;
   line-height: 1.25;
@@ -5906,12 +8105,12 @@ a.navbar-item,
   color: #424141; }
   /* line 81, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel-list a:hover {
-    color: #0023DC; }
+    color: #0025dc9f; }
 
 /* line 84, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
 .panel-block {
   align-items: center;
-  color: #54425D;
+  color: #050505;
   display: flex;
   justify-content: flex-start;
   padding: 0.5em 0.75em; }
@@ -5928,11 +8127,11 @@ a.navbar-item,
     flex-wrap: wrap; }
   /* line 98, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel-block.is-active {
-    border-left-color: #0023DC;
+    border-left-color: #0025dc9f;
     color: #262525; }
     /* line 101, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
     .panel-block.is-active .panel-icon {
-      color: #0023DC; }
+      color: #0025dc9f; }
   /* line 103, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/panel.sass */
   .panel-block:last-child {
     border-bottom-left-radius: 6px;
@@ -5987,15 +8186,15 @@ label.panel-block {
     vertical-align: top; }
     /* line 51, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/tabs.sass */
     .tabs a:hover {
-      border-bottom-color: #54425D;
-      color: #54425D; }
+      border-bottom-color: #050505;
+      color: #050505; }
   /* line 54, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/tabs.sass */
   .tabs li {
     display: block; }
     /* line 57, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/tabs.sass */
     .tabs li.is-active a {
-      border-bottom-color: #0023DC;
-      color: #0023DC; }
+      border-bottom-color: #0025dc9f;
+      color: #0025dc9f; }
   /* line 60, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/tabs.sass */
   .tabs ul {
     align-items: center;
@@ -6073,8 +8272,8 @@ label.panel-block {
     border-bottom-right-radius: 4px; }
   /* line 141, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/tabs.sass */
   .tabs.is-toggle li.is-active a {
-    background-color: #0023DC;
-    border-color: #0023DC;
+    background-color: #0025dc9f;
+    border-color: #0025dc9f;
     color: #fff;
     z-index: 1; }
   /* line 146, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/components/tabs.sass */
@@ -7587,75 +9786,75 @@ a.has-text-primary-dark:hover, a.has-text-primary-dark:focus {
 
 /* line 3, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-text-link {
-  color: #0023DC !important; }
+  color: #0025dc9f !important; }
 
 /* line 6, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 a.has-text-link:hover, a.has-text-link:focus {
-  color: #001ba9 !important; }
+  color: rgba(0, 28, 169, 0.623529) !important; }
 
 /* line 9, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-background-link {
-  background-color: #0023DC !important; }
+  background-color: #0025dc9f !important; }
 
 /* line 15, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-text-link-light {
-  color: #ebeeff !important; }
+  color: rgba(235, 238, 255, 0.623529) !important; }
 
 /* line 18, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 a.has-text-link-light:hover, a.has-text-link-light:focus {
-  color: #b8c3ff !important; }
+  color: rgba(184, 196, 255, 0.623529) !important; }
 
 /* line 21, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-background-link-light {
-  background-color: #ebeeff !important; }
+  background-color: rgba(235, 238, 255, 0.623529) !important; }
 
 /* line 24, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-text-link-dark {
-  color: #0f35ff !important; }
+  color: rgba(15, 56, 255, 0.623529) !important; }
 
 /* line 27, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 a.has-text-link-dark:hover, a.has-text-link-dark:focus {
-  color: #4260ff !important; }
+  color: rgba(66, 98, 255, 0.623529) !important; }
 
 /* line 30, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-background-link-dark {
-  background-color: #0f35ff !important; }
+  background-color: rgba(15, 56, 255, 0.623529) !important; }
 
 /* line 3, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-text-info {
-  color: #54425D !important; }
+  color: #050505 !important; }
 
 /* line 6, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 a.has-text-info:hover, a.has-text-info:focus {
-  color: #392d3f !important; }
+  color: black !important; }
 
 /* line 9, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-background-info {
-  background-color: #54425D !important; }
+  background-color: #050505 !important; }
 
 /* line 15, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-text-info-light {
-  color: #f5f3f7 !important; }
+  color: whitesmoke !important; }
 
 /* line 18, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 a.has-text-info-light:hover, a.has-text-info-light:focus {
-  color: #ddd5e1 !important; }
+  color: #dbdbdb !important; }
 
 /* line 21, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-background-info-light {
-  background-color: #f5f3f7 !important; }
+  background-color: whitesmoke !important; }
 
 /* line 24, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-text-info-dark {
-  color: #8c7099 !important; }
+  color: #919191 !important; }
 
 /* line 27, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 a.has-text-info-dark:hover, a.has-text-info-dark:focus {
-  color: #a48eaf !important; }
+  color: #ababab !important; }
 
 /* line 30, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-background-info-dark {
-  background-color: #8c7099 !important; }
+  background-color: #919191 !important; }
 
 /* line 3, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/color.sass */
 .has-text-success {
@@ -8856,7 +11055,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 /* line 88, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/typography.sass */
 .is-family-secondary {
-  font-family: "Roboto", "Times New Roman", sans-serif !important; }
+  font-family: "Roboto", "Nunito", "Times New Roman", sans-serif !important; }
 
 /* line 91, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/typography.sass */
 .is-family-sans-serif {
@@ -9469,7 +11668,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
           background-image: linear-gradient(141deg, #990047 0%, #CC003D 71%, #e6001e 100%); } }
   /* line 23, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
   .hero.is-link {
-    background-color: #0023DC;
+    background-color: #0025dc9f;
     color: #fff; }
     /* line 26, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
     .hero.is-link a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -9488,7 +11687,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     @media screen and (max-width: 1023px) {
       /* line 36, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
       .hero.is-link .navbar-menu {
-        background-color: #0023DC; } }
+        background-color: #0025dc9f; } }
     /* line 39, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
     .hero.is-link .navbar-item,
     .hero.is-link .navbar-link {
@@ -9497,7 +11696,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     .hero.is-link a.navbar-item:hover, .hero.is-link a.navbar-item.is-active,
     .hero.is-link .navbar-link:hover,
     .hero.is-link .navbar-link.is-active {
-      background-color: #001fc3;
+      background-color: rgba(0, 33, 195, 0.623529);
       color: #fff; }
     /* line 49, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
     .hero.is-link .tabs a {
@@ -9519,17 +11718,17 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     .hero.is-link .tabs.is-boxed li.is-active a, .hero.is-link .tabs.is-boxed li.is-active a:hover, .hero.is-link .tabs.is-toggle li.is-active a, .hero.is-link .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
-      color: #0023DC; }
+      color: #0025dc9f; }
     /* line 71, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
     .hero.is-link.is-bold {
-      background-image: linear-gradient(141deg, #0037a9 0%, #0023DC 71%, #0200f6 100%); }
+      background-image: linear-gradient(141deg, rgba(0, 57, 169, 0.623529) 0%, #0025dc9f 71%, rgba(0, 0, 246, 0.623529) 100%); }
       @media screen and (max-width: 768px) {
         /* line 76, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
         .hero.is-link.is-bold .navbar-menu {
-          background-image: linear-gradient(141deg, #0037a9 0%, #0023DC 71%, #0200f6 100%); } }
+          background-image: linear-gradient(141deg, rgba(0, 57, 169, 0.623529) 0%, #0025dc9f 71%, rgba(0, 0, 246, 0.623529) 100%); } }
   /* line 23, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
   .hero.is-info {
-    background-color: #54425D;
+    background-color: #050505;
     color: #fff; }
     /* line 26, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
     .hero.is-info a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -9548,7 +11747,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     @media screen and (max-width: 1023px) {
       /* line 36, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
       .hero.is-info .navbar-menu {
-        background-color: #54425D; } }
+        background-color: #050505; } }
     /* line 39, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
     .hero.is-info .navbar-item,
     .hero.is-info .navbar-link {
@@ -9557,7 +11756,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     .hero.is-info a.navbar-item:hover, .hero.is-info a.navbar-item.is-active,
     .hero.is-info .navbar-link:hover,
     .hero.is-info .navbar-link.is-active {
-      background-color: #47374e;
+      background-color: black;
       color: #fff; }
     /* line 49, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
     .hero.is-info .tabs a {
@@ -9579,14 +11778,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     .hero.is-info .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
-      color: #54425D; }
+      color: #050505; }
     /* line 71, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
     .hero.is-info.is-bold {
-      background-image: linear-gradient(141deg, #362745 0%, #54425D 71%, #6a4871 100%); }
+      background-image: linear-gradient(141deg, black 0%, #050505 71%, #131111 100%); }
       @media screen and (max-width: 768px) {
         /* line 76, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
         .hero.is-info.is-bold .navbar-menu {
-          background-image: linear-gradient(141deg, #362745 0%, #54425D 71%, #6a4871 100%); } }
+          background-image: linear-gradient(141deg, black 0%, #050505 71%, #131111 100%); } }
   /* line 23, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/layout/hero.sass */
   .hero.is-success {
     background-color: #94D50C;
