@@ -37,7 +37,7 @@
 <body>
         <div class="container has-text-white">
 
-            <div class="container" style="float:right; width: 160px;">
+            <div class="container" style="float: left; width: 160px;">
                 <div id="nav"> </div>
             </div>
              <!--Dayspedia.com widget--><iframe width='300' height='140' style='padding:0!important;margin:0!important;border:none!important;background:none!important;background:transparent!important;float: right; top:-30px' marginheight='0' marginwidth='0' frameborder='0' scrolling='no' comment='/*defined*/' src='https://dayspedia.com/widgets/digit/?v=1&iframe=eyJ3LTEyIjp0cnVlLCJ3LTExIjp0cnVlLCJ3LTEzIjp0cnVlLCJ3LTE0IjpmYWxzZSwidy0xNSI6ZmFsc2UsInctMTEwIjpmYWxzZSwidy13aWR0aC0wIjp0cnVlLCJ3LXdpZHRoLTEiOmZhbHNlLCJ3LXdpZHRoLTIiOmZhbHNlLCJ3LTE2IjoiMjRweCIsInctMTkiOiI0OCIsInctMTciOiIxNiIsInctMjEiOnRydWUsImJnaW1hZ2UiOi0yLCJiZ2ltYWdlU2V0IjpmYWxzZSwidy0yMWMwIjoiI2ZmZmZmZiIsInctMCI6dHJ1ZSwidy0zIjp0cnVlLCJ3LTNjMCI6IiMzNDM0MzQiLCJ3LTNiMCI6IjEiLCJ3LTYiOiIjMzQzNDM0Iiwidy0yMCI6dHJ1ZSwidy00IjoiIzAwN2RiZiIsInctMTgiOmZhbHNlLCJ3LXdpZHRoLTJjLTAiOiIzMDAifQ==&lang=en&cityid=1490'></iframe><!--Dayspedia.com widget ENDS-->
@@ -49,7 +49,7 @@
             <div class="dropdown">
                     <?php
                         //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
-                        $resultSet = $link->query("SELECT firstname, lastname FROM account");
+                        $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
                     ?>
                     <form method="post">
                     Select Child: <select id="dropdown-content" name ="childMenu">
@@ -60,7 +60,8 @@
                             {
                                 $fnames = $rows['firstname']; 
                                 $lnames = $rows['lastname'];
-                                echo "<option value='$fnames'>$fnames ".  $lnames ."</option>";
+                                $ids = $rows['id'];
+                                echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
                             }
                         } 
                     ?>
