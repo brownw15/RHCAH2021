@@ -54,6 +54,9 @@
                     <form method="post">
                     Select Child: <select id="dropdown-content" name ="childMenu">
                     <?php
+                        if(isset($_POST['childMenu'])){
+                            $_SESSION['childMenuValue'] = $_POST['childMenu'];
+                        }
                         if($_SESSION['access'] == 'staff')
                         {
                             while($rows = $resultSet->fetch_assoc())

@@ -3,11 +3,11 @@
     include 'databaseConnection.php';
 	header('Content-Type: application/json');
 	
-    if(!isset($_POST['childMenu'])){
+    if($_SESSION['childMenuValue'] == ""){ // fix only works for one switch
         $id = $_SESSION['userID']; //NEED TO PULL USERID WHEN THEY SIGNUP!!!
     }
     else{
-        $id = $_POST['childMenu'];
+        $id = $_SESSION['childMenuValue'];
     }
 	//THIS NEEDS TO BE PARAMETERIZED!!! QUERY NEEDS TO BE UPDATED TO REFLECT PER ACCOUNT
 	$read = $link->query('SELECT * FROM events WHERE userID = '. $id .'');

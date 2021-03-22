@@ -5,11 +5,11 @@
     // create INSERT statement for creating events
     $insert = 'INSERT INTO events (name,start,end,userID) VALUES (?,?,?,?)'; 
     $stmt = $link->prepare($insert);
-    if(!isset($_POST['childMenu'])){
+    if($_SESSION['childMenuValue'] == ""){ // fix only works for one switch !!
         $id = $_SESSION['userID']; //NEED TO PULL USERID WHEN THEY SIGNUP!!!
     }
     else{
-        $id = $_POST['childMenu'];
+        $id = $_SESSION['childMenuValue'];
     }
     $stmt->bind_param("sssi",$_POST['name'], $_POST['start'], $_POST['end'],$id); // put info in the statement
 
