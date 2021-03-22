@@ -8,7 +8,7 @@
     $stmt->bind_param("sss",$_POST['name'], $_POST['start'], $_POST['end']); // put info in the statement
 
     // determine whether the creation was successful
-    if($stmt->execute()){ // if the statement is successful
+    if($stmt->execute()){ // if the statement was successful
         // create confirmation response
         class Result {}
 

@@ -8,7 +8,7 @@
     $stmt->bind_param("i",$_POST['id']); // puts correct id in the statement
 
     // determine whether the deletion was successful
-    if($stmt->execute()){ // if statement succeded
+    if($stmt->execute()){ // if the statement was succesful
         // create confirmation response
         class Result {}
 
