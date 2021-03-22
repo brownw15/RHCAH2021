@@ -60,6 +60,7 @@
                             $stmt->bind_param('i', $_SESSION['childMenuValue']);
                             $stmt->execute();
                             $stmt->bind_result($id,$firstname,$lastname);
+                            $stmt->fetch();
                             echo "<option value='$id'>$firstname ".  $lastname ."</option>";
                         }
                         if($_SESSION['access'] == 'staff')
