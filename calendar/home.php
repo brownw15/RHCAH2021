@@ -56,6 +56,11 @@
                     <?php
                         if(isset($_POST['childMenu'])){
                             $_SESSION['childMenuValue'] = $_POST['childMenu'];
+                            $stmt = $link->prepare('SELECT id, firstname, lastname FROM account WHERE id = ? limit 1');
+                            $stmt->bind_param('i', $_SESSION['childMenuValue']);
+                            $stmt->execute();
+                            $stmt->bind_result($id,$firstname,$lastname);
+                            echo "<option value='$id'>$firstname ".  $lastname ."</option>";
                         }
                         if($_SESSION['access'] == 'staff')
                         {
