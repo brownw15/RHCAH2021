@@ -3,10 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 @import "reset";
 @import "redpurple";
-@import "cal";
-@import "calgreen";
-@import "calg";
-@import "caltraditional";
 
 // Set your brand colors
 $red: #CC003D;
@@ -43,7 +39,62 @@ $input-shadow: none;
   }
 
 .calendar-widget {
-  float: right;
+  float: left;
+}
+
+.toolbar {
+  margin-bottom: 10px;
+}
+
+.toolbar-item a {
+  background-color: #fff;
+  border: 1px solid #c0c0c0;
+  color: #333;
+  padding: 8px 0px;
+  width: 80px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.toolbar-item a.selected-button {
+  background-color: #f3f3f3;
+  color: #000;
+}
+
+/* context menu icons */
+.icon:before {
+  position: absolute;
+  margin-left: 0px;
+  margin-top: 3px;
+  width: 14px;
+  height: 14px;
+  content: '';
+}
+
+.icon-blue:before { background-color: #3d85c6; }
+.icon-green:before { background-color: #6aa84f; }
+.icon-orange:before { background-color: #e69138; }
+.icon-red:before { background-color: #cc4125; }
+
+/* active areas */
+.area-menu-icon {
+  background-color: #333333;
+  box-sizing: border-box;
+  xborder: 1px solid white;
+  border-radius: 10px;
+  opacity: 0.7;
+  color: white;
+  display: flex;
+  justify-content: center;
+  xalign-items: center;
+  font-size: 14px;
+}    
+
+.area-menu-icon:hover {
+  opacity: 1;
 }
 
 @import "../bulma/sass/utilities/_all.sass";
