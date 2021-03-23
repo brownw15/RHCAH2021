@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rock Hill Childrens Attention Home Calendar</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./media/css/styles.css">
     <link rel="stylesheet" href="./media/css/redpurple.css">
@@ -64,6 +64,13 @@
                     <span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
                     <span><?php echo $_SESSION['access'] ?> Access</span>
                 </span>
+                </div>
+            </div>
+            <div class="navbar-item">  
+                <div class="buttons">
+                <a class="button is-light logoutButton" name="logout">
+                    Log out
+                </a>
                 </div>
             </div>
             

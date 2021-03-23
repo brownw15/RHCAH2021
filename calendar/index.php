@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 	session_start(); // end in logout page
 ?>
@@ -5,10 +6,49 @@
 <head>
 	<link rel="stylesheet" href="./media/css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title> Log in</title>
+	<title>Rock Hill Childrens Attention Home Calendar Login Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!-- daypilot libraries -->
+    <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/45612e4e8c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+<nav class="navbar mb-2" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="home.php">
+            <img src="./media/images/logo.png" id="navlogo" width="100" height="200">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-menu my-4">
+            <div class="navbar-start">
+
+            <a class="navbar-item">
+               Settings
+            </a>
+            <a class="navbar-item">
+               Help
+            </a>
+            </div>
+        </div>
+            <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="user">    
+                <span class="icon-text">
+                    <span class="icon"> <i class="far fa-user"></i></span>
+                    <span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
+                    <span><?php echo $_SESSION['access'] ?> Access</span>
+                </span>
+                </div>
+            </div>
+            
+    </nav>
 	<div class="container is-centered block" style="width:600px">
 		<form id="loginForm" class="box" action="loginSubmission.php" method="post">
 			<h1 class="title is-1 has-text-weight-semibold is-family-monospace">Login</h1>
@@ -73,6 +113,7 @@
 			</div>
 		</form>
 	</div>
+	
 <script>
 function toggleForm(){
 	//this function toggles showing the login form and the signup form when the user clicks the 'signup' button at the bottom of login form and the 'login' button at the bottom of the sign up form
