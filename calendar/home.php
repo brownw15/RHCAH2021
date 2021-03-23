@@ -37,7 +37,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="home.php">
-            <img src="./media/images/logo.png" width="130 " height="150">
+            <img src="./media/images/logo.png" id="navlogo" width="100" height="200">
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -49,32 +49,13 @@
             <div class="navbar-start">
 
             <a class="navbar-item">
-                Documentation
+               Settings
             </a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                More
-                </a>
-
-                <div class="navbar-dropdown">
-                <a class="navbar-item">
-                    About
-                </a>
-                <a class="navbar-item">
-                    Jobs
-                </a>
-                <a class="navbar-item">
-                    Contact
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                    Report an issue
-                </a>
-                </div>
+            <a class="navbar-item">
+               Help
+            </a>
             </div>
         </div>
-
             <div class="navbar-end">
             <div class="navbar-item">
                 <div class="user">    
@@ -88,11 +69,41 @@
             
     </nav>
 
-    <div class="main has-text-white my-4">
+    <div class="main has-text-white my-4" style="display:flex">
         <div class="calendar-widget mx-2">
             <div id="nav"> </div>
         </div>
+        <div class="container calender" id="dp"></div>
+        <div class="selectchild">
+            <?php
+            //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
+            $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
+            ?>
+                <div> 
+                    <form method="post">
 
+                    <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
+                        <?php
+                            if(isset($_POST['childMenu'])){
+                            $_SESSION['childMenuValue'] = $_POST['childMenu'];
+                            }
+                            if($_SESSION['access'] == 'staff')
+                            {
+                                while($rows = $resultSet->fetch_assoc())
+                                {
+                                    $fnames = $rows['firstname']; 
+                                    $lnames = $rows['lastname'];
+                                    $ids = $rows['id'];
+                                    echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
+                                }
+                            } 
+                        ?>
+                    </select>
+                    <input class="button block" type="submit" value="Select User" style="float:left;"/>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="dropdown container">
         <!-- Include themes -->
             <div>
@@ -109,48 +120,15 @@
                     </div>
                 </div>
             </div>
-
-            <div>
-            <?php
-            //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
-            $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
-            ?>
-            <div class="selectchild"> 
-            <form method="post">
-
-            <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
-            <?php
-            if(isset($_POST['childMenu'])){
-            $_SESSION['childMenuValue'] = $_POST['childMenu'];
-            }
-            if($_SESSION['access'] == 'staff')
-            {
-            while($rows = $resultSet->fetch_assoc())
-            {
-            $fnames = $rows['firstname']; 
-            $lnames = $rows['lastname'];
-            $ids = $rows['id'];
-            echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
-            }
-            } 
-            ?>
-            </select>
-            <input class="button" type="submit" value="Select" style="float:left;"/>
-            </form>
-            </div>
-            </div>
-            </div>
-        <!-- Placeholder for daypilot lite calendar widget -->
-        <div class="container calender" id="dp"></div>
+        </div>
+        
   
         <div class="Upcoming has-text-white" style="margin-top: 15px; margin-left: 160px; width: 85%; border: .7px solid #e3e3e3; height: 80px; padding: 10px">
             <h1>Upcoming...</h1>
             "Company Potlock" &nbsp; &nbsp; <i class="fa fa-calendar" aria-hidden="true"></i> Next Friday  &nbsp; &nbsp; <i class="fa fa-map-marker" aria-hidden="true"></i> Location: On site
             &nbsp; &nbsp; <i class="fa fa-clock-o" aria-hidden="true"></i> 5:00 - 6:30p
-        </div>  
-    </div>
+        </div>
 
-    <div class="clear">
     </div>
     <script type="text/javascript">
         //get access type

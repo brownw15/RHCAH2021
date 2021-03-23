@@ -1363,6 +1363,11 @@ Theme Designer Version: 2020.11.14.39354
 .area-menu-icon:hover {
   opacity: 1; }
 
+/* line 101, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+#navlogo img {
+  height: 50%;
+  width: 90%; }
+
 /* Bulma Utilities */
 @keyframes spinAround {
   from {
