@@ -12,6 +12,7 @@
         fclose($statsFile);
         $_SESSION['name'] = "";
         $_SESSION['access'] = "";
+        $_SESSION['childMenuValue'] = "";
         echo '<script>';
         echo 'for(i=0; i<1; i++){window.location.assign("index.php")}';
         echo '</script>';

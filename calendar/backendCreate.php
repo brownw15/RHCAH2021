@@ -5,7 +5,7 @@
     // create INSERT statement for creating events
     $insert = 'INSERT INTO events (name,start,end,userID) VALUES (?,?,?,?)'; 
     $stmt = $link->prepare($insert);
-    if($_SESSION['childMenuValue'] == ""){ // fix only works for one switch !!
+    if($_SESSION['childMenuValue'] == ""){ 
         $id = $_SESSION['userID']; //NEED TO PULL USERID WHEN THEY SIGNUP!!!
     }
     else{

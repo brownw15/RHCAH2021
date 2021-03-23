@@ -3,7 +3,7 @@
     include 'databaseConnection.php';
 	header('Content-Type: application/json');
 	
-    if($_SESSION['childMenuValue'] == ""){ // fix only works for one switch
+    if($_SESSION['childMenuValue'] == ""){ 
         $id = $_SESSION['userID']; //NEED TO PULL USERID WHEN THEY SIGNUP!!!
     }
     else{

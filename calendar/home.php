@@ -85,15 +85,7 @@
                 </span>
                 </div>
             </div>
-            <div class="navbar-item">  
-                <div class="buttons">
-                <a class="button is-warning logoutButton" name="logout">
-                    Log out
-                </a>
-                </div>
-            </div>
-        </div>
-        </div>
+            
     </nav>
 
     <div class="main has-text-white my-4">
