@@ -16,6 +16,7 @@
             
             $_SESSION['name'] = $firstname;
             $_SESSION['access'] = $description;
+            $_SESSION['userID'] = $id;
             $statsData = array("Login, " . $firstname . ", " . date("Y-m-d") . ", " . date("h:i:sa"));
             foreach($statsData as $line){
                 fputcsv($statsFile, explode(',',$line));

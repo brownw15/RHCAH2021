@@ -1,38 +1,39 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    
-    $read = 'SELECT * FROM events WHERE ((start > 2021-03-01))';
-    $read->execute();    
-    $result = $read->fetchAll();
-
-    /*       OR
-
-    $read = 'SELECT * FROM events WHERE ((start > ?))';
-    $stmt = $link->prepare($read);
-    $dateTime = dateTime(2021-03-01);
-    $stmt->bind_param("s",$dateTime);
-
-    $stmt->execute();    
-    $result = $stmt->fetchAll();
-
-    */
-
-    class Event {}
-    $events = array();
-
-    foreach($result as $row) {
-    $e = new Event();
-    $e->id = $row['id'];
-    $e->text = $row['name'];
-    $e->start = $row['start'];
-    $e->end = $row['end'];
-    $events[] = $e;
+	header('Content-Type: application/json');
+	
+    if($_SESSION['childMenuValue'] == ""){ 
+        $id = $_SESSION['userID']; //NEED TO PULL USERID WHEN THEY SIGNUP!!!
     }
-
-    header('Content-Type: application/json');
+    else{
+        $id = $_SESSION['childMenuValue'];
+    }
+	//THIS NEEDS TO BE PARAMETERIZED!!! QUERY NEEDS TO BE UPDATED TO REFLECT PER ACCOUNT
+	$read = $link->query('SELECT * FROM events WHERE userID = '. $id .'');
+	
+	//select query needs to be updated to match.
+	$result = $read->fetch_all(MYSQLI_ASSOC);
+	
+    class Event {
+		public $id;
+		public $text;
+		public $start;
+		public $end;
+	}
+	
+    $events = [];
+    foreach($result as $row) {
+		$e = new Event();
+		$e->id = $row['id'];
+		$e->text = $row['name'];
+		$e->start = $row['start'];
+		$e->end = $row['end'];
+		$events[] = $e;
+    }
+	
+	//have to free result set.
+	$read->free_result();
+	
     echo json_encode($events);
-
-
-
 ?>

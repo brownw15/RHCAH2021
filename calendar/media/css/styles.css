@@ -1289,19 +1289,19 @@ Theme Designer Version: 2020.11.14.39354
   background-color: #870000;
   opacity: 0.5; }
 
-/* line 37, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 39, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .remove-all-styles {
   all: revert; }
 
-/* line 41, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 43, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .calendar-widget {
   float: left; }
 
-/* line 45, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 47, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .toolbar {
   margin-bottom: 10px; }
 
-/* line 49, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 51, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .toolbar-item a {
   background-color: #fff;
   border: 1px solid #c0c0c0;
@@ -1314,13 +1314,13 @@ Theme Designer Version: 2020.11.14.39354
   text-align: center;
   text-decoration: none; }
 
-/* line 62, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 64, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .toolbar-item a.selected-button {
   background-color: #f3f3f3;
   color: #000; }
 
 /* context menu icons */
-/* line 68, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 70, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .icon:before {
   position: absolute;
   margin-left: 0px;
@@ -1329,24 +1329,24 @@ Theme Designer Version: 2020.11.14.39354
   height: 14px;
   content: ''; }
 
-/* line 77, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 79, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .icon-blue:before {
   background-color: #3d85c6; }
 
-/* line 78, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 80, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .icon-green:before {
   background-color: #6aa84f; }
 
-/* line 79, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 81, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .icon-orange:before {
   background-color: #e69138; }
 
-/* line 80, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 82, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .icon-red:before {
   background-color: #cc4125; }
 
 /* active areas */
-/* line 83, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 85, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .area-menu-icon {
   background-color: #333333;
   box-sizing: border-box;
@@ -1359,9 +1359,17 @@ Theme Designer Version: 2020.11.14.39354
   xalign-items: center;
   font-size: 14px; }
 
-/* line 96, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+/* line 98, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
 .area-menu-icon:hover {
   opacity: 1; }
+
+/* line 102, ../../XAMPP/htdocs/RHCAH2021/calendar/media/sass/styles.scss */
+.login-box {
+  width: 75%;
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6; }
 
 /* Bulma Utilities */
 @keyframes spinAround {
@@ -1998,10 +2006,10 @@ table th {
 /* Bulma Elements */
 /* line 10, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/elements/box.sass */
 .box {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-  color: #424141;
+  color: rgba(255, 255, 255, 0.8);
   display: block;
   padding: 1.25rem; }
 
@@ -10220,7 +10228,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 /* line 88, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/typography.sass */
 .is-family-secondary {
-  font-family: "Roboto", "Nunito", "Times New Roman", sans-serif !important; }
+  font-family: "Open Sans", "Nunito", "Times New Roman", sans-serif !important; }
 
 /* line 91, ../../XAMPP/htdocs/RHCAH2021/calendar/media/bulma/sass/helpers/typography.sass */
 .is-family-sans-serif {
