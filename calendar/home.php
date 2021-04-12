@@ -65,6 +65,13 @@
                             <span><?php echo $_SESSION['access'] ?> Access</span>
                         </span>
                 </div>
+                <div class="navbar-item">  
+                    <div class="buttons">
+                        <a class="button is-light logoutButton" name="logout">
+                            Log out
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>		
     </nav>
@@ -261,7 +268,8 @@
                 end: args.end,
                 id: DayPilot.guid(),
                 resource: args.resource,
-                text: name
+                text: name,
+                text: location
             });
             dp.events.add(e);
 
@@ -280,7 +288,8 @@
                         'start': args.start.toString(),
                         'end': args.end.toString(),
                         'eventId': DayPilot.guid(),
-                        'eventName': name
+                        'eventName': name,
+                        'eventLocation': location
                         };
             $.post(processURL, data, function(response){
                 console.log("Stats Updated.");
