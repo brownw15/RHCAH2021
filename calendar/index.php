@@ -22,12 +22,6 @@
 					<a class="navbar-item" href="home.php">
 						<img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="250" height="500">
 					</a>
-
-					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-					</a>
 				</div>
 				<div id="navbar" class="navbar-menu my-4">
 					<div class="navbar-start">
@@ -75,6 +69,7 @@
 								<button class="button is-primary is-light" type="button" onclick="toggleForm()"> Sign Up</button>
 							</div>
 						</div>
+						<p><a class="has-text-black" href="password_reset.php">Forgot Password</a></p>
 					</form>
 				</div>
 				<form id="signupForm" class="box" action="signupSubmission.php" method="post" style="display:none">
