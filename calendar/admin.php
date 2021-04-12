@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- Bulma Version 0.9.0-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    
 </head>
 
 <body>
@@ -67,7 +67,7 @@
     <!-- END NAV -->
     <div class="container">
         <div class="columns">
-            <div class="column is-3 ">
+            <div class="column is-2 ">
                 <aside class="menu is-hidden-mobile">
                     <p class="menu-label">
                         Administration
@@ -91,7 +91,7 @@
                         <li class="is-active"><a href="#" aria-current="page">Admin</a></li>
                     </ul>
                 </nav>
-                <section class="hero is-info welcome is-small">
+                <section class="hero is-primary welcome is-small">
                     <div class="hero-body">
                         <div class="container">
                             <h1 class="title">
@@ -125,7 +125,7 @@
                         <div class="card events-card">
                             <header class="card-header">
                                 <p class="card-header-title">
-                                    Events
+                                    Users
                                 </p>
                                 <a href="#" class="card-header-icon" aria-label="more options">
                   <span class="icon">
@@ -138,29 +138,29 @@
                                     <table class="table is-fullwidth is-striped">
                                         <tbody>
                                             <tr>
+                                                <td width="5%"><i class="fa fa-user-o"></i></td>
+                                                <td>Son Goku</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
+                                            </tr>
+                                            <tr>
                                                 <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                                <td>Tj Wynn</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Nick Paul</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
                                             </tr>
                                             <tr>
                                                 <td width="5%"><i class="fa fa-bell-o"></i></td>
                                                 <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
                                             </tr>
                                             <tr>
                                                 <td width="5%"><i class="fa fa-bell-o"></i></td>
                                                 <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
                                             </tr>
                                           
                                         </tbody>
