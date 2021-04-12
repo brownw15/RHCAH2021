@@ -25,6 +25,7 @@
     <link type="text/css" rel="stylesheet" href="themes/calendar_traditional.css" />
     <link type="text/css" rel="stylesheet" href="themes/calendar_transparent.css" />
     <link type="text/css" rel="stylesheet" href="themes/calendar_white.css" />
+    <link rel="stylesheet" href="themes/modal_rounded.css" type="text/css" />
 <!-- helper libraries -->
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <!-- daypilot libraries -->
@@ -34,53 +35,71 @@
 </head>
 
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar mb-2" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="home.php">
-            <img src="./media/images/logo.png" id="navlogo" width="100" height="200">
+                <img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="250" height="500">
             </a>
+
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
         </div>
         <div id="navbar" class="navbar-menu my-4">
             <div class="navbar-start">
-
-            <a class="navbar-item">
-               Settings
-            </a>
-            <a class="navbar-item">
-               Help
-            </a>
-            </div>
-        </div>
-            <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="user">    
-                <span class="icon-text">
-                    <span class="icon"> <i class="far fa-user"></i></span>
-                    <span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
-                    <span><?php echo $_SESSION['access'] ?> Access</span>
-                </span>
-                </div>
-            </div>
-            <div class="navbar-item">  
-                <div class="buttons">
-                <a class="button is-light logoutButton" name="logout">
-                    Log out
+                <a class="navbar-item" href="admin.php">
+                    Settings
                 </a>
+                <a class="navbar-item" href="contact.php">
+                    Help
+                </a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="user">    
+                        <span class="icon-text">
+                            <span class="icon"> <i class="far fa-user"></i></span>
+                            <span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
+                            <span><?php echo $_SESSION['access'] ?> Access</span>
+                        </span>
+                </div>
+                <div class="navbar-item">  
+                    <div class="buttons">
+                        <a class="button is-light logoutButton" name="logout">
+                            Log out
+                        </a>
+                    </div>
                 </div>
             </div>
-            
+        </div>		
     </nav>
 
     <div class="main has-text-white my-4" style="display:flex">
-        <div class="calendar-widget mx-2">
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Modal title</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+
+                <section class="modal-card-body">
+                    <!-- Content ... -->
+                </section>
+
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button">Cancel</button>
+                </footer>
+            </div>
+        </div>
+
+        <div class="calendar-widget mx-2 ">
             <div id="nav"> </div>
         </div>
-        <div class="container calender" id="dp"></div>
+        <div class="container calender box px-2 mx-2" id="dp"></div>
         <div class="selectchild">
             <?php
             //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
@@ -106,7 +125,7 @@
                             } 
                         ?>
                     </select>
-                    <input class="button block" type="submit" value="Select User" style="float:left;"/>
+                    <input class="button block is-primary is-light my-2" type="submit" value="Select User" style="float:left;"/>
                     </form>
                 </div>
             </div>
@@ -237,6 +256,11 @@
         dp.onTimeRangeSelected = function(args) {
             if(access === "staff"){
             var name = prompt("New event name:", "Event");
+            /*var name = DayPilot.Modal.prompt("Event name:", { theme: "modal_rounded" }).then(function(args) {
+                console.log(args.result);
+                return args.result;
+            }); */
+
             dp.clearSelection();
             if (!name) return;
             var e = new DayPilot.Event({
@@ -244,7 +268,8 @@
                 end: args.end,
                 id: DayPilot.guid(),
                 resource: args.resource,
-                text: name
+                text: name,
+                text: location
             });
             dp.events.add(e);
 
@@ -263,7 +288,8 @@
                         'start': args.start.toString(),
                         'end': args.end.toString(),
                         'eventId': DayPilot.guid(),
-                        'eventName': name
+                        'eventName': name,
+                        'eventLocation': location
                         };
             $.post(processURL, data, function(response){
                 console.log("Stats Updated.");
@@ -304,6 +330,11 @@
             });
         });
     });
+
+    function css(theme) {
+    DayPilot.Modal.prompt("Event name:", { theme: theme }).then(function(args) { console.log(args.result); });
+  }
+
     </script>
 
 </body>

@@ -17,20 +17,22 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ox
 
 // Update Bulma's global variables
 $family-primary: $family-sans-serif;
-$family-secondary: "Roboto", "Nunito", "Times New Roman", sans-serif;
+$family-secondary: "Open Sans", "Nunito", "Times New Roman", sans-serif;
 $primary: $red;
-  $link: $blue;
-  $info: $gray;
-  $success: $green;
-  $warning: $orange;
-  $background: $grey-dark;
-  $text-strong: $gray;
-  $widescreen-enabled: true;
-  $fullhd-enabled: false;
+$link: $blue;
+$info: $gray;
+$success: $green;
+$warning: $orange;
+$background: $grey-dark;
+$text-strong: $gray;
+$widescreen-enabled: true;
+$fullhd-enabled: false;
 
 // Update some of Bulma's component variables
 $body-background-color: $grey-dark;
 $control-border-width: 2px;
+$box-color: rgba(255,255,255,.8);
+$box-background-color: rgba(255,255,255,.8);
 $input-border-color: transparent;
 $input-shadow: none;
 
@@ -97,11 +99,18 @@ $input-shadow: none;
   opacity: 1;
 }
 
-#navlogo{
-    height: 80%;
-    width: 90%;
+.login-box{
+  width:75%;
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
   
 }
+
+
+
+
+
 
 @import "../bulma/sass/utilities/_all.sass";
 @import "../bulma/bulma.sass";
