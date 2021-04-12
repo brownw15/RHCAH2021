@@ -1,6 +1,8 @@
 <?php 
     session_start(); 
     include 'databaseConnection.php';
+
+    date_default_timezone_set('America/New_York');
     /* KEEP OR DELETE */
     /*
         //if the user isn't logged in and they access homepage, redirect them to login page
@@ -130,24 +132,14 @@
                 </div>
             </div>
         </div>
-        <div class="dropdown container">
-        <!-- Include themes -->
-            <div>
-                <h3> Theme: <select id="theme"> </h3>
-                <div class="dropdown-menu" id="dropdown-menu1" role="menu">
-                    <div class="dropdown-content">
-                        <option value="calendar_default">Default</option>
-                        <option value="calendar_white">White</option>
-                        <option value="calendar_g">Google-Like</option>
-                        <option value="calendar_green">Green</option>
-                        <option value="calendar_traditional">Traditional</option>
-                        <option value="calendar_transparent">Transparent</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+
+        <button class="clockButtonIn button">
+               Clock In
+        </button>
+
+        <button class="clockButtonOut button">
+               Clock Out
+        </button>
   
         <div class="Upcoming has-text-white" style="margin-top: 15px; margin-left: 160px; width: 85%; border: .7px solid #e3e3e3; height: 80px; padding: 10px">
             <h1>Upcoming...</h1>
@@ -255,12 +247,9 @@
         // event creating
         dp.onTimeRangeSelected = function(args) {
             if(access === "staff"){
-            var name = prompt("New event name:", "Event");
-            /*var name = DayPilot.Modal.prompt("Event name:", { theme: "modal_rounded" }).then(function(args) {
-                console.log(args.result);
-                return args.result;
-            }); */
-
+            var name = prompt("New event name:");
+            var location = prompt("Location of event:");
+            var typeEvent = prompt("Type of event:");
             dp.clearSelection();
             if (!name) return;
             var e = new DayPilot.Event({
@@ -268,8 +257,6 @@
                 end: args.end,
                 id: DayPilot.guid(),
                 resource: args.resource,
-                text: name,
-                text: location
             });
             dp.events.add(e);
 
@@ -277,7 +264,9 @@
                     {
                         start: args.start.toString(),
                         end: args.end.toString(),
-                        name: name
+                        name: name,
+                        loc: location,
+                        type: typeEvent
                     },
                     function() {
                         console.log("Created.");
@@ -327,6 +316,22 @@
             $.post(processURL, data, function(response){
                 alert("logout successful");
                 for(i=0; i<1; i++){window.location.assign("index.php")};
+            });
+        });
+
+        $('.clockButtonIn').click(function(){
+            var processURL = 'clockIn.php';
+            $.post(processURL, function(response){
+                alert("You Have Clocked In");
+                for(i=0; i<1; i++){window.location.assign("home.php")};
+            });
+        });
+
+        $('.clockButtonOut').click(function(){
+            var processURL = 'clockOut.php';
+            $.post(processURL, function(response){
+                alert("You Have Clocked Out");
+                for(i=0; i<1; i++){window.location.assign("home.php")};
             });
         });
     });
