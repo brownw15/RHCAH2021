@@ -106,27 +106,35 @@
             $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
             ?>
                 <div> 
-                    <form method="post">
+                <form method="post">
 
-                    <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
-                        <?php
-                            if(isset($_POST['childMenu'])){
+                <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
+                    <?php
+                         $resultSet = $link->query("SELECT id, firstname, lastname FROM account WHERE description='child' ");
+
+                        if(isset($_POST['childMenu'])){
                             $_SESSION['childMenuValue'] = $_POST['childMenu'];
-                            }
-                            if($_SESSION['access'] == 'staff')
+                            $stmt = $link->prepare('SELECT id, firstname, lastname FROM account WHERE id = ? limit 1');
+                            $stmt->bind_param('i', $_SESSION['childMenuValue']);
+                            $stmt->execute();
+                            $stmt->bind_result($id,$firstname,$lastname);
+                            $stmt->fetch();
+                            echo "<option value='$id'>$firstname ".  $lastname ."</option>";
+                        }
+                        if($_SESSION['access'] == 'staff')
+                        {
+                            while($rows = $resultSet->fetch_assoc())
                             {
-                                while($rows = $resultSet->fetch_assoc())
-                                {
-                                    $fnames = $rows['firstname']; 
-                                    $lnames = $rows['lastname'];
-                                    $ids = $rows['id'];
-                                    echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
-                                }
-                            } 
-                        ?>
-                    </select>
-                    <input class="button block is-primary is-light my-2" type="submit" value="Select User" style="float:left;"/>
-                    </form>
+                                $fnames = $rows['firstname']; 
+                                $lnames = $rows['lastname'];
+                                $ids = $rows['id'];
+                                echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
+                            }
+                        } 
+                    ?>
+                </select>
+                <input class="button block is-primary is-light my-2" type="submit" value="Select User" style="float:left;"/>
+                </form>
                 </div>
             </div>
         </div>
