@@ -47,8 +47,8 @@
 		</div>
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<div class="remove-all-styles box login-box"> 
-					<form id="loginForm" class="is-centered" action="loginSubmission.php" method="post">
+				<div id="loginForm" class="box login-box"> 
+					<form  class="is-centered" action="loginSubmission.php" method="post">
 						<h1 class="title is-1 has-text-weight-semibold has-text-black is-family-secondary">Login</h1>
 						<div class="field">
 							<div class="control">

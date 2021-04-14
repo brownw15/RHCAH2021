@@ -26,15 +26,17 @@ $warning: $orange;
 $background: $grey-dark;
 $text-strong: $gray;
 $widescreen-enabled: true;
-$fullhd-enabled: false;
+$fullhd-enabled: true;
 
 // Update some of Bulma's component variables
 $body-background-color: $grey-dark;
 $control-border-width: 2px;
-$box-color: rgba(255,255,255,.8);
+$box-color: rgba(255,200,255,.8);
 $box-background-color: rgba(255,255,255,.8);
-$input-border-color: transparent;
+$input-border-color: $red;
 $input-shadow: none;
+$navbar-item-hover-background-color: $primary;
+$navbar-burger-color: $primary;
 
 .remove-all-styles {
     all: revert;
@@ -42,6 +44,16 @@ $input-shadow: none;
 
 .calendar-widget {
   float: left;
+}
+
+#header-logo {
+  position : relative;
+  background-size: cover;
+}
+
+a.navbar-item:hover{
+color: $primary;
+background-color: $info;
 }
 
 .toolbar {
@@ -85,13 +97,13 @@ $input-shadow: none;
 .area-menu-icon {
   background-color: #333333;
   box-sizing: border-box;
-  xborder: 1px solid white;
+  border: 1px solid white;
   border-radius: 10px;
   opacity: 0.7;
   color: white;
   display: flex;
   justify-content: center;
-  xalign-items: center;
+  align-items: center;
   font-size: 14px;
 }    
 
@@ -99,13 +111,8 @@ $input-shadow: none;
   opacity: 1;
 }
 
-.login-box{
-  width:75%;
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  
-}
+
+
 
 
 

@@ -36,12 +36,6 @@
             <a class="navbar-item" href="home.php">
                 <img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="250" height="500">
             </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
         </div>
         <div id="navbar" class="navbar-menu my-4">
             <div class="navbar-start">
@@ -52,15 +46,24 @@
                     Help
                 </a>
             </div>
+
             <div class="navbar-end">
-    
+                <div class="navbar-item">
+                    <div class="user">    
+                        <span class="icon-text">
+                            <span class="icon"> <i class="far fa-user"></i></span>
+                            <span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
+                            <span><?php echo $_SESSION['access'] ?> Access</span>
+                        </span>
+                    </div>
+                </div>
                 <div class="navbar-item">  
                     <div class="buttons">
                         <a class="button is-light logoutButton" name="logout">
                             Log out
-                        </a>
+                            </a>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>		
     </nav>
@@ -79,6 +82,7 @@
                                 <li><a>View Members</a></li>
                                 <li><a>Add a child</a></li>
                                 <li><a>Remove a child</a></li>
+                                <li><a>Generate Reports</a><li>
                             </ul>
                         </li>
 </ul>
