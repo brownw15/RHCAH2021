@@ -87,7 +87,7 @@
 
 					<div class="field">
 						<div class="control">
-						<input class="input" type="text" id="inputEmail" id="uEmail" name="email" placeholder="Email" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[^$#%*:'~()/><\][\\\x22,;|]+" title="use characters: a-z, 0-9, .@" required>
+						<input class="input" type="text" id="inputEmail" id="uEmail" name="email" placeholder="Email" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[A-Za-z0-9_-]+@[a-z0-9-]+.[a-z]{2,}$" title="Email Format Requires @ and ." required>
 						</div>
 					</div>
 					

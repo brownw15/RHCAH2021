@@ -26,7 +26,7 @@
     foreach($result as $row) {
 		$e = new Event();
 		$e->id = $row['id'];
-		$e->text = $row['name'];
+		$e->text = "<strong>" . $row['name'] . "</strong>" . "<br>" . "Location: " . $row['loc'] . "<br>";
 		$e->start = $row['start'];
 		$e->end = $row['end'];
 		$events[] = $e;
