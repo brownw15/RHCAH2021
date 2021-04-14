@@ -20,7 +20,7 @@
 			<nav class="navbar mb-2" role="navigation" aria-label="main navigation">
 				<div class="navbar-brand">
 					<a class="navbar-item" href="home.php">
-						<img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="250" height="500">
+						<img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="150" height="170">
 					</a>
 				</div>
 				<div id="navbar" class="navbar-menu my-4">
