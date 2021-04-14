@@ -23,10 +23,6 @@
     <link rel="stylesheet" href="./media/css/styles.css">
     <link rel="stylesheet" href="./media/css/redpurple.css">
     <link type="text/css" rel="stylesheet" href="themes/calendar_g.css" />
-    <link type="text/css" rel="stylesheet" href="themes/calendar_green.css" />
-    <link type="text/css" rel="stylesheet" href="themes/calendar_traditional.css" />
-    <link type="text/css" rel="stylesheet" href="themes/calendar_transparent.css" />
-    <link type="text/css" rel="stylesheet" href="themes/calendar_white.css" />
     <link rel="stylesheet" href="themes/modal_rounded.css" type="text/css" />
 <!-- helper libraries -->
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -42,12 +38,6 @@
             <a class="navbar-item" href="home.php">
                 <img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="150" height="170">
             </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
         </div>
         <div id="navbar" class="navbar-menu my-4">
             <div class="navbar-start">
@@ -58,6 +48,7 @@
                     Help
                 </a>
             </div>
+
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="user">    
@@ -66,14 +57,15 @@
                             <span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
                             <span><?php echo $_SESSION['access'] ?> Access</span>
                         </span>
+                    </div>
                 </div>
                 <div class="navbar-item">  
                     <div class="buttons">
                         <a class="button is-light logoutButton" name="logout">
                             Log out
-                        </a>
+                            </a>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>		
     </nav>
@@ -132,7 +124,7 @@
                 </div>
             </div>
         </div>
-
+        <div class="field is-grouped"></div>
         <button class="clockButtonIn button">
                Clock In
         </button>
@@ -141,10 +133,7 @@
                Clock Out
         </button>
   
-        <div class="Upcoming has-text-white" style="margin-top: 15px; margin-left: 160px; width: 85%; border: .7px solid #e3e3e3; height: 80px; padding: 10px">
-            <h1>Upcoming...</h1>
-            "Company Potlock" &nbsp; &nbsp; <i class="fa fa-calendar" aria-hidden="true"></i> Next Friday  &nbsp; &nbsp; <i class="fa fa-map-marker" aria-hidden="true"></i> Location: On site
-            &nbsp; &nbsp; <i class="fa fa-clock-o" aria-hidden="true"></i> 5:00 - 6:30p
+        <div class="foot">
         </div>
 
     </div>
@@ -166,6 +155,7 @@
         var dp = new DayPilot.Calendar("dp");
         dp.viewType = "Week";
         dp.eventDeleteHandling = "Update";
+        dp.cssClassPrefix = "basic_theme";
 
         // Nick Check this out
         //$("div").removeAttr("style");
@@ -339,6 +329,21 @@
     function css(theme) {
     DayPilot.Modal.prompt("Event name:", { theme: theme }).then(function(args) { console.log(args.result); });
   }
+
+  $(document).ready(function() {
+
+// Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function() {
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+        });
+    });
+
+    if ( window.history.replaceState ) {
+                window.history.replaceState( null, null, window.location.href );
+                };
 
     </script>
 
