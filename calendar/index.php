@@ -48,20 +48,20 @@
 		<div class="hero-body">
 			<div class="container has-text-centered">
 				<div id="loginForm" class="box login-box"> 
-					<form  class="is-centered" action="loginSubmission.php" method="post">
+					<form class="is-centered" action="loginSubmission.php" method="post">
 						<h1 class="title is-1 has-text-weight-semibold has-text-black is-family-secondary">Login</h1>
-						<div class="field">
-							<div class="control">
-								<input class="input" id="inputUsername" name="username" type="text" placeholder="Username or Email" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
-							</div>
-						</div>
 
-						<div class="field">
-							<div class="control">
+						<div class="field is-grouped has-addons is-centered">
+							<div class="control has-icons-left">
+								<input class="input" id="inputUsername" name="username" type="text" placeholder="Username or Email" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
+								<span class="icon is-small is-left"> <i class="fas fa-user"></i></span>
+							</div>
+							<div class="control has-icons-left">
 								<input class="input" type="password" name="userPassword" placeholder="Password" size="26" maxlength="30" minlength="1" autocomplete="off" pattern="[^#@()/><\][\\\x22,;|]+" title="enter at least 7 characters: a-z, 0-9, !.':/~-$|*%" required >
+								<span class="icon is-small is-left"> <i class="fas fa-lock"></i></span>
 							</div>
 						</div>
-						<div class="field is-grouped is-grouped-right">
+						<div class="field is-grouped is-grouped-center">
 							<div class="control">
 								<button class="button is-success is-light" type="submit" name="loginSubmit" onclick="Loader()"> Submit</button>
 							</div>
@@ -85,21 +85,28 @@
 						</div>
 					</div>
 
-					<div class="field">
-						<div class="control">
-						<input class="input" type="text" id="inputEmail" id="uEmail" name="email" placeholder="Email" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[A-Za-z0-9_-]+@[a-z0-9-]+.[a-z]{2,}$" title="Email Format Requires @ and ." required>
+					<div class="field has-addons">
+						<div class="control has-icons-left">
+							<input class="input" type="text" id="inputEmail" id="uEmail" name="email" placeholder="Email" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[A-Za-z0-9_-]+@[a-z0-9-]+.[a-z]{2,}$" title="Email Format Requires @ and ." required>
+							<span class="icon is-small is-left">
+      							<i class="fas fa-envelope"></i>
+    						</span>
 						</div>
 					</div>
 					
 					<div class="field">
-						<div class="control">
+						<div class="control has-icons-left">
 							<input class="input" id="inputSignupUsername" name="username" type="text" placeholder="Username" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
+							<span class="icon is-small is-left"> <i class="fas fa-user"></i></span>
 						</div>
 					</div>
 
-					<div class="field">
-						<div class="control">
+					<div class="field has-addons">
+						<div class="control has-icons-left">
 							<input class="input" type="password" id="inputPassword" name="userPassword" placeholder="Password" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[^#@()/><\][\\\x22,;|]+" title="Must contain 7 or more characters that are of at least one number, and one uppercase and lowercase letter. use characters: a-z, 0-9, !.':/~-$|*%" required>
+							<span class="icon is-small is-left">
+								<i class="fas fa-lock"></i>
+							</span>
 						</div>
 					</div>
 					

@@ -1243,7 +1243,7 @@ Theme Designer Version: 2020.11.14.39354
 /* day headers */
 .navigator_default_dayheader {
   color: #ffffff;
-  background: #870000;
+  background: #CC003D;
   padding: 0px;
   text-align: center;
 }
@@ -4212,7 +4212,7 @@ a.tag:hover {
 /* Bulma Form */
 .select select, .textarea, .input {
   background-color: white;
-  border-color: #CC003D;
+  border-color: #424141;
   border-radius: 4px;
   color: #050505;
 }
