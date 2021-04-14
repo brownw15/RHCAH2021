@@ -49,7 +49,7 @@
 			<div class="container has-text-centered">
 				<div id="loginForm" class="box login-box"> 
 					<form class="is-centered" action="loginSubmission.php" method="post">
-						<h1 class="title is-1 has-text-weight-semibold has-text-black is-family-secondary">Login</h1>
+						<label class="subtitle is-2 has-text-weight-semibold has-text-black is-family-secondary px-2 my-2">Login</label>
 
 						<div class="field is-grouped has-addons is-centered">
 							<div class="control has-icons-left">
@@ -69,7 +69,7 @@
 								<button class="button is-primary is-light" type="button" onclick="toggleForm()"> Sign Up</button>
 							</div>
 						</div>
-						<p><a class="has-text-black" href="password_reset.php">Forgot Password</a></p>
+						<p><a class="has-text-black" href="#" onclick="forgotPw()">Forgot Password</a></p>
 					</form>
 				</div>
 				<form id="signupForm" class="box" action="signupSubmission.php" method="post" style="display:none">
@@ -119,9 +119,31 @@
 						</div>
 					</div>
 				</form>
+
+				<form class="box is-centered" id="pwForm" style="display:none;">
+					<div class="field">
+						<label class="label is-medium">Reset Password</label>
+						<div class="control has-icons-left has-icons-right">
+							<input class="input is-small" type="email" placeholder="Normal">
+							<span class="icon is-small is-left">
+							<i class="fas fa-envelope"></i>
+							</span>
+							<span class="icon is-small is-right">
+							<i class="fas fa-check"></i>
+							</span>
+						</div>
+					</div>
+					<div class="field is-grouped is-grouped-right">
+						<div class="control">
+							<button class="button is-primary is-light" type="button"  onclick="toggleForm()">Back to login</button>
+						</div>
+						<div class="control">
+							<button name="passwordSubmit" type="submit" class="button is-success is-light"> Submit</button>
+						</div>
+					</div>	
+				</form>
 			</div>
 		</div>
-
 	</section>
 <script>
 function toggleForm(){
@@ -129,6 +151,7 @@ function toggleForm(){
 	var loginElement = document.getElementById("loginForm"); //make an object for the login and sign up form element
 	var signupElement = document.getElementById("signupForm");
 	var headerText = document.getElementById("headerText");
+	
 	if(loginElement.style.display === "none"){
 		loginElement.style.display = "block";
 		signupElement.style.display = "none";
@@ -138,6 +161,16 @@ function toggleForm(){
 		loginElement.style.display = "none";
 		signupElement.style.display = "block";
 		headerText.innerHTML = "Sign Up";
+	}
+}
+
+function forgotPw(){
+	var pwElement = document.getElementById("pwForm");
+	var loginElement = document.getElementById("loginForm");
+
+	if(pwElement.style.display === "none"){
+		loginElement.style.display = "none";
+		pwElement.style.display = "block";
 	}
 }
 
