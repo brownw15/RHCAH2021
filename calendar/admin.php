@@ -23,6 +23,7 @@
     <title>Admin</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <!-- Bulma Version 0.9.0-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" /> 
     <!-- <link rel="stylesheet" href="./media/css/styles.css"> -->
@@ -60,9 +61,9 @@
                 </div>
                 <div class="navbar-item">  
                     <div class="buttons">
-                        <a class="button is-light logoutButton" name="logout">
+                        <button class="button is-light logoutButton" name="logout">
                             Log out
-                            </a>
+                        </button>
                     </div>
                     </div>
             </div>
@@ -208,6 +209,19 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $('.logoutButton').click(function(){
+            var btnValue = $(this).val();
+            var processURL = 'logout.php';
+            var data = {'action': btnValue};
+            $.post(processURL, data, function(response){
+                alert("logout successful");
+                for(i=0; i<1; i++){window.location.assign("index.php")};
+            });
+        });
+    });
+    </script>
     <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
 <html>

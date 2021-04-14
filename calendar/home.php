@@ -271,7 +271,8 @@
                         'eventLocation': location
                         };
             $.post(processURL, data, function(response){
-                console.log("Stats Updated.");
+                console.log("Stats Updated.")
+                window.location.assign("home.php")
             });
 
             }
