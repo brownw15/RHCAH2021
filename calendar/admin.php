@@ -1,18 +1,12 @@
 <?php 
     session_start(); 
     include 'databaseConnection.php';
-    /* KEEP OR DELETE */
-    /*
-        //if the user isn't logged in and they access homepage, redirect them to login page
-        if(!iiset($_SESSION[myUsername])){
-            echo '<script>';
-            echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
-            echo '</script>';
-        }
+ ///FOR ADMIN PAGE
 
-    */
-
+    //get number of users in database
+    //get number of users in database
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -24,7 +18,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- Bulma Version 0.9.0-->
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" /> 
+    <link rel="stylesheet" href="./media/css/styles.css">
+  
     <!-- <link rel="stylesheet" href="./media/css/styles.css"> -->
     
 </head>
@@ -80,9 +75,8 @@
                         <li>
                             <a>Manage Your Users</a>
                             <ul>
-                                <li><a>View Members</a></li>
-                                <li><a>Add a child</a></li>
-                                <li><a>Remove a child</a></li>
+                                <li><a href="delete_acc.php">View Members</a></li>
+                                <li><a href="delete_acc.php">Remove a child</a></li>
                                 <li><a>Generate Reports</a><li>
                             </ul>
                         </li>
@@ -112,7 +106,17 @@
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">439</p>
+                                <p class="title">
+                                    <?php 
+                                        $sql="SELECT firstname FROM account";
+                                        if ($result=mysqli_query($link,$sql))
+                                        {
+                                            $rowcount=mysqli_num_rows($result);
+                                            echo $rowcount;
+                                            mysqli_free_result($result);
+                                        }
+                                    ?>
+                                </p>
                                 <p class="subtitle">Users</p>
                             </article>
                         </div>
@@ -142,32 +146,19 @@
                                 <div class="content">
                                     <table class="table is-fullwidth is-striped">
                                         <tbody>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-user-o"></i></td>
-                                                <td>Son Goku</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Tj Wynn</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Nick Paul</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                          
+                                            <?php
+                                                $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
+                                                while($rows = $resultSet->fetch_assoc())
+                                                    {
+                                                        $fnames = $rows['firstname']; 
+                                                        $lnames = $rows['lastname'];
+                                                        echo "<tr>
+                                                        <td width='5%'><i class='fa fa-bell-o'></i></td>
+                                                        <td>" .$fnames . " " . $lnames . "</td>
+                                                        <td class='level-right'><a class='button is-small is-primary' href='reset_pass.php'>Edit</a></td>
+                                                        </tr>";
+                                                    }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>

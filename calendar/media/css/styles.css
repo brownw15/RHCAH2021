@@ -1243,7 +1243,7 @@ Theme Designer Version: 2020.11.14.39354
 /* day headers */
 .navigator_default_dayheader {
   color: #ffffff;
-  background: #CC003D;
+  background: #cc003d6e;
   padding: 0px;
   text-align: center;
 }
@@ -1305,7 +1305,6 @@ Theme Designer Version: 2020.11.14.39354
 
 a.navbar-item:hover {
   color: #CC003D;
-  background-color: #050505;
 }
 
 .toolbar {
@@ -1866,7 +1865,7 @@ th:not([align]) {
 }
 
 html {
-  background-color: #424141;
+  background-color: #ffffff;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -6617,7 +6616,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .navbar-link:focus-within,
 .navbar-link:hover,
 .navbar-link.is-active {
-  background-color: #CC003D;
+  background-color: #fafafa;
   color: #0025dc9f;
 }
 
@@ -6930,7 +6929,7 @@ body.has-spaced-navbar-fixed-bottom {
   }
 
   .navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #CC003D;
+    background-color: #fafafa;
   }
 }
 .hero.is-fullheight-with-navbar {
