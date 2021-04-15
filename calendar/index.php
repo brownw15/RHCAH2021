@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 	session_start(); // end in logout page
+	date_default_timezone_set('America/New_York');
 ?>
 <html>
 <head>
@@ -33,13 +34,7 @@
 						</a>
 					</div>
 					<div class="navbar-end">
-						<div class="navbar-item">
-							<div class="user">    
-								<span class="icon-text">
-									<span class="icon"> <i class="far fa-user"></i></span>
-									<span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
-									<span><?php echo $_SESSION['access'] ?> Access</span>
-								</span>
+						<div class="navbar-item">   
 						</div>
 					</div>
 				</div>		
@@ -53,7 +48,7 @@
 
 						<div class="field is-grouped has-addons is-centered">
 							<div class="control has-icons-left">
-								<input class="input" id="inputUsername" name="username" type="text" placeholder="Username or Email" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
+								<input class="input" id="inputUsername" name="username" type="text" placeholder="Username" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
 								<span class="icon is-small is-left"> <i class="fas fa-user"></i></span>
 							</div>
 							<div class="control has-icons-left">

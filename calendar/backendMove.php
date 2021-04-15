@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'databaseConnection.php';
+    date_default_timezone_set('America/New_York');
     
     $move = 'UPDATE events SET start = ?, end = ? WHERE id = ?';
     $stmt = $link->prepare($move);

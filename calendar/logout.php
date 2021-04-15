@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'databaseConnection.php';
+    date_default_timezone_set('America/New_York');
 
     if(isset($_POST['action'])){
         $statsFile = fopen("statsFile.csv","a");

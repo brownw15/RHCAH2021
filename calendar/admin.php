@@ -83,7 +83,7 @@
                                 <li><a>View Members</a></li>
                                 <li><a>Add a child</a></li>
                                 <li><a>Remove a child</a></li>
-                                <li><a>Generate Reports</a><li>
+                                <li><a class = "reports" href = "reports.php">Generate Reports</a><li>
                             </ul>
                         </li>
 </ul>
@@ -112,7 +112,17 @@
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">439</p>
+                                <p class="title"><?php
+                                     //get number of users in database
+                                        //include 'databaseConnection.php';
+                                        $sql="SELECT firstname FROM account";
+                                        if ($result=mysqli_query($link,$sql))
+                                        {
+                                            $rowcount=mysqli_num_rows($result);
+                                            echo $rowcount;
+                                            mysqli_free_result($result);
+                                        }
+                                    ?></p>
                                 <p class="subtitle">Users</p>
                             </article>
                         </div>
@@ -142,6 +152,20 @@
                                 <div class="content">
                                     <table class="table is-fullwidth is-striped">
                                         <tbody>
+                                        <?php
+                                            //get list of users
+                                            $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
+                                            while($rows = $resultSet->fetch_assoc())
+                                                {
+                                                    $fnames = $rows['firstname']; 
+                                                    $lnames = $rows['lastname'];
+                                                    echo "<tr>
+                                                    <td width='5%'><i class='fa fa-bell-o'></i></td>
+                                                    <td>" .$fnames . " " . $lnames . "</td>
+                                                    <td class='level-right'><a class='button is-small is-primary' href='#'>Action</a></td>
+                                                    </tr>";
+                                                }
+                                        ?>
                                             <tr>
                                                 <td width="5%"><i class="fa fa-user-o"></i></td>
                                                 <td>Son Goku</td>

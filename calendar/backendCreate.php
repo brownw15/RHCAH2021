@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'databaseConnection.php'; // connect to database
+    date_default_timezone_set('America/New_York');
     
     // create INSERT statement for creating events
     $insert = 'INSERT INTO events (name,loc,type,start,end,userID) VALUES (?,?,?,?,?,?)'; 

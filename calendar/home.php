@@ -97,13 +97,14 @@
         <div class="selectchild">
             <?php
             //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
-            $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
+            $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
             ?>
                 <div> 
                     <form method="post">
 
                     <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
                         <?php
+                            date_default_timezone_set('America/New_York');
                             if(isset($_POST['childMenu'])){
                             $_SESSION['childMenuValue'] = $_POST['childMenu'];
                             }
