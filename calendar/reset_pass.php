@@ -84,6 +84,7 @@ function test_input($data)//Strips excess data and protects against exploits
                 <div class="field">
                     <input class="input " type = "text" name=ID placeholder="Id Number of Account">
                     <button class="button my-2 is-success is-light is-centered" type="submit" onclick="redirect()">Submit Changes</button>
+					<button class="button is-warning is-light"><a href="home.php">Go Back</a></button>
                 </div>
             </form>
         </div>
