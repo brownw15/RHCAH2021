@@ -1383,6 +1383,10 @@ a.navbar-item:hover {
   z-index: 1;
 }
 
+#signupForm {
+  width: 75%;
+}
+
 /* Bulma Utilities */
 @keyframes spinAround {
   from {
@@ -5260,7 +5264,7 @@ a.tag:hover {
 }
 .breadcrumb a {
   align-items: center;
-  color: #0025dc9f;
+  color: #CC003D;
   display: flex;
   justify-content: center;
   padding: 0 0.75em;
@@ -5650,11 +5654,11 @@ button.dropdown-item.is-active {
   padding: 0.5em 0.75em;
 }
 .menu-list a:hover {
-  background-color: #424141;
-  color: #050505;
+  background-color: #ffffff;
+  color: #CC003D;
 }
 .menu-list a.is-active {
-  background-color: #0025dc9f;
+  background-color: #ffffff;
   color: #fff;
 }
 .menu-list li ul {
