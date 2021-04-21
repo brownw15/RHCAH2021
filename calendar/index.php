@@ -30,14 +30,6 @@
 						</a>
 					</div>
 					<div class="navbar-end">
-						<div class="navbar-item">
-							<div class="user">    
-								<span class="icon-text">
-									<span class="icon"> <i class="far fa-user"></i></span>
-									<span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
-									<span><?php echo $_SESSION['access'] ?> Access</span>
-								</span>
-						</div>
 					</div>
 				</div>		
 			</nav>
