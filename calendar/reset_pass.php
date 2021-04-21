@@ -68,6 +68,8 @@ function test_input($data)//Strips excess data and protects against exploits
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
+<section class="hero is-info is-fullheight">
+<div class="hero-head">
 <nav class="navbar mb-2" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.php">
@@ -84,25 +86,35 @@ function test_input($data)//Strips excess data and protects against exploits
             </div>
         </div>		
     </nav>
-    <div class="container">
-        <div class="box has-text-black">
-            <form class="is-centered" method ="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                <label class="title is-2 my-2 px-4">Password Recovery</label> </br>
+	</div>
+	<div class="hero-body">
+    <div class="container has-text-centered ">
+        <div class="box has-text-black is-flex is-flex-direction-column is-justify-content-center">
+            <form id="recov_form" class="is-centered" method ="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                <label class="title is-2 my-2 px-4 has-text-weight-semibold has-text-black is-family-secondary">Password Recovery</label> </br>
+             
+				<div class="field is-grouped is-grouped-centered has-addons mx-2 px-2">
 
-                <div class="field has-addons is-group-centered mx-2 px-2">
-                    <input class="input mx-2 px-2" type = "text" name=newpass placeholder="New Password">
-                    <span class="error"> <?php echo $emptyErr; echo $matchErr; echo $formatErr; ?> </span>
-                    <input class="input mx-2 px-2" type = "text" name=confpass placeholder="Confirm New Password">
-                </div>
-                <div class="field ">
-                    <input class="input " type = "text" name=ID placeholder="Id Number of Account">
-                    <button class="button my-2 is-success is-light is-centered" type="submit" onclick="redirect()">Submit Changes</button>
-					<button class="button is-info is-light my-2 px-2"><a href="home.php">Back to login</a></button>
-                </div>
+					<div class="control has-icons-left">
+						<input class="input mx-2 px-2" type = "text" name=newpass placeholder="New Password">
+						<span class="icon is-small is-left"><i class="fas fa-lock -o"></i></span>
+                    	<span class="error"> <?php echo $emptyErr; echo $matchErr; echo $formatErr; ?> </span>
+                    	<input class="input mx-2 px-2" type = "text" name=confpass placeholder="Confirm New Password">
+						<span class="icon is-small is-right"><i class="fas fa-lock -o"></i></span>
+					</div>
+				</div>
+				<div class="field is-grouped has-addons mx-2 px-2 is-grouped-centered">
+					<div class="control has-icons-left ">
+						<input class="input" type = "text" name=ID placeholder="Id Number of Account">
+						<button class="button my-2 is-success is-light is-centered" type="submit" onclick="redirect()">Submit Changes</button>
+						<button class="button is-info is-light my-2 px-2"><a href="home.php">Back to login</a></button>
+					</div>
+				</div>
             </form>
         </div>
     </div>
-
+</div>
+</section>
 <script>
     function redirect() {
         window.location("index.php");
@@ -110,4 +122,25 @@ function test_input($data)//Strips excess data and protects against exploits
     }
 </script>
 </body>
+<style>
+  
+html,body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.hero.is-info {
+  background:#262525 no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.hero , .hero.is-success .nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.hero .subtitle {
+  padding: 3rem 0;
+  line-height: 1.5;
+}
+</style>
 </html>
