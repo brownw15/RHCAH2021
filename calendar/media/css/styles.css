@@ -1387,6 +1387,10 @@ a.navbar-item:hover {
   width: 75%;
 }
 
+.select-dd {
+  display: none;
+}
+
 /* Bulma Utilities */
 @keyframes spinAround {
   from {
