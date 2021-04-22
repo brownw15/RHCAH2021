@@ -79,13 +79,13 @@
         <div class="calendar" id="dp"></div>
 
         <div class="field is-grouped is-grouped-right px-2 mx-2 py-2 my-2">
-            <div class="selectchild control">
+            <div class="selectchild control" id="select-dd">
                 <?php
                 //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
                 $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
                 ?>
                 <div> 
-                    <form method="post">
+                    <form method="post" >
                         <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
                             <option></option>
                             <?php
@@ -143,6 +143,8 @@
         dp.viewType = "Week";
         dp.eventDeleteHandling = "Update";
         dp.cssClassPrefix = "basic_theme";
+
+
 
         // Nick Check this out
         //$("div").removeAttr("style");
@@ -278,14 +280,21 @@
             dp.events.load("backendRead.php");
         }
 
-    </script>
-
-    <script type="text/javascript">
     $(document).ready(function() {
         $("#theme").change(function(e) {
             dp.theme = this.value;
             dp.update();
         });
+
+        $(window).on( "load", function() {
+            if(access !== "staff"){
+                $('#select-dd').addClass("select-dd");
+                console.log('welcome');
+            }else{
+                $('#select-dd').removeClass("select-dd")
+            }
+        });
+        
 
         $('.logoutButton').click(function(){
             var btnValue = $(this).val();

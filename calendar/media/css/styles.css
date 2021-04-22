@@ -1387,6 +1387,14 @@ a.navbar-item:hover {
   width: 75%;
 }
 
+#recovForm {
+  width: 76%;
+}
+
+.select-dd {
+  display: none;
+}
+
 /* Bulma Utilities */
 @keyframes spinAround {
   from {

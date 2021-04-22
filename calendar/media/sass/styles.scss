@@ -37,6 +37,10 @@ $input-border-color: $grey-dark;
 $input-shadow: none;
 $navbar-item-hover--color: $primary;
 $navbar-burger-color: $primary;
+$menu-item-active-background-color : #ffffff;
+$menu-item-hover-background-color: #ffffff;
+$menu-item-hover-color: $primary;
+$breadcrumb-item-color : $primary;
 
 .remove-all-styles {
     all: revert;
@@ -110,7 +114,27 @@ color: $primary;
   opacity: 1;
 }
 
+#dp{
+  position:relative;
+  z-index:0;
+}
 
+#nav{
+  position:relative;
+  z-index: 1;
+}
+
+#signupForm{
+  width: 75%;
+}
+
+#recovForm{
+width: 76%;
+}
+
+.select-dd{
+  display: none;
+}
 
 
 

@@ -70,7 +70,7 @@
 						<h1 class="title is-1 has-text-weight-semibold is-family-monospace has-text-black">Sign Up</h1>
 						</hr>
 
-						<div class="field is-grouped">
+						<div class="field is-grouped is-centered">
 							<div class="control">
 								<input class="input" type="text" id="fname" name="firstName" placeholder="First Name" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z" required>
 							</div>
