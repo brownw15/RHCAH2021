@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'databaseConnection.php'; // connect to database
+    include 'databaseConnection.php'; // holds establishing connection to database
     
     // create DELETE statement to delete an event by its id
     $delete = 'DELETE FROM events WHERE id = ?'; 

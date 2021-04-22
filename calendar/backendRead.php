@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'databaseConnection.php';
+    include 'databaseConnection.php'; // holds establishing connection to database
 	header('Content-Type: application/json');
 	
     if($_SESSION['childMenuValue'] == ""){ 

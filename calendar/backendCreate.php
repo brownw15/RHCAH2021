@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'databaseConnection.php'; // connect to database
+    include 'databaseConnection.php'; // holds establishing connection to database
     
     // create INSERT statement for creating events
     $insert = 'INSERT INTO events (name,start,end,userID) VALUES (?,?,?,?)'; 
