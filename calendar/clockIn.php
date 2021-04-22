@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'databaseConnection.php'; // connect to database
+include 'reports.php';
 
 date_default_timezone_set('America/New_York');
 
@@ -14,6 +15,8 @@ $stmt->bind_result($id);
 $stmt->fetch();
 
 $_SESSION['clockEvent'] = $id;
+
+
 
 $statsData = array("Clock In Time, " . $inTime . ", User" . $_SESSION['userID'] . ", EventID " . $_SESSION['clockEvent']);
 foreach($statsData as $line){

@@ -2,6 +2,7 @@
     //require_once '_db.php';
     session_start();
     include 'databaseConnection.php';    // holds establishing connection to database
+    date_default_timezone_set('America/New_York');
 
     $statsFile = fopen("statsFile.csv","a");
 

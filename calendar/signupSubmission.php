@@ -28,9 +28,10 @@
     //create profile if it doesn't already exist
     if($profileExists == false){
         //id needs to be modified for each test unless working with a fresh database.
-        $insert = 'INSERT INTO account (firstname,lastname,username,email,userPassword) VALUES (?,?,?,?,?)'; //prepared sql statement for efficiency and security
+        $insert = 'INSERT INTO account (firstname,lastname,username,email,userPassword,description) VALUES (?,?,?,?,?,?)'; //prepared sql statement for efficiency and security
 	    $stmt = $link->prepare($insert);
-        $stmt->bind_param("sssss", $_POST['firstName'], $_POST['lastName'], $_POST['username'], $_POST['email'], $_POST['userPassword']); //sssss for each parameter being handled as a string
+        $child = "child";
+        $stmt->bind_param("ssssss", $_POST['firstName'], $_POST['lastName'], $_POST['username'], $_POST['email'], $_POST['userPassword'], $child); //sssss for each parameter being handled as a string
         
         if($stmt->execute()){
             //account was successfully created

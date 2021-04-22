@@ -20,7 +20,7 @@
 				}
 				else { 
 					// echo $pass."<BR>";
-					$pass = hash("sha256", $pass);
+					//$pass = hash("sha256", $pass);
 					//echo $pass."<BR>";
 					
 					$stmt = $link->prepare("UPDATE `account` 

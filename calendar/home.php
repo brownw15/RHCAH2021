@@ -41,9 +41,11 @@
         </div>
         <div id="navbar" class="navbar-menu my-4">
             <div class="navbar-start">
-                <a class="navbar-item" href="admin.php">
-                    Settings
-                </a>
+            <?php
+                if($_SESSION['access'] == "staff"){
+                echo "<a class='navbar-item' href='admin.php'> Settings </a>";
+                }              
+            ?>
                 <a class="navbar-item" href="contact.php">
                     Help
                 </a>
@@ -70,8 +72,8 @@
         </div>		
     </nav>
     <div class="container is-fluid box px-2 mx-2">
-        <div class="calendar-widget mx-2 ">
-            <div id="nav" class="mx-2 px-2 my-2"> </div>
+        <div class="calendar-widget mx-2 container">
+            <div id="nav" class="mx-2 px-2 my-2" style = "float:left"> </div>
         </div>
         
         <div class="calendar" id="dp"></div>
@@ -80,11 +82,12 @@
             <div class="selectchild control" id="select-dd">
                 <?php
                 //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
-                $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
+                $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
                 ?>
                 <div> 
                     <form method="post" >
                         <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
+                            <option></option>
                             <?php
                                 if(isset($_POST['childMenu'])){
                                 $_SESSION['childMenuValue'] = $_POST['childMenu'];
@@ -258,6 +261,7 @@
                         };
             $.post(processURL, data, function(response){
                 console.log("Stats Updated.");
+                window.location.assign("home.php");
             });
 
             }

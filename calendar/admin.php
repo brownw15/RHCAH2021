@@ -55,7 +55,7 @@
                 </div>
                 <div class="navbar-item">  
                     <div class="buttons">
-                        <a class="button is-light logoutButton" name="logout">
+                        <a class="button is-light logoutButton" name="logout" href = "index.php">                        
                             Log out
                             </a>
                     </div>
@@ -75,9 +75,9 @@
                         <li>
                             <a>Manage Your Users</a>
                             <ul>
-                                <li><a href="delete_acc.php">View Members</a></li>
-                                <li><a href="delete_acc.php">Remove a child</a></li>
-                                <li><a>Generate Reports</a><li>
+                                <li><a class = "reports" href = "reports.php">Generate Reports</a><li>
+                                <li><a href="delete_acc.php">Remove A User</a></li>
+                                <li><a href="permissionChange.php">Change Permissions</a></li>
                             </ul>
                         </li>
 </ul>
@@ -106,8 +106,9 @@
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">
-                                    <?php 
+                                <p class="title"><?php
+                                     //get number of users in database
+                                        //include 'databaseConnection.php';
                                         $sql="SELECT firstname FROM account";
                                         if ($result=mysqli_query($link,$sql))
                                         {
@@ -115,16 +116,8 @@
                                             echo $rowcount;
                                             mysqli_free_result($result);
                                         }
-                                    ?>
-                                </p>
+                                    ?></p>
                                 <p class="subtitle">Users</p>
-                            </article>
-                        </div>
-                        
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">30</p>
-                                <p class="subtitle">Events today</p>
                             </article>
                         </div>
                     </div>
@@ -146,19 +139,20 @@
                                 <div class="content">
                                     <table class="table is-fullwidth is-striped">
                                         <tbody>
-                                            <?php
-                                                $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
-                                                while($rows = $resultSet->fetch_assoc())
-                                                    {
-                                                        $fnames = $rows['firstname']; 
-                                                        $lnames = $rows['lastname'];
-                                                        echo "<tr>
-                                                        <td width='5%'><i class='fa fa-bell-o'></i></td>
-                                                        <td>" .$fnames . " " . $lnames . "</td>
-                                                        <td class='level-right'><a class='button is-small is-primary' href='reset_pass.php'>Edit</a></td>
-                                                        </tr>";
-                                                    }
-                                            ?>
+                                        <?php
+                                            //get list of users
+                                            $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
+                                            while($rows = $resultSet->fetch_assoc())
+                                                {
+                                                    $fnames = $rows['firstname']; 
+                                                    $lnames = $rows['lastname'];
+                                                    echo "<tr>
+                                                    <td width='5%'><i class='fa fa-user-o'></i></td>
+                                                    <td>" .$fnames . " " . $lnames . "</td>
+                                                    </tr>";
+                                                }
+                                        ?>
+                                          
                                         </tbody>
                                     </table>
                                 </div>
@@ -169,31 +163,8 @@
                         </div>
                     </div>
                     <div class="column is-6">
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    User Search
-                                </p>
-                                <a href="#" class="card-header-icon" aria-label="more options">
-                  <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </a>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="control has-icons-left has-icons-right">
-                                        <input class="input is-large" type="text" placeholder="">
-                                        <span class="icon is-medium is-left">
-                      <i class="fa fa-search"></i>
-                    </span>
-                                        <span class="icon is-medium is-right">
-                      <i class="fa fa-check"></i>
-                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>

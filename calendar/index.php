@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 	session_start(); // end in logout page
+	date_default_timezone_set('America/New_York');
 ?>
 <html>
 <head>
@@ -30,6 +31,8 @@
 						</a>
 					</div>
 					<div class="navbar-end">
+						<div class="navbar-item">   
+						</div>
 					</div>
 				</div>		
 			</nav>
@@ -43,7 +46,7 @@
 
 						<div class="field is-grouped has-addons is-grouped-centered">
 							<div class="control has-icons-left">
-								<input class="input" id="inputUsername" name="username" type="text" placeholder="Username or Email" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
+								<input class="input" id="inputUsername" name="username" type="text" placeholder="Username" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
 								<span class="icon is-small is-left"> <i class="fas fa-user"></i></span>
 							</div>
 							<div class="control has-icons-left">
@@ -59,7 +62,7 @@
 								<button class="button is-primary is-light" type="button" onclick="toggleForm()"> Sign Up</button>
 							</div>
 						</div>
-						<p><a class="has-text-black" href="#" onclick="forgotPw()">Forgot Password</a></p>
+						<p><a class="has-text-black" href="reset_pass.php" onclick="forgotPw()">Forgot Password</a></p>
 					</form>
 				</div>
 				<div id="signupForm" class="box" style="display:none">
@@ -69,10 +72,10 @@
 
 						<div class="field is-grouped is-grouped-centered">
 							<div class="control">
-								<input class="input" type="text" id="fname" name="firstName" placeholder="First Name" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z">
+								<input class="input" type="text" id="fname" name="firstName" placeholder="First Name" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z" required>
 							</div>
 							<div class="control">
-								<input class="input" type="text" id="lname" name="lastName" placeholder="Last Name" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z">
+								<input class="input" type="text" id="lname" name="lastName" placeholder="Last Name" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z" required>
 							</div>
 						</div>
 

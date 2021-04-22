@@ -91,8 +91,8 @@
 					echo "<tr><td>".$data." </td>";
 					$data = $readResult['lastname'];
 					echo "<td>".$data." </td>";
-					$data = $readResult['id'];
-					echo "<td>".$data."</td></tr>"; 
+					//$data = $readResult['id'];
+					//echo "<td>".$data."</td></tr>"; 
 			}
 		}
 		echo "</table> <br><br>";
