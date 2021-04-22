@@ -1,6 +1,40 @@
-<?php
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" /> 
+    <!-- <link rel="stylesheet" href="./media/css/styles.css"> -->
+    
+</head>
+	<body>
+		<style>
+		.error {color: #FF0000;}
+		</style>
+		<nav class="navbar mb-2" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="admin.php">
+                <img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="150" height="170">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-menu my-4">
+            <div class="navbar-start">
+                <a class="navbar-item" href="contact.php">
+                    Help
+                </a>
+            </div>
+            <div class="navbar-end">
+            </div>
+        </div>		
+    </nav>
+	<?php
 		include 'databaseConnection.php'; 
-		include 'reports.php';
 		$confirm2 = $confirm1 = $NoMatchError = $NoInputError = $InputError = $data =  $confirmError = $NotExistErr = "";
 
 //Start of Table View for Accounts
@@ -9,9 +43,9 @@
 	$readResult = $readAcc->get_result();
 	$accList = $readResult->fetch_all(MYSQLI_ASSOC);
 	
-	
-		echo '<table class= "table is-bordered is-striped is-hoverable">';
-		echo "<tr><td> Staff Account Table </td> </tr>";
+	echo '<div class=" my-2 px-2 container is-flex is-flex-direction-row ">';
+		echo '<table class= "table is-bordered is-striped is-hoverable align-self-flex-auto mx-2 px-2">';
+		echo '<tr><td class="subtitle is-4"> Staff Account Table </td> </tr>';
 		echo "<tr><td> First Name </td><td> Last Name </td> <td> ID </td></tr>";
 		foreach( $accList as  $readResult )
 		{	
@@ -28,7 +62,7 @@
 		}
 		echo "</table> <br> <br>";
 		echo '<table class="table is-bordered is-striped is-hoverable">';
-		echo "<tr><td> Child Account Table </td> </tr>";
+		echo '<tr><td class="subtitle is-4"> Child Account Table </td> </tr>';
 		echo "<tr><td> First Name </td><td> Last Name </td> <td> ID </td></tr>";
 		foreach( $accList as  $readResult )
 		{	
@@ -43,26 +77,9 @@
 					echo "<td>".$data."</td></tr>"; 
 			}
 		}
-		echo "</table> <br><br>";
-		/*
-		echo '<table class="table is-bordered is-striped is-hoverable">';
-		echo "<tr><td> Other Accounts Table </td> </tr>";
-		echo "<tr><td> First Name </td><td> Last Name </td><td> ID </td></tr>";
-		foreach( $accList as  $readResult )
-		{	
-			$data = $readResult['description'];
-		if($data != "staff" && $data != "child")
-			{
-					$data = $readResult['firstname'];
-					echo "<tr><td>".$data." </td>";
-					$data = $readResult['lastname'];
-					echo "<td>".$data." </td>";
-					$data = $readResult['id'];
-					echo "<td>".$data."</td></tr>"; 
-			}
-		}
-		echo "</table> <br><br>";
-		*/
+		echo "</table> <br><br>"; 
+		
+		echo "</div>";
 //End of Table Creation
 
 //Start of Input Validation
@@ -119,27 +136,7 @@ function test_input($data)//Strips excess data and protects against exploits
 			return $data;
 		}
 ?>
-
-
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <!-- Bulma Version 0.9.0-->
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" /> 
-    <!-- <link rel="stylesheet" href="./media/css/styles.css"> -->
-    
-</head>
-	<body>
-		<style>
-		.error {color: #FF0000;}
-		</style>
-		
-		
+	<div class="container box">
 		<form method ="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<!--<span class="error"><?php echo $NoMatchError; echo $InputError; echo $NoInputError; echo $NotExistErr; ?> </span> -->
 			<div class="field">
@@ -157,11 +154,11 @@ function test_input($data)//Strips excess data and protects against exploits
 				</div>
 
 				<div class="control">
-					<button class="button is-success is-light" type ="submit" name ="submit">Submit</button>
-					<button class="button is-warning is-light"><a href="admin.php">Go Back</a></button>
+					<button class="button is-success is-light my-2 px-2" type ="submit" name ="submit">Submit</button>
+					<button class="button is-info is-light my-2 px-2"><a href="admin.php">Go Back</a></button>
 				</div>
 			</div>
 		</form>
-
+		</div>
 	</body>
 </html>
