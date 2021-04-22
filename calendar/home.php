@@ -1,6 +1,8 @@
 <?php 
     session_start(); 
     include 'databaseConnection.php';
+
+    date_default_timezone_set('America/New_York');
     /* KEEP OR DELETE */
     /*
         //if the user isn't logged in and they access homepage, redirect them to login page
@@ -21,10 +23,6 @@
     <link rel="stylesheet" href="./media/css/styles.css">
     <link rel="stylesheet" href="./media/css/redpurple.css">
     <link type="text/css" rel="stylesheet" href="themes/calendar_g.css" />
-    <link type="text/css" rel="stylesheet" href="themes/calendar_green.css" />
-    <link type="text/css" rel="stylesheet" href="themes/calendar_traditional.css" />
-    <link type="text/css" rel="stylesheet" href="themes/calendar_transparent.css" />
-    <link type="text/css" rel="stylesheet" href="themes/calendar_white.css" />
     <link rel="stylesheet" href="themes/modal_rounded.css" type="text/css" />
 <!-- helper libraries -->
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -38,24 +36,21 @@
     <nav class="navbar mb-2" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="home.php">
-                <img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="250" height="500">
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+                <img src="./media/images/50th-CAH-Logo-Website.png" class="navlogo" width="150" height="170">
             </a>
         </div>
         <div id="navbar" class="navbar-menu my-4">
             <div class="navbar-start">
-                <a class="navbar-item" href="admin.php">
-                    Settings
-                </a>
+            <?php
+                if($_SESSION['access'] == "staff"){
+                echo "<a class='navbar-item' href='admin.php'> Settings </a>";
+                }              
+            ?>
                 <a class="navbar-item" href="contact.php">
                     Help
                 </a>
             </div>
+
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="user">    
@@ -64,106 +59,71 @@
                             <span>Welcome Back <?php echo $_SESSION['name']; ?>!</span>
                             <span><?php echo $_SESSION['access'] ?> Access</span>
                         </span>
+                    </div>
                 </div>
                 <div class="navbar-item">  
                     <div class="buttons">
                         <a class="button is-light logoutButton" name="logout">
                             Log out
-                        </a>
+                            </a>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>		
     </nav>
-
-    <div class="main has-text-white my-4" style="display:flex">
-        <div class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head">
-                    <p class="modal-card-title">Modal title</p>
-                    <button class="delete" aria-label="close"></button>
-                </header>
-
-                <section class="modal-card-body">
-                    <!-- Content ... -->
-                </section>
-
-                <footer class="modal-card-foot">
-                    <button class="button is-success">Save changes</button>
-                    <button class="button">Cancel</button>
-                </footer>
-            </div>
-        </div>
-
-        <div class="calendar-widget mx-2 ">
-            <div id="nav"> </div>
-        </div>
-        <div class="container calender box px-2 mx-2" id="dp"></div>
-        <div class="selectchild">
-            <?php
-            //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
-            $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
-            ?>
-                <div> 
-                <form method="post">
-
-                <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
-                    <?php
-                         $resultSet = $link->query("SELECT id, firstname, lastname FROM account WHERE description='child' ");
-
-                        if(isset($_POST['childMenu'])){
-                            $_SESSION['childMenuValue'] = $_POST['childMenu'];
-                            $stmt = $link->prepare('SELECT id, firstname, lastname FROM account WHERE id = ? limit 1');
-                            $stmt->bind_param('i', $_SESSION['childMenuValue']);
-                            $stmt->execute();
-                            $stmt->bind_result($id,$firstname,$lastname);
-                            $stmt->fetch();
-                            echo "<option value='$id'>$firstname ".  $lastname ."</option>";
-                        }
-                        if($_SESSION['access'] == 'staff')
-                        {
-                            while($rows = $resultSet->fetch_assoc())
-                            {
-                                $fnames = $rows['firstname']; 
-                                $lnames = $rows['lastname'];
-                                $ids = $rows['id'];
-                                echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
-                            }
-                        } 
-                    ?>
-                </select>
-                <input class="button block is-primary is-light my-2" type="submit" value="Select User" style="float:left;"/>
-                </form>
-                </div>
-            </div>
-        </div>
-        <div class="dropdown container">
-        <!-- Include themes -->
-            <div>
-                <h3> Theme: <select id="theme"> </h3>
-                <div class="dropdown-menu" id="dropdown-menu1" role="menu">
-                    <div class="dropdown-content">
-                        <option value="calendar_default">Default</option>
-                        <option value="calendar_white">White</option>
-                        <option value="calendar_g">Google-Like</option>
-                        <option value="calendar_green">Green</option>
-                        <option value="calendar_traditional">Traditional</option>
-                        <option value="calendar_transparent">Transparent</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+    <div class="container is-fluid box px-2 mx-2">
+        <div class="calendar-widget mx-2 container">
+            <div id="nav" class="mx-2 px-2 my-2" style = "float:left"> </div>
         </div>
         
-  
-        <div class="Upcoming has-text-white" style="margin-top: 15px; margin-left: 160px; width: 85%; border: .7px solid #e3e3e3; height: 80px; padding: 10px">
-            <h1>Upcoming...</h1>
-            "Company Potlock" &nbsp; &nbsp; <i class="fa fa-calendar" aria-hidden="true"></i> Next Friday  &nbsp; &nbsp; <i class="fa fa-map-marker" aria-hidden="true"></i> Location: On site
-            &nbsp; &nbsp; <i class="fa fa-clock-o" aria-hidden="true"></i> 5:00 - 6:30p
-        </div>
+        <div class="calendar" id="dp"></div>
 
-    </div>
+        <div class="field is-grouped is-grouped-right px-2 mx-2 py-2 my-2">
+            <div class="selectchild control" id="select-dd">
+                <?php
+                //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
+                $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
+                ?>
+                <div> 
+                    <form method="post" >
+                        <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
+                            <option></option>
+                            <?php
+                                if(isset($_POST['childMenu'])){
+                                $_SESSION['childMenuValue'] = $_POST['childMenu'];
+                                }
+                                if($_SESSION['access'] == 'staff')
+                                {
+                                    while($rows = $resultSet->fetch_assoc())
+                                    {
+                                        $fnames = $rows['firstname']; 
+                                        $lnames = $rows['lastname'];
+                                        $ids = $rows['id'];
+                                        echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
+                                    }
+                                } 
+                            ?>
+                        </select>
+                        <input class="button block is-primary is-light my-2" type="submit" value="Select User" style="float:left;"/>
+                    </form>
+                </div>
+            </div>
+
+            <div class="control">
+                <button class="clockButtonIn button is-primary is-legit">
+                    Clock In
+                </button>
+            </div>
+
+            <div class="control">
+                <button class="clockButtonOut button is-primary is-light">
+                    Clock Out
+                </button>
+            </div>
+        </div>
+    </div>    
+    <div class="foot">
+
     <script type="text/javascript">
         //get access type
         var access = "<?php echo $_SESSION['access']; ?>";
@@ -182,6 +142,9 @@
         var dp = new DayPilot.Calendar("dp");
         dp.viewType = "Week";
         dp.eventDeleteHandling = "Update";
+        dp.cssClassPrefix = "basic_theme";
+
+
 
         // Nick Check this out
         //$("div").removeAttr("style");
@@ -263,12 +226,9 @@
         // event creating
         dp.onTimeRangeSelected = function(args) {
             if(access === "staff"){
-            var name = prompt("New event name:", "Event");
-            /*var name = DayPilot.Modal.prompt("Event name:", { theme: "modal_rounded" }).then(function(args) {
-                console.log(args.result);
-                return args.result;
-            }); */
-
+            var name = prompt("New event name:");
+            var location = prompt("Location of event:");
+            var typeEvent = prompt("Type of event:");
             dp.clearSelection();
             if (!name) return;
             var e = new DayPilot.Event({
@@ -276,8 +236,6 @@
                 end: args.end,
                 id: DayPilot.guid(),
                 resource: args.resource,
-                text: name,
-                text: location
             });
             dp.events.add(e);
 
@@ -285,7 +243,9 @@
                     {
                         start: args.start.toString(),
                         end: args.end.toString(),
-                        name: name
+                        name: name,
+                        loc: location,
+                        type: typeEvent
                     },
                     function() {
                         console.log("Created.");
@@ -301,6 +261,7 @@
                         };
             $.post(processURL, data, function(response){
                 console.log("Stats Updated.");
+                window.location.assign("home.php");
             });
 
             }
@@ -319,14 +280,21 @@
             dp.events.load("backendRead.php");
         }
 
-    </script>
-
-    <script type="text/javascript">
     $(document).ready(function() {
         $("#theme").change(function(e) {
             dp.theme = this.value;
             dp.update();
         });
+
+        $(window).on( "load", function() {
+            if(access !== "staff"){
+                $('#select-dd').addClass("select-dd");
+                console.log('welcome');
+            }else{
+                $('#select-dd').removeClass("select-dd")
+            }
+        });
+        
 
         $('.logoutButton').click(function(){
             var btnValue = $(this).val();
@@ -337,11 +305,42 @@
                 for(i=0; i<1; i++){window.location.assign("index.php")};
             });
         });
+
+        $('.clockButtonIn').click(function(){
+            var processURL = 'clockIn.php';
+            $.post(processURL, function(response){
+                alert("You Have Clocked In");
+                for(i=0; i<1; i++){window.location.assign("home.php")};
+            });
+        });
+
+        $('.clockButtonOut').click(function(){
+            var processURL = 'clockOut.php';
+            $.post(processURL, function(response){
+                alert("You Have Clocked Out");
+                for(i=0; i<1; i++){window.location.assign("home.php")};
+            });
+        });
     });
 
     function css(theme) {
     DayPilot.Modal.prompt("Event name:", { theme: theme }).then(function(args) { console.log(args.result); });
   }
+
+  $(document).ready(function() {
+
+// Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function() {
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+        });
+    });
+
+    if ( window.history.replaceState ) {
+                window.history.replaceState( null, null, window.location.href );
+                };
 
     </script>
 

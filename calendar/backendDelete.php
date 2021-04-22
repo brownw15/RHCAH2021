@@ -1,6 +1,7 @@
 <?php
     session_start();
-    include 'databaseConnection.php'; // holds establishing connection to database
+    include 'databaseConnection.php'; // connect to database
+    date_default_timezone_set('America/New_York');
     
     // create DELETE statement to delete an event by its id
     $delete = 'DELETE FROM events WHERE id = ?'; 

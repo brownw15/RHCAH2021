@@ -1,6 +1,7 @@
 <?php
     session_start();
-    include 'databaseConnection.php'; // holds establishing connection to database
+    include 'databaseConnection.php';
+	date_default_timezone_set('America/New_York');
 	header('Content-Type: application/json');
 	
     if($_SESSION['childMenuValue'] == ""){ 
@@ -26,7 +27,7 @@
     foreach($result as $row) {
 		$e = new Event();
 		$e->id = $row['id'];
-		$e->text = $row['name'];
+		$e->text = "<strong>" . $row['name'] . "</strong>" . "<br>" . "Location: " . $row['loc'] . "<br>";
 		$e->start = $row['start'];
 		$e->end = $row['end'];
 		$events[] = $e;
