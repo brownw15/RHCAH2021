@@ -1243,7 +1243,7 @@ Theme Designer Version: 2020.11.14.39354
 /* day headers */
 .navigator_default_dayheader {
   color: #ffffff;
-  background: #CC003D;
+  background: #cc003d6e;
   padding: 0px;
   text-align: center;
 }
@@ -1305,7 +1305,6 @@ Theme Designer Version: 2020.11.14.39354
 
 a.navbar-item:hover {
   color: #CC003D;
-  background-color: #050505;
 }
 
 .toolbar {
@@ -1372,6 +1371,20 @@ a.navbar-item:hover {
 
 .area-menu-icon:hover {
   opacity: 1;
+}
+
+#dp {
+  position: relative;
+  z-index: 0;
+}
+
+#nav {
+  position: relative;
+  z-index: 1;
+}
+
+#signupForm {
+  width: 75%;
 }
 
 /* Bulma Utilities */
@@ -1866,7 +1879,7 @@ th:not([align]) {
 }
 
 html {
-  background-color: #424141;
+  background-color: #ffffff;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -5251,7 +5264,7 @@ a.tag:hover {
 }
 .breadcrumb a {
   align-items: center;
-  color: #0025dc9f;
+  color: #CC003D;
   display: flex;
   justify-content: center;
   padding: 0 0.75em;
@@ -5641,11 +5654,11 @@ button.dropdown-item.is-active {
   padding: 0.5em 0.75em;
 }
 .menu-list a:hover {
-  background-color: #424141;
-  color: #050505;
+  background-color: #ffffff;
+  color: #CC003D;
 }
 .menu-list a.is-active {
-  background-color: #0025dc9f;
+  background-color: #ffffff;
   color: #fff;
 }
 .menu-list li ul {
@@ -6617,7 +6630,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .navbar-link:focus-within,
 .navbar-link:hover,
 .navbar-link.is-active {
-  background-color: #CC003D;
+  background-color: #fafafa;
   color: #0025dc9f;
 }
 
@@ -6930,7 +6943,7 @@ body.has-spaced-navbar-fixed-bottom {
   }
 
   .navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #CC003D;
+    background-color: #fafafa;
   }
 }
 .hero.is-fullheight-with-navbar {

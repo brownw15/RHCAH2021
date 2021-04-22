@@ -1,5 +1,5 @@
 <?php
-// We'll be outputting a PDF
+//We'll be outputting a PDF
 header('Content-type: text/csv');
 
 // It will be called downloaded.pdf

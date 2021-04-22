@@ -29,13 +29,13 @@ $widescreen-enabled: true;
 $fullhd-enabled: true;
 
 // Update some of Bulma's component variables
-$body-background-color: $grey-dark;
+$body-background-color: #ffffff;
 $control-border-width: 2px;
 $box-color: rgba(255,200,255,.8);
 $box-background-color: rgba(255,255,255,.8);
 $input-border-color: $grey-dark;
 $input-shadow: none;
-$navbar-item-hover-background-color: $primary;
+$navbar-item-hover--color: $primary;
 $navbar-burger-color: $primary;
 
 .remove-all-styles {
@@ -53,7 +53,6 @@ $navbar-burger-color: $primary;
 
 a.navbar-item:hover{
 color: $primary;
-background-color: $info;
 }
 
 .toolbar {

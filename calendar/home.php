@@ -41,9 +41,11 @@
         </div>
         <div id="navbar" class="navbar-menu my-4">
             <div class="navbar-start">
-                <a class="navbar-item" href="admin.php">
-                    Settings
-                </a>
+            <?php
+                if($_SESSION['access'] == "staff"){
+                echo "<a class='navbar-item' href='admin.php'> Settings </a>";
+                }              
+            ?>
                 <a class="navbar-item" href="contact.php">
                     Help
                 </a>
@@ -69,75 +71,59 @@
             </div>
         </div>		
     </nav>
-
-    <div class="main has-text-white my-4" style="display:flex">
-        <div class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head">
-                    <p class="modal-card-title">Modal title</p>
-                    <button class="delete" aria-label="close"></button>
-                </header>
-
-                <section class="modal-card-body">
-                    <!-- Content ... -->
-                </section>
-
-                <footer class="modal-card-foot">
-                    <button class="button is-success">Save changes</button>
-                    <button class="button">Cancel</button>
-                </footer>
-            </div>
+    <div class="container is-fluid box px-2 mx-2">
+        <div class="calendar-widget mx-2 container">
+            <div id="nav" class="mx-2 px-2 my-2" style = "float:left"> </div>
         </div>
+        
+        <div class="calendar" id="dp"></div>
 
-        <div class="calendar-widget mx-2 ">
-            <div id="nav"> </div>
-        </div>
-        <div class="container calender box px-2 mx-2" id="dp"></div>
-        <div class="selectchild">
-            <?php
-            //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
-            $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
-            ?>
+        <div class="field is-grouped is-grouped-right px-2 mx-2 py-2 my-2">
+            <div class="selectchild control">
+                <?php
+                //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
+                $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
+                ?>
                 <div> 
                     <form method="post">
-
-                    <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
-                        <?php
-                            date_default_timezone_set('America/New_York');
-                            if(isset($_POST['childMenu'])){
-                            $_SESSION['childMenuValue'] = $_POST['childMenu'];
-                            }
-                            if($_SESSION['access'] == 'staff')
-                            {
-                                while($rows = $resultSet->fetch_assoc())
-                                {
-                                    $fnames = $rows['firstname']; 
-                                    $lnames = $rows['lastname'];
-                                    $ids = $rows['id'];
-                                    echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
+                        <select class="dropdown-item" id="childMenu" name ="childMenu" value="Select User">
+                            <option></option>
+                            <?php
+                                if(isset($_POST['childMenu'])){
+                                $_SESSION['childMenuValue'] = $_POST['childMenu'];
                                 }
-                            } 
-                        ?>
-                    </select>
-                    <input class="button block is-primary is-light my-2" type="submit" value="Select User" style="float:left;"/>
+                                if($_SESSION['access'] == 'staff')
+                                {
+                                    while($rows = $resultSet->fetch_assoc())
+                                    {
+                                        $fnames = $rows['firstname']; 
+                                        $lnames = $rows['lastname'];
+                                        $ids = $rows['id'];
+                                        echo "<option value='$ids'>$fnames ".  $lnames ."</option>";
+                                    }
+                                } 
+                            ?>
+                        </select>
+                        <input class="button block is-primary is-light my-2" type="submit" value="Select User" style="float:left;"/>
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="field is-grouped"></div>
-        <button class="clockButtonIn button">
-               Clock In
-        </button>
 
-        <button class="clockButtonOut button">
-               Clock Out
-        </button>
-  
-        <div class="foot">
-        </div>
+            <div class="control">
+                <button class="clockButtonIn button is-primary is-legit">
+                    Clock In
+                </button>
+            </div>
 
-    </div>
+            <div class="control">
+                <button class="clockButtonOut button is-primary is-light">
+                    Clock Out
+                </button>
+            </div>
+        </div>
+    </div>    
+    <div class="foot">
+
     <script type="text/javascript">
         //get access type
         var access = "<?php echo $_SESSION['access']; ?>";
@@ -273,6 +259,7 @@
                         };
             $.post(processURL, data, function(response){
                 console.log("Stats Updated.");
+                window.location.assign("home.php");
             });
 
             }

@@ -1,18 +1,12 @@
 <?php 
     session_start(); 
     include 'databaseConnection.php';
-    /* KEEP OR DELETE */
-    /*
-        //if the user isn't logged in and they access homepage, redirect them to login page
-        if(!iiset($_SESSION[myUsername])){
-            echo '<script>';
-            echo 'for(i=0; i<1; i++){window.location.assign("home.php")}';
-            echo '</script>';
-        }
+ ///FOR ADMIN PAGE
 
-    */
-
+    //get number of users in database
+    //get number of users in database
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -24,7 +18,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- Bulma Version 0.9.0-->
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" /> 
+    <link rel="stylesheet" href="./media/css/styles.css">
+  
     <!-- <link rel="stylesheet" href="./media/css/styles.css"> -->
     
 </head>
@@ -60,7 +55,7 @@
                 </div>
                 <div class="navbar-item">  
                     <div class="buttons">
-                        <a class="button is-light logoutButton" name="logout">
+                        <a class="button is-light logoutButton" name="logout" href = "index.php">                        
                             Log out
                             </a>
                     </div>
@@ -80,10 +75,9 @@
                         <li>
                             <a>Manage Your Users</a>
                             <ul>
-                                <li><a>View Members</a></li>
-                                <li><a>Add a child</a></li>
-                                <li><a>Remove a child</a></li>
                                 <li><a class = "reports" href = "reports.php">Generate Reports</a><li>
+                                <li><a href="delete_acc.php">Remove A User</a></li>
+                                <li><a href="permissionChange.php">Change Permissions</a></li>
                             </ul>
                         </li>
 </ul>
@@ -126,13 +120,6 @@
                                 <p class="subtitle">Users</p>
                             </article>
                         </div>
-                        
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <p class="title">30</p>
-                                <p class="subtitle">Events today</p>
-                            </article>
-                        </div>
                     </div>
                 </section>
                 <div class="columns">
@@ -154,43 +141,17 @@
                                         <tbody>
                                         <?php
                                             //get list of users
-                                            $resultSet = $link->query("SELECT id, firstname, lastname FROM account");
+                                            $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
                                             while($rows = $resultSet->fetch_assoc())
                                                 {
                                                     $fnames = $rows['firstname']; 
                                                     $lnames = $rows['lastname'];
                                                     echo "<tr>
-                                                    <td width='5%'><i class='fa fa-bell-o'></i></td>
+                                                    <td width='5%'><i class='fa fa-user-o'></i></td>
                                                     <td>" .$fnames . " " . $lnames . "</td>
-                                                    <td class='level-right'><a class='button is-small is-primary' href='#'>Action</a></td>
                                                     </tr>";
                                                 }
                                         ?>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-user-o"></i></td>
-                                                <td>Son Goku</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Tj Wynn</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Nick Paul</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Actions</a></td>
-                                            </tr>
                                           
                                         </tbody>
                                     </table>
@@ -202,31 +163,8 @@
                         </div>
                     </div>
                     <div class="column is-6">
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    User Search
-                                </p>
-                                <a href="#" class="card-header-icon" aria-label="more options">
-                  <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </a>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="control has-icons-left has-icons-right">
-                                        <input class="input is-large" type="text" placeholder="">
-                                        <span class="icon is-medium is-left">
-                      <i class="fa fa-search"></i>
-                    </span>
-                                        <span class="icon is-medium is-right">
-                      <i class="fa fa-check"></i>
-                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
