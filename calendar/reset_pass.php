@@ -105,7 +105,6 @@ function test_input($data)//Strips excess data and protects against exploits
 				</div>
 				<div class="field is-grouped has-addons mx-2 px-2 is-grouped-centered">
 					<div class="control has-icons-left ">
-						<input class="input" type = "text" name=ID placeholder="Id Number of Account">
 						<button class="button my-2 is-success is-light is-centered" type="submit" onclick="redirect()">Submit Changes</button>
 						<button class="button is-info is-light my-2 px-2"><a href="home.php">Back to login</a></button>
 					</div>

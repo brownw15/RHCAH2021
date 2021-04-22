@@ -67,7 +67,7 @@
 						<h1 class="title is-1 has-text-weight-semibold is-family-monospace has-text-black">Sign Up</h1>
 						</hr>
 
-						<div class="field is-grouped is-centered">
+						<div class="field is-grouped is-grouped-centered">
 							<div class="control">
 								<input class="input" type="text" id="fname" name="firstName" placeholder="First Name" size="26" maxlength="100" autocomplete="off" pattern="[A-Za-z]+" title="use characters: a-z">
 							</div>
@@ -76,7 +76,7 @@
 							</div>
 						</div>
 
-						<div class="field has-addons">
+						<div class="field has-addons is-grouped is-grouped-centered">
 							<div class="control has-icons-left">
 								<input class="input" type="text" id="inputEmail" id="uEmail" name="email" placeholder="Email" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[A-Za-z0-9_-]+@[a-z0-9-]+.[a-z]{2,}$" title="Email Format Requires @ and ." required>
 								<span class="icon is-small is-left">
@@ -85,14 +85,14 @@
 							</div>
 						</div>
 						
-						<div class="field has-addons">
+						<div class="field has-addons is-grouped is-grouped-centered">
 							<div class="control has-icons-left">
 								<input class="input" id="inputSignupUsername" name="username" type="text" placeholder="Username" size="26" maxlength="30" minlength="3" autocomplete="off" pattern="[^$#@%><\][\\\x22,;|]+" title="enter at least 3 characters: a-z, 0-9, .':/~-_()" required >
 								<span class="icon is-small is-left"> <i class="fas fa-user"></i></span>
 							</div>
 						</div>
 
-						<div class="field has-addons">
+						<div class="field has-addons is-grouped is-grouped-centered">
 							<div class="control has-icons-left">
 								<input class="input" type="password" id="inputPassword" name="userPassword" placeholder="Password" size="26" maxlength="100" minlength="7" autocomplete="off" pattern="[^#@()/><\][\\\x22,;|]+" title="Must contain 7 or more characters that are of at least one number, and one uppercase and lowercase letter. use characters: a-z, 0-9, !.':/~-$|*%" required>
 								<span class="icon is-small is-left"> <i class="fas fa-lock"></i></span>

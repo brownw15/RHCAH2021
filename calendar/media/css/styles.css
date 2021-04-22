@@ -1384,7 +1384,9 @@ a.navbar-item:hover {
 }
 
 #signupForm {
-  width: 75%;
+  width: 90%;
+  margin: auto;
+  padding: auto;
 }
 
 #recovForm {
