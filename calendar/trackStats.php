@@ -2,7 +2,7 @@
     session_start();
     include 'databaseConnection.php';    // holds establishing connection to database
 
-    $statsFile = fopen("statsFile.csv","a");
+    $statsFile = fopen("EventStats.csv","a");
     if($_POST['type'] == 'create'){
         $statsData = array("Event Created, " . $_SESSION['name'] .
             ", EventID: " . $_POST['eventId'] .

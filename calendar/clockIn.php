@@ -1,11 +1,10 @@
 <?php
 session_start();
 include 'databaseConnection.php'; // connect to database
-include 'reports.php';
 
 date_default_timezone_set('America/New_York');
 
-$statsFile = fopen("statsFile.csv","a");
+$statsFile = fopen("ClockInStatsFile.csv","a");
 $inTime = date("Y-m-d h:i:s");
 
 $stmt = $link->prepare('SELECT id FROM events WHERE userID = ? AND end > ? ORDER BY id DESC LIMIT 1');

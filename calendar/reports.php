@@ -1,10 +1,14 @@
 <?php
-//We'll be outputting a PDF
-header('Content-type: text/csv');
 
-// It will be called downloaded.pdf
-header('Content-Disposition: attachment; filename="GeneratedReport.csv"');
+//check to see that the variable came through
+if(isset($_GET['stat'])){
+    $filename = $_GET['stat'];
+}
 
-// The PDF source is in original.pdf
-readfile('statsFile.csv');
+header('Content-type: application/csv');
+
+header('Content-Disposition: attachment; filename="'.basename($filename).'"');
+
+readfile($filename)
+
 ?> 

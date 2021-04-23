@@ -3,7 +3,7 @@
     session_start();
     include 'databaseConnection.php';   // we will add this file later, which holds establishing connection to database
 
-    $statsFile = fopen("statsFile.csv","a");
+    $statsFile = fopen("AccountCreationStats.csv","a");
 
     // This code block checks to see if user is in database before adding them to it
     //the object in $var->prepare needs to be the same object as the object created in databaseConnection.php via $var = new mysqli();
@@ -31,7 +31,11 @@
         $insert = 'INSERT INTO account (firstname,lastname,username,email,userPassword,description) VALUES (?,?,?,?,?,?)'; //prepared sql statement for efficiency and security
 	    $stmt = $link->prepare($insert);
         $child = "child";
-        $stmt->bind_param("ssssss", $_POST['firstName'], $_POST['lastName'], $_POST['username'], $_POST['email'], $_POST['userPassword'], $child); //sssss for each parameter being handled as a string
+
+        $PassHash = $_POST['userPassword'];
+        $PassHash = hash("sha256", $PassHash);
+        $stmt->bind_param("ssssss", $_POST['firstName'], $_POST['lastName'], $_POST['username'], $_POST['email'],$PassHash, $child); //sssss for each parameter being handled as a string
+
         
         if($stmt->execute()){
             //account was successfully created
