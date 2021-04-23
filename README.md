@@ -23,5 +23,11 @@ You have the project files downloaded and in a folder (the predefined folder wil
   - Type  **localhost/calendar/index.php**  in the URL of the browser to access login page (if the path is wrong, use the directory for wherever your project is stored in the XAMPP directory on your pc)
   - ![3](https://user-images.githubusercontent.com/35666498/115800393-853af980-a3a8-11eb-8f80-88bc58c68ced.png)
 
-6. The database can be accessed by typing localhost/phpmyadmin/ in the browser URL and open the “testforcalendar” database
+6. The intial product is shipped with a singular account that has full priveledges as a staff account so that newly made accounts can be changed to staff if neccessary.
+
+   The login for this account is:
+   Username: admin
+   Password: garrison
+
+7. The database can be accessed by typing localhost/phpmyadmin/ in the browser URL and open the “testforcalendar” database
  - ![4](https://user-images.githubusercontent.com/35666498/115800397-8704bd00-a3a8-11eb-939d-cb003c0ac8a9.png)
