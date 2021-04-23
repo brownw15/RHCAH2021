@@ -31,9 +31,11 @@
         $insert = 'INSERT INTO account (firstname,lastname,username,email,userPassword,description) VALUES (?,?,?,?,?,?)'; //prepared sql statement for efficiency and security
 	    $stmt = $link->prepare($insert);
         $child = "child";
+
         $PassHash = $_POST['userPassword'];
         $PassHash = hash("sha256", $PassHash);
         $stmt->bind_param("ssssss", $_POST['firstName'], $_POST['lastName'], $_POST['username'], $_POST['email'],$PassHash, $child); //sssss for each parameter being handled as a string
+
         
         if($stmt->execute()){
             //account was successfully created
