@@ -3,7 +3,7 @@
     session_start();
     include 'databaseConnection.php';   // we will add this file later, which holds establishing connection to database
 
-    $statsFile = fopen("statsFile.csv","a");
+    $statsFile = fopen("AccountCreationStats.csv","a");
 
     // This code block checks to see if user is in database before adding them to it
     //the object in $var->prepare needs to be the same object as the object created in databaseConnection.php via $var = new mysqli();

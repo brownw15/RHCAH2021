@@ -60,7 +60,7 @@
 					echo "<td>".$data."</td></tr>"; 
 			}
 		}
-	/*	echo "</table> <br> <br>";
+		echo "</table> <br> <br>";
 		echo '<table class="table is-bordered is-striped is-hoverable">';
 		echo '<tr><td class="subtitle is-4"> Child Account Table </td> </tr>';
 		echo "<tr><td> First Name </td><td> Last Name </td> <td> ID </td></tr>";
@@ -77,25 +77,8 @@
 					echo "<td>".$data."</td></tr>"; 
 			}
 		}
-		echo "</table> <br><br>"; */
-		
-		echo '<table class=" box table is-bordered is-striped is-hoverable align-self-flex-end mx-2 px-2">';
-		echo '<tr><td class="subtitle is-4"> Child Account Table </td> </tr>';
-		echo "<tr><td> First Name </td><td> Last Name </td><td> ID </td></tr>";
-		foreach( $accList as  $readResult )
-		{	
-			$data = $readResult['description'];
-		if($data != "staff" && $data != "child")
-			{
-					$data = $readResult['firstname'];
-					echo "<tr><td>".$data." </td>";
-					$data = $readResult['lastname'];
-					echo "<td>".$data." </td>";
-					//$data = $readResult['id'];
-					//echo "<td>".$data."</td></tr>"; 
-			}
-		}
 		echo "</table> <br><br>";
+		
 	echo "</div>";
 //End of Table Creation
 

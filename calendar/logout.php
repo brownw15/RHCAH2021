@@ -4,7 +4,7 @@
     date_default_timezone_set('America/New_York');
 
     if(isset($_POST['action'])){
-        $statsFile = fopen("statsFile.csv","a");
+        $statsFile = fopen("LoginStats.csv","a");
         $statsData = array("Logout, " . $_SESSION['name'] . ", " .
         date("Y-m-d") . ", " . date("h:i:sa"));
         foreach($statsData as $line){

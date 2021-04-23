@@ -4,7 +4,7 @@
     include 'databaseConnection.php';    // holds establishing connection to database
     date_default_timezone_set('America/New_York');
 
-    $statsFile = fopen("statsFile.csv","a");
+    $statsFile = fopen("LoginStats.csv","a");
 
     // This code block checks to see if user is in database and logs them in
     if(isset($_POST['loginSubmit'])){

@@ -75,7 +75,10 @@
                         <li>
                             <a>Manage Your Users</a>
                             <ul>
-                                <li><a class = "reports" href = "reports.php">Generate Reports</a><li>
+                                <li><a href = "reports.php?stat=ClockInStatsFile.csv">Generate Clock In Reports</a><li>
+                                <li><a href = "reports.php?stat=AccountCreationStats.csv">Generate Account Creation Reports</a><li>
+                                <li><a href = "reports.php?stat=LoginStats.csv">Generate Login Reports</a><li>
+                                <li><a href = "reports.php?stat=EventStats.csv">Generate Event Reports</a><li>
                                 <li><a href="delete_acc.php">Remove A User</a></li>
                                 <li><a href="permissionChange.php">Change Permissions</a></li>
                             </ul>
