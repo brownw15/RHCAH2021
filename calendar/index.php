@@ -18,6 +18,7 @@
 <div id="loading "class="pageloader is-active"></div>
 	<section class="hero is-info is-fullheight"> 
 		<div class="hero-head">
+	<!-- start of navbar at top of page -->
 			<nav class="navbar mb-2" role="navigation" aria-label="main navigation">
 				<div class="navbar-brand">
 					<a class="navbar-item" href="#">
@@ -36,9 +37,10 @@
 					</div>
 				</div>		
 			</nav>
+		<!-- end of nav bar code -->
 		</div>
 		<div class="hero-body">
-			<div class="container has-text-centered">
+			<div class="container has-text-centered"> <!-- form contatiner of signup/login -->
 				
 				<div id="loginForm" class="box login-box"> 
 					<form class="is-centered" action="loginSubmission.php" method="post">
@@ -112,31 +114,6 @@
 						</div>
 					</form>
 				</div>
-
-				<div id="pwForm" class="box is-centered" style="display:none">
-					<form class="box is-centered" id="pwForm" style="display:none">
-						<div class="field">
-							<label class="label is-medium">Reset Password</label>
-							<div class="control has-icons-left has-icons-right">
-								<input class="input is-small" type="email" placeholder="Normal">
-								<span class="icon is-small is-left">
-								<i class="fas fa-envelope"></i>
-								</span>
-								<span class="icon is-small is-right">
-								<i class="fas fa-check"></i>
-								</span>
-							</div>
-						</div>
-						<div class="field is-grouped is-grouped-right">
-							<div class="control">
-								<button class="button is-primary is-light" type="button"  onclick="toggleForm()">Back to login</button>
-							</div>
-							<div class="control">
-								<button name="passwordSubmit" type="submit" class="button is-success is-light"> Submit</button>
-							</div>
-						</div>	
-					</form>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -161,27 +138,10 @@ function toggleForm(){
 		headerText.innerHTML = "Sign Up";
 	}
 }
-
-function forgotPw(){
-	var pwElement1 = document.getElementById("pwForm");
-	var loginElement1 = document.getElementById("loginForm");
-	var signupElement1 = document.getElementById("signupForm");
-
-	if(pwElement1.style.display === "none"){
-		loginElement1.style.display = "none";
-		signupElement1.style.display = "none";
-		pwElement1.style.display = "block";
-	}
-}
-
-function Loader(){
-	var el = document.getElementById("loading");
-	el.classList.toggle("is-active");
-}
 </script>
 </body>
 <style>
-  
+
 html,body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }

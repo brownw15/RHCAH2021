@@ -1,12 +1,13 @@
 <?php
+    //this page updates the size of calendar event
     session_start();
     include 'databaseConnection.php';
     date_default_timezone_set('America/New_York');
-    
+    //query to update event in table
     $move = 'UPDATE events SET start = ?, end = ? WHERE id = ?';
     $stmt = $link->prepare($move);
     $stmt->bind_param("ssi",$_POST['newStart'], $_POST['newEnd'], $_POST['id']);
-
+    
     if($stmt->execute()){
         class Result {}
 

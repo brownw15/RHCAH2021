@@ -1,4 +1,5 @@
 <?php 
+    //this is the home page with calendar view
     session_start(); 
     include 'databaseConnection.php';
 
@@ -33,6 +34,7 @@
 </head>
 
 <body>
+<!-- This is the navbar for the menu -->
     <nav class="navbar mb-2" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="home.php">
@@ -61,6 +63,7 @@
                         </span>
                     </div>
                 </div>
+                <!-- Logout button -->
                 <div class="navbar-item">  
                     <div class="buttons">
                         <a class="button is-light logoutButton" name="logout">
@@ -71,6 +74,7 @@
             </div>
         </div>		
     </nav>
+    <!-- Calendar navbar to navigate between different weeks -->
     <div class="container is-fluid box px-2 mx-2">
         <div class="calendar-widget mx-2 container">
             <div id="nav" class="mx-2 px-2 my-2" style = "float:left"> </div>
@@ -81,7 +85,7 @@
         <div class="field is-grouped is-grouped-right px-2 mx-2 py-2 my-2">
             <div class="selectchild control" id="select-dd">
                 <?php
-                //$mysqli = NEW MySqli('localhost','root','','testforcalendar');
+                //this query populates the dropdown with all users to be edited
                 $resultSet = $link->query("SELECT id, firstname, lastname FROM account ORDER BY firstname ASC");
                 ?>
                 <div> 
@@ -92,8 +96,10 @@
                                 if(isset($_POST['childMenu'])){
                                 $_SESSION['childMenuValue'] = $_POST['childMenu'];
                                 }
+                                //must have staff access to select dropdown
                                 if($_SESSION['access'] == 'staff')
                                 {
+                                    //populates dropdown with users firstname and lastname
                                     while($rows = $resultSet->fetch_assoc())
                                     {
                                         $fnames = $rows['firstname']; 
@@ -146,12 +152,9 @@
 
 
 
-        // Nick Check this out
-        //$("div").removeAttr("style");
 
         //below are the main functions you can perform on the calendar
         //each function comunicates data to the php backend functions to process
-        
         dp.onEventDeleted = function(args) {
             if(access === "staff"){
             $.post("backendDelete.php",
@@ -172,7 +175,7 @@
 
             }
         };
-
+        //event moving javascript
         dp.onEventMoved = function(args) {
             if(access === "staff"){
             $.post("backendMove.php",
@@ -197,7 +200,7 @@
 
             }
         };
-
+        //event resizing javascript
         dp.onEventResized = function(args) {
             if(access === "staff"){
             $.post("backendResize.php",
@@ -238,7 +241,7 @@
                 resource: args.resource,
             });
             dp.events.add(e);
-
+            //event deletion script
             $.post("backendCreate.php",
                     {
                         start: args.start.toString(),
@@ -267,11 +270,11 @@
             }
 
         };
-
+        //if you click on calendar event it will pop up a message
         dp.onEventClick = function(args) {
             alert("clicked: " + args.e.id());
         };
-
+        //initialize calendar and load events
         dp.init();
 
         loadEvents();
@@ -295,7 +298,7 @@
             }
         });
         
-
+        //logout button script that redirects to signin page
         $('.logoutButton').click(function(){
             var btnValue = $(this).val();
             var processURL = 'logout.php';
@@ -305,7 +308,7 @@
                 for(i=0; i<1; i++){window.location.assign("index.php")};
             });
         });
-
+        //clock in button that background redirects to clockin.php then back to home immediatly 
         $('.clockButtonIn').click(function(){
             var processURL = 'clockIn.php';
             $.post(processURL, function(response){
@@ -313,7 +316,7 @@
                 for(i=0; i<1; i++){window.location.assign("home.php")};
             });
         });
-
+        //same as clock in but clock out
         $('.clockButtonOut').click(function(){
             var processURL = 'clockOut.php';
             $.post(processURL, function(response){

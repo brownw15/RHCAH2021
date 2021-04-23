@@ -1,4 +1,4 @@
-
+<!-- this code deletes user and all related events with that user based on selection -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +11,7 @@
     <!-- Bulma Version 0.9.0-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" /> 
     <!-- <link rel="stylesheet" href="./media/css/styles.css"> -->
-    
+    <!-- the following is styling code -->
 </head>
 	<body>
 		<style>
@@ -42,11 +42,12 @@
 	$readAcc->execute();
 	$readResult = $readAcc->get_result();
 	$accList = $readResult->fetch_all(MYSQLI_ASSOC);
-	
+	//showing tables on screen. this one is for staff
 	echo '<div class=" my-2 px-2 container is-flex is-flex-direction-row ">';
 		echo '<table class= "table is-bordered is-striped is-hoverable align-self-flex-auto mx-2 px-2">';
 		echo '<tr><td class="subtitle is-4"> Staff Account Table </td> </tr>';
 		echo "<tr><td> First Name </td><td> Last Name </td> <td> ID </td></tr>";
+		//populating tables
 		foreach( $accList as  $readResult )
 		{	
 			$data = $readResult['description'];
@@ -60,6 +61,7 @@
 					echo "<td>".$data."</td></tr>"; 
 			}
 		}
+	//does the same thing as above but for child table
 		echo "</table> <br> <br>";
 		echo '<table class="table is-bordered is-striped is-hoverable">';
 		echo '<tr><td class="subtitle is-4"> Child Account Table </td> </tr>';
@@ -84,7 +86,7 @@
 
 //Start of Input Validation
 
-
+//deletion queries. deletes user and events tied to user
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		if($_POST["confirm1"] == "" || $_POST["confirm2"] == "")
@@ -157,7 +159,7 @@ function test_input($data)//Strips excess data and protects against exploits
 					<span class="error"><?php echo $NoMatchError; echo $InputError; echo $NoInputError; echo $NotExistErr; ?> </span>
 					<label class="label">Re-Enter ID of Account to be Deleted</label>
 					<div class="control">
-						<input class="input" type="email" placeholder="e.g.733221" name="confirm2">
+						<input class="input" type="text" placeholder="e.g.733221" name="confirm2">
 					</div>
 
 					<div class="control">

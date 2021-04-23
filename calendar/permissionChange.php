@@ -47,6 +47,7 @@
 		echo '<table class= "table is-bordered is-striped is-hoverable align-self-flex-auto mx-2 px-2">';
 		echo '<tr><td class="subtitle is-4"> Staff Account Table </td> </tr>';
 		echo "<tr><td> First Name </td><td> Last Name </td> <td> ID </td></tr>";
+		//pulls and generates table for staff
 		foreach( $accList as  $readResult )
 		{	
 			$data = $readResult['description'];
@@ -64,6 +65,7 @@
 		echo '<table class="table is-bordered is-striped is-hoverable">';
 		echo '<tr><td class="subtitle is-4"> Child Account Table </td> </tr>';
 		echo "<tr><td> First Name </td><td> Last Name </td> <td> ID </td></tr>";
+		//pulls and generates table for children
 		foreach( $accList as  $readResult )
 		{	
 			$data = $readResult['description'];
@@ -83,7 +85,6 @@
 //End of Table Creation
 
 //Start of Input Validation
-
 
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{

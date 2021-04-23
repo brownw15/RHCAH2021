@@ -9,7 +9,9 @@
     // This code block checks to see if user is in database and logs them in
     if(isset($_POST['loginSubmit'])){
         $stmt = $link->prepare('SELECT id, username, userPassword, firstname, lastname, email, description FROM account WHERE username = ? AND userPassword = ? limit 1');
-        $stmt->bind_param('ss', $_POST['username'], $_POST['userPassword']);
+        $PassHash = $_POST['userPassword']; //hashes password (security tings)
+        $PassHash = hash("sha256", $PassHash);
+        $stmt->bind_param('ss', $_POST['username'], $PassHash);
         $stmt->execute();
         $stmt->bind_result($id,$username,$userPassword,$firstname,$lastname,$email,$description);
         

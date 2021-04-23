@@ -1,3 +1,7 @@
 Action,Time,User ID,Event ID
 Clock In Time, 2021-04-21 09:03:26, User12, EventID 
 Clock Out Time, , User12, EventID 
+"Clock In Time"," 2021-04-22 09:14:59"," User12"," EventID "
+"Clock Out Time"," "," User12"," EventID "
+"Clock In Time"," 2021-04-22 09:26:06"," User33"," EventID "
+"Clock Out Time"," "," User33"," EventID "

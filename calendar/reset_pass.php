@@ -1,8 +1,9 @@
 <?php
+		//resets password
 		include 'databaseConnection.php'; 
 		$pass = $ID = $confirm = $emptyErr = $matchErr = $formatErr = $password_length = "";
 
-
+		//data validation
 		if($_SERVER["REQUEST_METHOD"] == "POST")
 		{
 			if ($_POST["newpass"] != $_POST["confpass"]) 
@@ -11,6 +12,7 @@
 			}
 			else
 			{
+				//newpass is placeholder
 				$pass = test_input($_POST["newpass"]);
 				$ID = test_input($_POST["ID"]);
 				
@@ -22,7 +24,7 @@
 					// echo $pass."<BR>";
 					//$pass = hash("sha256", $pass);
 					//echo $pass."<BR>";
-					
+					//updates password in database
 					$stmt = $link->prepare("UPDATE `account` 
 					set `userPassword` = ? 
 					where id = ?");

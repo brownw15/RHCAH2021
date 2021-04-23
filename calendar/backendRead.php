@@ -1,16 +1,18 @@
 <?php
+	//this file reads all the events of a user and populates them onto the calendar 
     session_start();
     include 'databaseConnection.php';
 	date_default_timezone_set('America/New_York');
 	header('Content-Type: application/json');
 	
+	//this checks whether the id of the user is a child or a staff
     if($_SESSION['childMenuValue'] == ""){ 
-        $id = $_SESSION['userID']; //NEED TO PULL USERID WHEN THEY SIGNUP!!!
+        $id = $_SESSION['userID']; 
     }
     else{
         $id = $_SESSION['childMenuValue'];
     }
-	//THIS NEEDS TO BE PARAMETERIZED!!! QUERY NEEDS TO BE UPDATED TO REFLECT PER ACCOUNT
+	//selecting events associated with user
 	$read = $link->query('SELECT * FROM events WHERE userID = '. $id .'');
 	
 	//select query needs to be updated to match.
@@ -22,7 +24,7 @@
 		public $start;
 		public $end;
 	}
-	
+	//populates all the events into an array	
     $events = [];
     foreach($result as $row) {
 		$e = new Event();
@@ -35,6 +37,6 @@
 	
 	//have to free result set.
 	$read->free_result();
-	
+	//returned back to home page	
     echo json_encode($events);
 ?>

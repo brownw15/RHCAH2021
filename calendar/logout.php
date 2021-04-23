@@ -1,10 +1,11 @@
 <?php
+    //this page once reached will reset session variables and log user out
     session_start();
     include 'databaseConnection.php';
     date_default_timezone_set('America/New_York');
-
+    //if logout button is pressed
     if(isset($_POST['action'])){
-        $statsFile = fopen("LoginStats.csv","a");
+        $statsFile = fopen("LoginStats.csv","a"); //puttin data in csv file for reports
         $statsData = array("Logout, " . $_SESSION['name'] . ", " .
         date("Y-m-d") . ", " . date("h:i:sa"));
         foreach($statsData as $line){

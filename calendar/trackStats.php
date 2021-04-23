@@ -1,7 +1,7 @@
 <?php
     session_start();
     include 'databaseConnection.php';    // holds establishing connection to database
-
+    //here we submit our tracked data from our stats data array into csv file
     $statsFile = fopen("EventStats.csv","a");
     if($_POST['type'] == 'create'){
         $statsData = array("Event Created, " . $_SESSION['name'] .
