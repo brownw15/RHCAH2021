@@ -64,10 +64,10 @@
         </div>		
     </nav>
     <!-- END NAV -->
-    <div class="container">
+    
         <div class="columns">
             <div class="column is-2 ">
-                <aside class="menu is-hidden-mobile">
+                <aside class="menu is-hidden-mobile my-2 mx-4">
                     <p class="menu-label">
                         Administration
                     </p>
@@ -83,7 +83,7 @@
                                 <li><a href="permissionChange.php">Change Permissions</a></li>
                             </ul>
                         </li>
-</ul>
+                    </ul>
                 </aside>
             </div>
             <div class="column is-9">
@@ -172,7 +172,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
 <html>

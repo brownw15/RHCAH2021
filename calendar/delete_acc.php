@@ -142,7 +142,7 @@ function test_input($data)//Strips excess data and protects against exploits
 ?>
 
 
-	
+		
 		<div class="container box">
 			<form method ="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			<!--<span class="error"><?php echo $NoMatchError; echo $InputError; echo $NoInputError; echo $NotExistErr; ?> </span> -->
