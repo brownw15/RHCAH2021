@@ -1,7 +1,7 @@
 # RHCAH2021
  ## Rock Hill Childrens Attention Home Event Manager. 
 
-### Running the Software (On Local Machine)
+### Setting Up the Software (On Local Machine)
 To get the app running on your local machine you will need to download a local Apache & mySQL server. (XAMPP is good)
 
 ### Preconditions:
